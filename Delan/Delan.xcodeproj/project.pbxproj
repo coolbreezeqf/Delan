@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B013D7B11B0C952500AFE1FC /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B013D7B01B0C952500AFE1FC /* MoreViewController.m */; };
 		B08336A51B0C791C007CCCAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B08336A41B0C791C007CCCAC /* main.m */; };
 		B08336A81B0C791C007CCCAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B08336A71B0C791C007CCCAC /* AppDelegate.m */; };
 		B08336AB1B0C791C007CCCAC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B08336AA1B0C791C007CCCAC /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B013D7AF1B0C952500AFE1FC /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoreViewController.h; path = MoreTab/MoreViewController.h; sourceTree = "<group>"; };
+		B013D7B01B0C952500AFE1FC /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoreViewController.m; path = MoreTab/MoreViewController.m; sourceTree = "<group>"; };
 		B083369F1B0C791C007CCCAC /* Delan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08336A31B0C791C007CCCAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B08336A41B0C791C007CCCAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -62,6 +65,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B013D7AD1B0C94BC00AFE1FC /* MoreTab */ = {
+			isa = PBXGroup;
+			children = (
+				B013D7AF1B0C952500AFE1FC /* MoreViewController.h */,
+				B013D7B01B0C952500AFE1FC /* MoreViewController.m */,
+			);
+			name = MoreTab;
+			sourceTree = "<group>";
+		};
+		B013D7AE1B0C94E200AFE1FC /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = HomePage;
+			sourceTree = "<group>";
+		};
 		B08336961B0C791C007CCCAC = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +102,8 @@
 		B08336A11B0C791C007CCCAC /* Delan */ = {
 			isa = PBXGroup;
 			children = (
+				B013D7AE1B0C94E200AFE1FC /* HomePage */,
+				B013D7AD1B0C94BC00AFE1FC /* MoreTab */,
 				B08336A61B0C791C007CCCAC /* AppDelegate.h */,
 				B08336A71B0C791C007CCCAC /* AppDelegate.m */,
 				B08336A91B0C791C007CCCAC /* ViewController.h */,
@@ -224,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B08336AB1B0C791C007CCCAC /* ViewController.m in Sources */,
+				B013D7B11B0C952500AFE1FC /* MoreViewController.m in Sources */,
 				B08336A81B0C791C007CCCAC /* AppDelegate.m in Sources */,
 				B08336A51B0C791C007CCCAC /* main.m in Sources */,
 			);
