@@ -355,6 +355,7 @@
 				INFOPLIST_FILE = Delan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
 			name = Debug;
 		};
@@ -366,6 +367,7 @@
 				INFOPLIST_FILE = Delan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
 			name = Release;
 		};
@@ -422,6 +424,7 @@
 				B08336C41B0C791C007CCCAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B08336C51B0C791C007CCCAC /* Build configuration list for PBXNativeTarget "DelanTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +433,7 @@
 				B08336C71B0C791C007CCCAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
