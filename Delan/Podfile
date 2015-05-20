@@ -1,0 +1,7 @@
+platform :ios, '7.0'
+pod "AFNetworking", "~> 2.5.2"
+pod "JSONKit-NoWarning", '~> 1.2'
+pod 'SDWebImage', '~> 3.7.2'
+pod 'SVPullToRefresh', '~> 0.4.1'
+pod 'MBProgressHUD', '~> 0.9.1'
+pod 'UIViewAdditions', '~> 1.0.0'
