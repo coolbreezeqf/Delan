@@ -17,6 +17,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+	self.navigationItem.title = @"更多";
+	UILabel *laa = [[UILabel alloc] initWithFrame:CGRectMake(0, self.g_OffsetY, kMainScreenWidth, 64)];
+	laa.backgroundColor = [UIColor greenColor];
+	[self.view addSubview:laa];
+	
+	
+	UILabel *lbb = [[UILabel alloc] initWithFrame:CGRectMake(0, self.g_OffsetY, kMainScreenWidth, 64)];
+	lbb.backgroundColor = [UIColor greenColor];
+	BaseViewController *base = [[BaseViewController alloc] init];
+	[self.navigationController pushViewController:base animated:YES];
+	[base.view addSubview:lbb];
+	
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+//	self.navigationController.navigationBarHidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+	self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)didReceiveMemoryWarning {

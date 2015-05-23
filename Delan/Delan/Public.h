@@ -9,6 +9,17 @@
 #ifndef Delan_Public_h
 #define Delan_Public_h
 
+//*******Delan******
+#import "AppDelegate.h"
+#define kAppDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
+//********end*******
+
+
+//*******Message*****
+#define kMessageShowLoginView @"showLoginView"
+//********End********
+
 #define kMainScreenHeight [UIScreen mainScreen].bounds.size.height
 #define kMainScreenWidth  [UIScreen mainScreen].bounds.size.width
 

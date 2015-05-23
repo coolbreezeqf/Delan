@@ -17,7 +17,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Override point for customization after application launch.
+	self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+	self.window.backgroundColor = [UIColor whiteColor];
+	[self setUI];
+	[self.window makeKeyAndVisible];
 	return YES;
+}
+
+- (void)setUI{
+	_tabBar = [[RootTabBarController alloc] init];
+	_tabBar.tabBar.selectedImageTintColor = RGBCOLOR(87, 14, 185);
+	self.window.rootViewController = _tabBar;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
