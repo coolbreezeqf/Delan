@@ -7,7 +7,9 @@
 //
 
 #import "RootTabBarController.h"
+#import "RootNavgationController.h"
 #import "MoreViewController.h"
+#import "HomePageController.h"
 
 @interface RootTabBarController ()<UITabBarControllerDelegate, UITabBarDelegate>{
 	NSInteger lastSelectIndex;			//上次选中的位置
@@ -33,10 +35,10 @@
 
 - (void)initTabBarController{
 	/***修改这里NavegationController的RootViewController***/
-	_homePageNav = [[UINavigationController alloc] initWithRootViewController:[[UIViewController alloc] init]];
-	_productNav = [[UINavigationController alloc] initWithRootViewController:[[UIViewController alloc] init]];
-	_accoutNav = [[UINavigationController alloc] initWithRootViewController:[[UIViewController alloc] init]];
-	_moreNav = [[UINavigationController alloc] initWithRootViewController:[[MoreViewController alloc] init]];
+	_homePageNav = [[RootNavgationController alloc] initWithRootViewController:[[HomePageController alloc] init]];
+	_productNav = [[RootNavgationController alloc] initWithRootViewController:[[UIViewController alloc] init]];
+	_accoutNav = [[RootNavgationController alloc] initWithRootViewController:[[UIViewController alloc] init]];
+	_moreNav = [[RootNavgationController alloc] initWithRootViewController:[[MoreViewController alloc] init]];
 	/*****************************************************/
 	
 	NSArray *navArr = @[_homePageNav, _productNav, _accoutNav, _moreNav];
@@ -46,7 +48,7 @@
 		UINavigationController *nc = navArr[i];
 		NSDictionary *info = infoArr[i];
 		nc.title = info[@"title"];
-		nc.tabBarItem.image = [UIImage imageNamed:info[@"image"]];
+        nc.tabBarItem.image = [UIImage imageNamed:info[@"image"]];
 		nc.tabBarItem.selectedImage = [UIImage imageNamed:info[@"selectImage"]];
 		[self addChildViewController:nc];
 	}

@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-	self.navigationItem.title = @"更多";
+	self.navigationItem.title = @"更 多";
 	UILabel *laa = [[UILabel alloc] initWithFrame:CGRectMake(0, self.g_OffsetY, kMainScreenWidth, 64)];
 	laa.backgroundColor = [UIColor greenColor];
 	[self.view addSubview:laa];
