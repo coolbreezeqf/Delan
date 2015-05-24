@@ -42,22 +42,6 @@
 }
 
 
-//定制导航条样式
-+ (void)initialize {
-    
-    /***-----------------------标题文字风格样式的设置--------------------***/
-    
-    NSMutableDictionary * style = [NSMutableDictionary dictionary];
-    
-    //标题大小
-    style[NSFontAttributeName] = kFontBold18;
-    //标题颜色
-    style[NSForegroundColorAttributeName] = [UIColor whiteColor];
-    
-    [[UINavigationBar appearance] setTitleTextAttributes:style];
-    
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

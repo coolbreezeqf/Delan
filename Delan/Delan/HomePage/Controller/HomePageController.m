@@ -53,8 +53,24 @@
 - (void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
+
+    //    [self.pageScrollView triggerPullToRefresh];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
     
-//    [self.pageScrollView triggerPullToRefresh];
+    //设置标题
+    self.navigationItem.title = @"首 页";
+    
+    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+    
+    //设置标题颜色
+    NSMutableDictionary * style = [NSMutableDictionary dictionary];
+    style[NSForegroundColorAttributeName] = [UIColor blackColor];
+    //标题大小
+    style[NSFontAttributeName] = kFont20;
+    self.navigationController.navigationBar.titleTextAttributes = style;
 }
 
 
@@ -65,10 +81,6 @@
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     
     _advertisementImageCount = 5;
-    
-    //设置标题
-    self.navigationItem.title = @"首 页";
-    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
     
     UIScrollView * pageScrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
     pageScrollView.contentSize = CGSizeMake(0, pageScrollView.frame.size.height + 1);
