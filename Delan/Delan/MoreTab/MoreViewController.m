@@ -9,6 +9,9 @@
 #import "MoreViewController.h"
 #import "MBProgressHUD.h"
 #import "AFNetworking.h"
+#import "HelpCenterTableViewController.h"
+#import "FeedBackViewController.h"
+#import "NewsViewController.h"
 @interface MoreViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic,strong) UITableView *tableView;
@@ -40,6 +43,7 @@
 }
 #pragma mark - set UI
 - (void)initUI{
+	self.view.backgroundColor = [UIColor whiteColor];
 	self.navigationItem.title = @"更 多";
 	
 	_tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
@@ -73,6 +77,7 @@
 	}else{
 		//设置cell
 		cell.textLabel.text = _rowInfo[indexPath.section][indexPath.row][@"cellName"];
+		cell.textLabel.font = kFont15;
 		[cell.imageView setImage:[UIImage imageNamed:_rowInfo[indexPath.section][indexPath.row][@"cellIcon"]]];
 	}
 	
@@ -81,6 +86,7 @@
 		if (indexPath.row == 3) {
 			//版本信息
 			UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 50, 30)];
+			label.font = kFont15;
 #warning 动态获取
 			label.text = @"V1.2.4";
 			label.textColor = [UIColor grayColor];
@@ -93,9 +99,35 @@
 	return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+	if (indexPath.section == 0) {
+		switch (indexPath.row) {
+			case 2:{
+				NewsViewController *nvc = [[NewsViewController alloc] init];
+				[self.navigationController pushViewController:nvc animated:YES];
+			}break;
+
+			default:break;
+		}
+	}else if(indexPath.section == 1){
+		switch (indexPath.row) {
+			case 0:{
+				HelpCenterTableViewController *hvc = [[HelpCenterTableViewController alloc] init];
+				[self.navigationController pushViewController:hvc animated:YES];
+			}break;
+			case 1:{
+				FeedBackViewController *fbvc = [[FeedBackViewController alloc] init];
+				[self.navigationController pushViewController:fbvc animated:YES];
+			}break;
+			default:{
+			}break;
+		}
+	}
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
 	if (section == 0) {
-		return 10;
+		return 0.1;
 	}
 	return 10;
 }

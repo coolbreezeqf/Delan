@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>cellIcon</key>
+		<string>helpCenter1-1</string>
+		<key>cellName</key>
+		<string>常见问题</string>
+	</dict>
+	<dict>
+		<key>cellIcon</key>
+		<string>helpCenter1-2</string>
+		<key>cellName</key>
+		<string>P2P百科</string>
+	</dict>
+	<dict>
+		<key>cellIcon</key>
+		<string>helpCenter1-3</string>
+		<key>cellName</key>
+		<string>登陆与注册</string>
+	</dict>
+	<dict>
+		<key>cellIcon</key>
+		<string>helpCenter1-4</string>
+		<key>cellName</key>
+		<string>利率与费用</string>
+	</dict>
+	<dict>
+		<key>cellIcon</key>
+		<string>helpCenter1-5</string>
+		<key>cellName</key>
+		<string>充值</string>
+	</dict>
+	<dict>
+		<key>cellIcon</key>
+		<string>helpCenter1-6</string>
+		<key>cellName</key>
+		<string>投资与提现</string>
+	</dict>
+	<dict>
+		<key>cellIcon</key>
+		<string>helpCenter1-7</string>
+		<key>cellName</key>
+		<string>保障与安全</string>
+	</dict>
+</array>
+</plist>

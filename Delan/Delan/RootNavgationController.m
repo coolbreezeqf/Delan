@@ -34,8 +34,7 @@
     } else {
         
         //在跳转时自动隐藏tabBar
-//        [viewController setHidesBottomBarWhenPushed:YES];
-		
+		viewController.hidesBottomBarWhenPushed = YES;
         //调用父类的push
         [super pushViewController:viewController animated:animated];
     }

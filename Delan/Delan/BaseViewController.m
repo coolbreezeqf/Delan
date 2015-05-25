@@ -17,20 +17,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//	self.navigationController.navigationBar.barTintColor =
+
 	if (self != [self.navigationController.viewControllers objectAtIndex:0]) {
-//		[self setLeftButton:[UIImage imageNamed:@"DLBackButtonImage"] title:nil target:self action:@selector(back) rect:CGRectMake(0, 0, 21, 35)];
-		[self setLeftButton:[UIImage imageNamed:@"DLBackButtonImage"] title:nil target:self action:@selector(back)];
+		[self setLeftButton:[UIImage imageNamed:@"DLBackButtonImage"] title:nil target:self action:@selector(back) rect:CGRectMake(0, 0, 22, 22)];
 	}
-	if (self.navigationController) {
-		if (self.navigationController.navigationBarHidden == YES) {
-			g_OffsetY = 0;
-			self.view.frame = CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight);
-		}else{
-			g_OffsetY = 44;
-			self.view.frame = CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight - 44);
-		}
-	}
+	
+//	if (self.navigationController) {
+//		if (self.navigationController.navigationBarHidden == YES) {
+//			g_OffsetY = 0;
+//			self.view.frame = CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight);
+//		}else{
+//			g_OffsetY = 44;
+//			self.view.frame = CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight - 44);
+//		}
+//	}
+	self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)back{
@@ -66,13 +67,20 @@
 	if (self.navigationItem) {
 		CGRect buttonFrame;
 		CGRect viewFrame;
-		if (!CGRectIsEmpty(rect)) {
-			buttonFrame = rect;
-		}else{
-			buttonFrame = CGRectMake(0, 0, 44, 44);
-			viewFrame = CGRectMake(0, 0, 44, 44);
-		}
+		
+		buttonFrame = CGRectMake(0, 0, 44, 44);
+		viewFrame = CGRectMake(0, 0, 44, 44);
+
 		UIButton *button = [[UIButton alloc] initWithFrame:buttonFrame];
+		UIView *view = [[UIView alloc] initWithFrame:viewFrame];
+		if (!CGRectIsEmpty(rect)) {
+			UIImageView *iv = [[UIImageView alloc] initWithImage:image];
+			iv.frame = rect;
+			iv.center = view.center;
+			iv.left = view.left;
+			[view addSubview:iv];
+			image = nil;
+		}
 		if (image) {
 			[button setBackgroundImage:image forState:UIControlStateNormal];
 		}
@@ -81,8 +89,9 @@
 		}
 		[button addTarget:target action:selector forControlEvents:UIControlEventTouchDown];
 		
-		UIView *view = [[UIView alloc] initWithFrame:viewFrame];
+		
 		[view addSubview:button];
+		
 		self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:view];
 	}
 }
