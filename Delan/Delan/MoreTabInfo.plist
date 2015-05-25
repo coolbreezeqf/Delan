@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>tableViewInfo</key>
+	<array>
+		<array>
+			<dict>
+				<key>cellName</key>
+				<string>公司简介</string>
+				<key>cellIcon</key>
+				<string>moreindex00</string>
+			</dict>
+			<dict>
+				<key>cellName</key>
+				<string>官方公告</string>
+				<key>cellIcon</key>
+				<string>moreindex01</string>
+			</dict>
+			<dict>
+				<key>cellName</key>
+				<string>行业报道</string>
+				<key>cellIcon</key>
+				<string>moreindex02</string>
+			</dict>
+		</array>
+		<array>
+			<dict>
+				<key>cellName</key>
+				<string>帮助中心</string>
+				<key>cellIcon</key>
+				<string>moreindex10</string>
+			</dict>
+			<dict>
+				<key>cellName</key>
+				<string>意见反馈</string>
+				<key>cellIcon</key>
+				<string>moreindex11</string>
+			</dict>
+			<dict>
+				<key>cellName</key>
+				<string>联系我们</string>
+				<key>cellIcon</key>
+				<string>moreindex12</string>
+			</dict>
+			<dict>
+				<key>cellName</key>
+				<string>当前版本</string>
+				<key>cellIcon</key>
+				<string>moreindex13</string>
+			</dict>
+		</array>
+	</array>
+</dict>
+</plist>

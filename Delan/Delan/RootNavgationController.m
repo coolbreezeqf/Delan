@@ -34,13 +34,29 @@
     } else {
         
         //在跳转时自动隐藏tabBar
-        [viewController setHidesBottomBarWhenPushed:YES];
-        
+//        [viewController setHidesBottomBarWhenPushed:YES];
+		
         //调用父类的push
         [super pushViewController:viewController animated:animated];
     }
 }
 
+
+//定制导航条样式
++ (void)initialize {
+    
+    /***-----------------------标题文字风格样式的设置--------------------***/
+    
+    NSMutableDictionary * style = [NSMutableDictionary dictionary];
+    
+    //标题大小
+    style[NSFontAttributeName] = kFontBold18;
+    //标题颜色
+    style[NSForegroundColorAttributeName] = [UIColor blackColor];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:style];
+    
+}
 
 
 - (void)didReceiveMemoryWarning {

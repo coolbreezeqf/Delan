@@ -27,8 +27,8 @@
 			g_OffsetY = 0;
 			self.view.frame = CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight);
 		}else{
-			g_OffsetY = 64;
-			self.view.frame = CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight - 64);
+			g_OffsetY = 44;
+			self.view.frame = CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight - 44);
 		}
 	}
 }
