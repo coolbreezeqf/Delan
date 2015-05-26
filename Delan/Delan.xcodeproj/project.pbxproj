@@ -26,6 +26,10 @@
 		B0109D921B0E01E600257AF9 /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0109D911B0E01E600257AF9 /* RootTabBarController.m */; };
 		B0109D951B0E09E200257AF9 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0109D941B0E09E200257AF9 /* BaseViewController.m */; };
 		B013D7B11B0C952500AFE1FC /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B013D7B01B0C952500AFE1FC /* MoreViewController.m */; };
+		B01B8F7C1B1358F600A85DCD /* IntroduceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01B8F7B1B1358F600A85DCD /* IntroduceViewController.m */; };
+		B01B8F7E1B13590E00A85DCD /* IntroduceInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = B01B8F7D1B13590E00A85DCD /* IntroduceInfo.plist */; };
+		B01FB3B01B1400D500088768 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = B01FB3AF1B1400D500088768 /* NSString+Additions.m */; };
+		B01FB3B91B149D2800088768 /* HelpDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01FB3B81B149D2800088768 /* HelpDetailViewController.m */; };
 		B02F2F901B1223DD00D3D59E /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B02F2F6A1B1223DD00D3D59E /* AFHTTPRequestOperation.m */; };
 		B02F2F911B1223DD00D3D59E /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B02F2F6C1B1223DD00D3D59E /* AFHTTPRequestOperationManager.m */; };
 		B02F2F921B1223DD00D3D59E /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B02F2F6E1B1223DD00D3D59E /* AFHTTPSessionManager.m */; };
@@ -66,13 +70,13 @@
 		B02F2FFD1B13362100D3D59E /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B02F2FE61B13362100D3D59E /* UIImageView+HighlightedWebCache.m */; };
 		B02F2FFE1B13362100D3D59E /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B02F2FE81B13362100D3D59E /* UIImageView+WebCache.m */; };
 		B02F2FFF1B13362100D3D59E /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B02F2FEA1B13362100D3D59E /* UIView+WebCacheOperation.m */; };
-		B02F30001B13362100D3D59E /* Pods-SDWebImage.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B02F2FEC1B13362100D3D59E /* Pods-SDWebImage.xcconfig */; };
-		B02F30011B13362100D3D59E /* Pods-SDWebImage-Private.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B02F2FED1B13362100D3D59E /* Pods-SDWebImage-Private.xcconfig */; };
 		B02F30021B13362100D3D59E /* Pods-SDWebImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B02F2FEE1B13362100D3D59E /* Pods-SDWebImage-dummy.m */; };
 		B08336A51B0C791C007CCCAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B08336A41B0C791C007CCCAC /* main.m */; };
 		B08336A81B0C791C007CCCAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B08336A71B0C791C007CCCAC /* AppDelegate.m */; };
 		B08336B31B0C791C007CCCAC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08336B11B0C791C007CCCAC /* LaunchScreen.xib */; };
 		B08336BF1B0C791C007CCCAC /* DelanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B08336BE1B0C791C007CCCAC /* DelanTests.m */; };
+		B0B650351B13633C002105E2 /* NoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B650341B13633C002105E2 /* NoticeViewController.m */; };
+		B0B650381B1364F2002105E2 /* NoticeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B650371B1364F2002105E2 /* NoticeTableViewCell.m */; };
 		B7C38AEF9BA4367E7D23F98E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8B704C5C15F212F5D79DE6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +121,13 @@
 		B0109D941B0E09E200257AF9 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		B013D7AF1B0C952500AFE1FC /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoreViewController.h; path = MoreTab/MoreViewController.h; sourceTree = "<group>"; };
 		B013D7B01B0C952500AFE1FC /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoreViewController.m; path = MoreTab/MoreViewController.m; sourceTree = "<group>"; };
+		B01B8F7A1B1358F600A85DCD /* IntroduceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntroduceViewController.h; path = MoreTab/IntroduceViewController.h; sourceTree = "<group>"; };
+		B01B8F7B1B1358F600A85DCD /* IntroduceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IntroduceViewController.m; path = MoreTab/IntroduceViewController.m; sourceTree = "<group>"; };
+		B01B8F7D1B13590E00A85DCD /* IntroduceInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = IntroduceInfo.plist; sourceTree = "<group>"; };
+		B01FB3AE1B1400D500088768 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		B01FB3AF1B1400D500088768 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
+		B01FB3B71B149D2800088768 /* HelpDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelpDetailViewController.h; path = MoreTab/HelpDetailViewController.h; sourceTree = "<group>"; };
+		B01FB3B81B149D2800088768 /* HelpDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelpDetailViewController.m; path = MoreTab/HelpDetailViewController.m; sourceTree = "<group>"; };
 		B0236E1D272C98352625402C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B02F2F691B1223DD00D3D59E /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		B02F2F6A1B1223DD00D3D59E /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
@@ -215,6 +226,10 @@
 		B08336BE1B0C791C007CCCAC /* DelanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DelanTests.m; sourceTree = "<group>"; };
 		B08336C81B0C7BAB007CCCAC /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B08336C91B0C7CAD007CCCAC /* Public.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Public.h; sourceTree = "<group>"; };
+		B0B650331B13633C002105E2 /* NoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeViewController.h; sourceTree = "<group>"; };
+		B0B650341B13633C002105E2 /* NoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeViewController.m; sourceTree = "<group>"; };
+		B0B650361B1364F2002105E2 /* NoticeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoticeTableViewCell.h; path = MoreTab/NoticeTableViewCell.h; sourceTree = "<group>"; };
+		B0B650371B1364F2002105E2 /* NoticeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoticeTableViewCell.m; path = MoreTab/NoticeTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +356,8 @@
 		B013D7AD1B0C94BC00AFE1FC /* MoreTab */ = {
 			isa = PBXGroup;
 			children = (
+				B01FB3AE1B1400D500088768 /* NSString+Additions.h */,
+				B01FB3AF1B1400D500088768 /* NSString+Additions.m */,
 				B02F2FBA1B12E72400D3D59E /* 联系我们 */,
 				B02F2FB91B12E71900D3D59E /* 意见反馈 */,
 				B02F2FB81B12E70D00D3D59E /* 帮助中心 */,
@@ -453,6 +470,9 @@
 		B02F2FB51B12E6ED00D3D59E /* 公司简介 */ = {
 			isa = PBXGroup;
 			children = (
+				B01B8F7A1B1358F600A85DCD /* IntroduceViewController.h */,
+				B01B8F7B1B1358F600A85DCD /* IntroduceViewController.m */,
+				B01B8F7D1B13590E00A85DCD /* IntroduceInfo.plist */,
 			);
 			name = "公司简介";
 			sourceTree = "<group>";
@@ -460,6 +480,10 @@
 		B02F2FB61B12E6F900D3D59E /* 官方公告 */ = {
 			isa = PBXGroup;
 			children = (
+				B0B650331B13633C002105E2 /* NoticeViewController.h */,
+				B0B650341B13633C002105E2 /* NoticeViewController.m */,
+				B0B650361B1364F2002105E2 /* NoticeTableViewCell.h */,
+				B0B650371B1364F2002105E2 /* NoticeTableViewCell.m */,
 			);
 			name = "官方公告";
 			sourceTree = "<group>";
@@ -481,6 +505,8 @@
 				B02F2FC01B12F6CC00D3D59E /* HelpCenterTableViewController.h */,
 				B02F2FC11B12F6CC00D3D59E /* HelpCenterTableViewController.m */,
 				B02F2FC31B130F1300D3D59E /* HelpCenterInfo.plist */,
+				B01FB3B71B149D2800088768 /* HelpDetailViewController.h */,
+				B01FB3B81B149D2800088768 /* HelpDetailViewController.m */,
 			);
 			name = "帮助中心";
 			sourceTree = "<group>";
@@ -728,14 +754,13 @@
 			files = (
 				184DCE7B1B106B4400DFEF20 /* rollview_test_2.png in Resources */,
 				B0109D8F1B0DEEE100257AF9 /* Images.xcassets in Resources */,
-				B02F30001B13362100D3D59E /* Pods-SDWebImage.xcconfig in Resources */,
 				186AAB421B11906A00B5C84C /* DetailHeaderViewFor414.xib in Resources */,
 				186AAB3E1B1177E400B5C84C /* DetailHeaderViewFor375.xib in Resources */,
 				B02F2FC41B130F1300D3D59E /* HelpCenterInfo.plist in Resources */,
 				184DCE7A1B106B4400DFEF20 /* rollview_test_1.png in Resources */,
 				184DCE7C1B106B4400DFEF20 /* rollview_test_3.png in Resources */,
 				B08336B31B0C791C007CCCAC /* LaunchScreen.xib in Resources */,
-				B02F30011B13362100D3D59E /* Pods-SDWebImage-Private.xcconfig in Resources */,
+				B01B8F7E1B13590E00A85DCD /* IntroduceInfo.plist in Resources */,
 				186AAB401B11906500B5C84C /* DetailHeaderViewFor320.xib in Resources */,
 				184DCE7E1B106B4400DFEF20 /* rollview_test_5.png in Resources */,
 				B02F2FBE1B12EA3100D3D59E /* MoreTabInfo.plist in Resources */,
@@ -794,12 +819,14 @@
 				B013D7B11B0C952500AFE1FC /* MoreViewController.m in Sources */,
 				B02F2F9C1B1223DD00D3D59E /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				B02F2FA11B1223DD00D3D59E /* UIRefreshControl+AFNetworking.m in Sources */,
+				B01FB3B01B1400D500088768 /* NSString+Additions.m in Sources */,
 				B02F2F9E1B1223DD00D3D59E /* UIButton+AFNetworking.m in Sources */,
 				B02F2F9D1B1223DD00D3D59E /* UIAlertView+AFNetworking.m in Sources */,
 				184DCE711B10564300DFEF20 /* HomePageController.m in Sources */,
 				B02F2FCD1B1331F600D3D59E /* NewsTableViewCell.m in Sources */,
 				B02F2F911B1223DD00D3D59E /* AFHTTPRequestOperationManager.m in Sources */,
 				184DCE741B1059FA00DFEF20 /* RootNavgationController.m in Sources */,
+				B01FB3B91B149D2800088768 /* HelpDetailViewController.m in Sources */,
 				B02F2FAC1B1223EC00D3D59E /* UIView+RSAdditions.m in Sources */,
 				B02F2F951B1223DD00D3D59E /* AFURLConnectionOperation.m in Sources */,
 				B0109D951B0E09E200257AF9 /* BaseViewController.m in Sources */,
@@ -809,6 +836,7 @@
 				B02F2FF81B13362100D3D59E /* SDWebImageManager.m in Sources */,
 				B02F2FFD1B13362100D3D59E /* UIImageView+HighlightedWebCache.m in Sources */,
 				B02F2FB31B12240B00D3D59E /* UIScrollView+SVInfiniteScrolling.m in Sources */,
+				B0B650351B13633C002105E2 /* NoticeViewController.m in Sources */,
 				B02F2FA01B1223DD00D3D59E /* UIProgressView+AFNetworking.m in Sources */,
 				B02F2FFB1B13362100D3D59E /* UIImage+GIF.m in Sources */,
 				B02F2F921B1223DD00D3D59E /* AFHTTPSessionManager.m in Sources */,
@@ -820,8 +848,10 @@
 				B02F2FFE1B13362100D3D59E /* UIImageView+WebCache.m in Sources */,
 				B08336A81B0C791C007CCCAC /* AppDelegate.m in Sources */,
 				B02F2FFA1B13362100D3D59E /* UIButton+WebCache.m in Sources */,
+				B01B8F7C1B1358F600A85DCD /* IntroduceViewController.m in Sources */,
 				B02F2F931B1223DD00D3D59E /* AFNetworkReachabilityManager.m in Sources */,
 				B02F2FF61B13362100D3D59E /* SDWebImageDownloader.m in Sources */,
+				B0B650381B1364F2002105E2 /* NoticeTableViewCell.m in Sources */,
 				B02F2FF21B13362100D3D59E /* NSData+ImageContentType.m in Sources */,
 				B02F2FC71B131BE600D3D59E /* FeedBackViewController.m in Sources */,
 				B02F2F9F1B1223DD00D3D59E /* UIImageView+AFNetworking.m in Sources */,

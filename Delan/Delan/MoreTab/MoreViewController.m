@@ -12,6 +12,8 @@
 #import "HelpCenterTableViewController.h"
 #import "FeedBackViewController.h"
 #import "NewsViewController.h"
+#import "IntroduceViewController.h"
+#import "NoticeViewController.h"
 @interface MoreViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic,strong) UITableView *tableView;
@@ -102,6 +104,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 	if (indexPath.section == 0) {
 		switch (indexPath.row) {
+			case 0:{
+				IntroduceViewController *ivc = [[IntroduceViewController alloc] init];
+				[self.navigationController pushViewController:ivc animated:YES];
+			}break;
+			case 1:{
+				//官方公告
+				NoticeViewController *nvc = [[NoticeViewController alloc] init];
+				[self.navigationController pushViewController:nvc animated:YES];
+			}break;
 			case 2:{
 				NewsViewController *nvc = [[NewsViewController alloc] init];
 				[self.navigationController pushViewController:nvc animated:YES];

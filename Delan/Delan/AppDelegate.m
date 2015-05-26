@@ -26,7 +26,7 @@
 
 - (void)setUI{
 	_tabBar = [[RootTabBarController alloc] init];
-	_tabBar.tabBar.selectedImageTintColor = RGBCOLOR(87, 14, 185);
+	_tabBar.tabBar.selectedImageTintColor = RGBCOLOR(87, 114, 185);
 	self.window.rootViewController = _tabBar;
 }
 

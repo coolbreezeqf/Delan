@@ -9,9 +9,10 @@
 #import "FeedBackViewController.h"
 #define ButtonColor RGBCOLOR(87, 112, 187)
 #define BackGroundColor RGBCOLOR(245, 245, 245)
-@interface FeedBackViewController ()
+@interface FeedBackViewController ()<UITextViewDelegate>
 @property (nonatomic,strong) UITextView *textView;
 @property (nonatomic,strong) UIButton *feedBackBtn;
+@property (nonatomic, strong) UILabel *tipLabel;
 @end
 
 @implementation FeedBackViewController
@@ -28,12 +29,13 @@
 	self.extendedLayoutIncludesOpaqueBars = NO;
 	/*****end*****/
 	
-	_textView = [[UITextView alloc] initWithFrame:CGRectMake(10, 0, kMainScreenWidth-20, kMainScreenHeight)];
+	_textView = [[UITextView alloc] initWithFrame:CGRectMake(10, 5, kMainScreenWidth-20, kMainScreenHeight)];
 	_textView.font = kFont15;
 	_textView.layer.cornerRadius = 3;
 	_textView.layer.borderColor = [UIColor lightGrayColor].CGColor;
 	_textView.layer.borderWidth = 1;
 	_textView.scrollEnabled = YES;
+	_textView.delegate = self;
 	[_textView setContentOffset:CGPointMake(0, 0)];
 	[self.view addSubview:_textView];
 	
@@ -48,6 +50,22 @@
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+	
+	_tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 3, kMainScreenWidth - 20, 30)];
+	_tipLabel.enabled = NO;
+	_tipLabel.backgroundColor = [UIColor clearColor];
+	_tipLabel.textColor = [UIColor grayColor];
+	_tipLabel.text = @"感谢您对德岚的关注，您的意见我们一定认真听取～";
+	_tipLabel.font = kFont13;
+	[_textView addSubview:_tipLabel];
+}
+
+- (void)textViewDidChange:(UITextView *)textView{
+	if (textView.text.length == 0) {
+		_tipLabel.text = @"感谢您对德岚的关注，您的意见我们一定认真听取～";
+	}else{
+		_tipLabel.text = @"";
+	}
 }
 
 - (void)feedBack{

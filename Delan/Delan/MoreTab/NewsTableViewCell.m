@@ -7,7 +7,7 @@
 //
 
 #import "NewsTableViewCell.h"
-
+#import "NSString+Additions.h"
 #define DefaultHeight 42
 #define ContentFont kFont13
 
@@ -21,14 +21,9 @@
 + (NSInteger)heightWithContent:(NSString *)content{
 	NSInteger height = 185;
 	
-	UILabel *lb = [[UILabel alloc] init];
-	lb.font = kFont13;
-	lb.numberOfLines = 0;
-	lb.lineBreakMode = NSLineBreakByWordWrapping;
-	lb.text = content;
-	CGSize size = [lb sizeThatFits:CGSizeMake(kMainScreenWidth - 40, MAXFLOAT)];
+	CGSize s = [content sizeWithConstrainedToWidth:kMainScreenWidth - 40 fromFont:kFont13 lineSpace:3];
 	
-	return height + size.height;
+	return height + s.height;
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{

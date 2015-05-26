@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>content</key>
+		<string>• 德岚是一家为中小企业提供方便快捷的融资渠道，拥有快速、有效、合法的互联网金融服务平台。
+• 德岚由杭州微贷宝资产管理有限公司、杭州威贷宝投资管理有限公司、盛麒互联网金融服务有限公司共同出资创立。公司注册资金：5000万人民币。
+• 德岚秉持“为您的财富安全增值”为服务宗旨，致力于为有融资需求的个人，中小企业，非银行金融机构提供高效便捷的融资服务；为投资人提供安全、有担保、高收益的互联网理财服务。</string>
+		<key>title</key>
+		<string>德岚</string>
+	</dict>
+	<dict>
+		<key>content</key>
+		<string>• 公司建有完善的风险控制架构和项目考察团队。其金 融网络平台——“德岚”所提供 理财项目（产品）均由 专业风控团队严格</string>
+		<key>title</key>
+		<string>团队介绍</string>
+	</dict>
+	<dict>
+		<key>content</key>
+		<string>• 汇付天下根据平台上客户提交的交易指令(密码验证)， 完成资金账户间的划款 操作。 投资热／借款人可自 主管理自己的实名</string>
+		<key>title</key>
+		<string>平台模式</string>
+	</dict>
+	<dict>
+		<key>content</key>
+		<string>• 严格遵守国家相关法律法规，未经允许不会透露给第三方
+• 设有严格的安全系统，采用最先进的加密技术对信息高强度加密，保障安全
+• 实行实名认证，用户注册，充提现等操作均需实名认证
+• 实行账户与本人一对一实名绑定制度
+• 金采用RC4、MD5以及RSA等加密算法，使用128位密 钥，确保传送的数据不被网络黑客截获和解密
+• 采用双机热备功能，读写分离，数据备份</string>
+		<key>title</key>
+		<string>隐私保护</string>
+	</dict>
+</array>
+</plist>
