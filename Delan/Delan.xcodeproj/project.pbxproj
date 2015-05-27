@@ -71,13 +71,15 @@
 		B02F2FFE1B13362100D3D59E /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B02F2FE81B13362100D3D59E /* UIImageView+WebCache.m */; };
 		B02F2FFF1B13362100D3D59E /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B02F2FEA1B13362100D3D59E /* UIView+WebCacheOperation.m */; };
 		B02F30021B13362100D3D59E /* Pods-SDWebImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B02F2FEE1B13362100D3D59E /* Pods-SDWebImage-dummy.m */; };
+		B051376C1B15E5490046A4CA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B051376B1B15E5490046A4CA /* libz.dylib */; };
+		B051376E1B15E5BD0046A4CA /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B051376D1B15E5BD0046A4CA /* Reveal.framework */; };
 		B08336A51B0C791C007CCCAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B08336A41B0C791C007CCCAC /* main.m */; };
 		B08336A81B0C791C007CCCAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B08336A71B0C791C007CCCAC /* AppDelegate.m */; };
 		B08336B31B0C791C007CCCAC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08336B11B0C791C007CCCAC /* LaunchScreen.xib */; };
 		B08336BF1B0C791C007CCCAC /* DelanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B08336BE1B0C791C007CCCAC /* DelanTests.m */; };
 		B0B650351B13633C002105E2 /* NoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B650341B13633C002105E2 /* NoticeViewController.m */; };
 		B0B650381B1364F2002105E2 /* NoticeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B650371B1364F2002105E2 /* NoticeTableViewCell.m */; };
-		B7C38AEF9BA4367E7D23F98E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8B704C5C15F212F5D79DE6 /* libPods.a */; };
+		B7C38AEF9BA4367E7D23F98E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8B704C5C15F212F5D79DE6 /* libPods.a */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -215,6 +217,8 @@
 		B02F2FED1B13362100D3D59E /* Pods-SDWebImage-Private.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-SDWebImage-Private.xcconfig"; sourceTree = "<group>"; };
 		B02F2FEE1B13362100D3D59E /* Pods-SDWebImage-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Pods-SDWebImage-dummy.m"; sourceTree = "<group>"; };
 		B02F2FEF1B13362100D3D59E /* Pods-SDWebImage-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pods-SDWebImage-prefix.pch"; sourceTree = "<group>"; };
+		B051376B1B15E5490046A4CA /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		B051376D1B15E5BD0046A4CA /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		B083369F1B0C791C007CCCAC /* Delan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08336A31B0C791C007CCCAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B08336A41B0C791C007CCCAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -237,6 +241,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B051376E1B15E5BD0046A4CA /* Reveal.framework in Frameworks */,
+				B051376C1B15E5490046A4CA /* libz.dylib in Frameworks */,
 				B7C38AEF9BA4367E7D23F98E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +310,7 @@
 		18678ED41B108A0400DECEBE /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				B051376D1B15E5BD0046A4CA /* Reveal.framework */,
 				B02F2FF11B13362100D3D59E /* SDWebImage */,
 				B02F2FAD1B12240B00D3D59E /* SVPullToRefresh */,
 				B02F2FA31B1223EC00D3D59E /* UIViewAdditions */,
@@ -665,6 +672,7 @@
 		E728ECE434957E5433812136 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B051376B1B15E5490046A4CA /* libz.dylib */,
 				5E8B704C5C15F212F5D79DE6 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -998,12 +1006,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Delan",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Delan/PrefixHeader.pch";
 				INFOPLIST_FILE = Delan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
+					"-lz",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
@@ -1016,12 +1029,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Delan",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Delan/PrefixHeader.pch";
 				INFOPLIST_FILE = Delan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
+					"-lz",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";

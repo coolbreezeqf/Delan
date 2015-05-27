@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HelpDetailViewController : UIViewController
+@interface HelpDetailViewController : BaseViewController
 
 @end
