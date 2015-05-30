@@ -14,6 +14,7 @@
 #import "AccountCenterController.h"
 
 #import "RegisterViewController.h"
+#import "LoginViewController.h"
 
 @interface RootTabBarController ()<UITabBarControllerDelegate, UITabBarDelegate>{
 	NSInteger lastSelectIndex;			//上次选中的位置
@@ -73,6 +74,7 @@
 	MLOG(@"select %d tab", currentSelectIndex);
 	if (currentSelectIndex == 2) {
 //		[(RootNavgationController *)viewController pushViewController:vc animated:YES];
+//		[(RootNavgationController *)viewController pushViewController:[[LoginViewController alloc] init] animated:YES];
 	}
 		
 }
