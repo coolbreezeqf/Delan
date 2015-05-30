@@ -9,6 +9,8 @@
 #import "RootNavgationController.h"
 #import "HomePageController.h"
 #import "MoreViewController.h"
+#import "ProductController.h"
+#import "AccountCenterController.h"
 
 @interface RootNavgationController ()
 
@@ -26,7 +28,7 @@
 //重写push方法
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     
-    if (([viewController isMemberOfClass:[HomePageController class]]) || [viewController isMemberOfClass:[MoreViewController class]]) {
+    if (([viewController isMemberOfClass:[HomePageController class]]) || [viewController isMemberOfClass:[MoreViewController class]] || [viewController isMemberOfClass:[AccountCenterController class]] || [viewController isMemberOfClass:[ProductController class]]) {
         
         //调用父类的push
         [super pushViewController:viewController animated:animated];

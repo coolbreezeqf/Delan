@@ -7,6 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		099E89DB1B19693F00842D1A /* MBProgressHUD+NJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E89D71B19693F00842D1A /* MBProgressHUD+NJ.m */; };
+		099E89DC1B19693F00842D1A /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 099E89D81B19693F00842D1A /* MBProgressHUD.bundle */; };
+		099E89DD1B19693F00842D1A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E89DA1B19693F00842D1A /* MBProgressHUD.m */; };
+		099E89E01B19696500842D1A /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E89DF1B19696500842D1A /* ProductModel.m */; };
+		099E89E61B19699600842D1A /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E89E21B19699600842D1A /* CustomTableViewCell.m */; };
+		099E89E71B19699600842D1A /* CustomTableViewCell320.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E89E31B19699600842D1A /* CustomTableViewCell320.xib */; };
+		099E89E81B19699600842D1A /* CustomTableViewCell375.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E89E41B19699600842D1A /* CustomTableViewCell375.xib */; };
+		099E89E91B19699600842D1A /* CustomTableViewCell414.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E89E51B19699600842D1A /* CustomTableViewCell414.xib */; };
+		099E89EC1B19699E00842D1A /* ProductController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E89EB1B19699E00842D1A /* ProductController.m */; };
+		099E89F51B1969E600842D1A /* AccountManageOtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E89F41B1969E600842D1A /* AccountManageOtherCell.m */; };
+		099E89FC1B1969F300842D1A /* AccountManageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E89F81B1969F300842D1A /* AccountManageViewCell.m */; };
+		099E89FD1B1969F300842D1A /* AccountManageViewCell320.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E89F91B1969F300842D1A /* AccountManageViewCell320.xib */; };
+		099E89FE1B1969F300842D1A /* AccountManageViewCell375.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E89FA1B1969F300842D1A /* AccountManageViewCell375.xib */; };
+		099E89FF1B1969F300842D1A /* AccountManageViewCell414.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E89FB1B1969F300842D1A /* AccountManageViewCell414.xib */; };
+		099E8A061B196A0100842D1A /* AccountCenterHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A021B196A0100842D1A /* AccountCenterHeaderTableViewCell.m */; };
+		099E8A071B196A0100842D1A /* AccountCenterHeaderTableViewCell320.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8A031B196A0100842D1A /* AccountCenterHeaderTableViewCell320.xib */; };
+		099E8A081B196A0100842D1A /* AccountCenterHeaderTableViewCell375.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8A041B196A0100842D1A /* AccountCenterHeaderTableViewCell375.xib */; };
+		099E8A091B196A0100842D1A /* AccountCenterHeaderTableViewCell414.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8A051B196A0100842D1A /* AccountCenterHeaderTableViewCell414.xib */; };
+		099E8A0C1B196A0D00842D1A /* AccountCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A0B1B196A0D00842D1A /* AccountCenterController.m */; };
+		099E8A101B196A1A00842D1A /* MyVipController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A0F1B196A1A00842D1A /* MyVipController.m */; };
+		099E8A141B196A2800842D1A /* CardManageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A131B196A2800842D1A /* CardManageController.m */; };
+		099E8A1D1B196A3700842D1A /* InvestDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A171B196A3700842D1A /* InvestDetailController.m */; };
+		099E8A1E1B196A3700842D1A /* InvestDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A191B196A3700842D1A /* InvestDetailCell.m */; };
+		099E8A1F1B196A3700842D1A /* InvestDetailCell320.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8A1A1B196A3700842D1A /* InvestDetailCell320.xib */; };
+		099E8A201B196A3700842D1A /* InvestDetailCell375.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8A1B1B196A3700842D1A /* InvestDetailCell375.xib */; };
+		099E8A211B196A3700842D1A /* InvestDetailCell414.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8A1C1B196A3700842D1A /* InvestDetailCell414.xib */; };
+		099E8A2F1B196A4800842D1A /* BackProjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A241B196A4800842D1A /* BackProjectController.m */; };
+		099E8A301B196A4800842D1A /* BackProjectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A261B196A4800842D1A /* BackProjectCell.m */; };
+		099E8A311B196A4800842D1A /* BackProjectCell320.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8A271B196A4800842D1A /* BackProjectCell320.xib */; };
+		099E8A321B196A4800842D1A /* BackProjectCell375.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8A281B196A4800842D1A /* BackProjectCell375.xib */; };
+		099E8A331B196A4800842D1A /* BackProjectCell414.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8A291B196A4800842D1A /* BackProjectCell414.xib */; };
+		099E8A341B196A4800842D1A /* BackProjectHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A2B1B196A4800842D1A /* BackProjectHeaderCell.m */; };
+		099E8A351B196A4800842D1A /* BackProjectHeaderCell320.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8A2C1B196A4800842D1A /* BackProjectHeaderCell320.xib */; };
+		099E8A361B196A4800842D1A /* BackProjectHeaderCell375.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8A2D1B196A4800842D1A /* BackProjectHeaderCell375.xib */; };
+		099E8A371B196A4800842D1A /* BackProjectHeaderCell414.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8A2E1B196A4800842D1A /* BackProjectHeaderCell414.xib */; };
+		099E8A481B196A5900842D1A /* InvestRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A3A1B196A5900842D1A /* InvestRecordController.m */; };
+		099E8A491B196A5900842D1A /* InvestRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A3C1B196A5900842D1A /* InvestRecordCell.m */; };
+		099E8A4A1B196A5900842D1A /* InvestRecordCell320.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8A3D1B196A5900842D1A /* InvestRecordCell320.xib */; };
+		099E8A4B1B196A5900842D1A /* InvestRecordCell375.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8A3E1B196A5900842D1A /* InvestRecordCell375.xib */; };
+		099E8A4C1B196A5900842D1A /* InvestRecordCell414.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8A3F1B196A5900842D1A /* InvestRecordCell414.xib */; };
+		099E8A4D1B196A5900842D1A /* InvestRecordHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A411B196A5900842D1A /* InvestRecordHeaderCell.m */; };
+		099E8A4E1B196A5900842D1A /* InvestRecordHeaderCellt320.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8A421B196A5900842D1A /* InvestRecordHeaderCellt320.xib */; };
+		099E8A4F1B196A5900842D1A /* InvestRecordHeaderCellt375.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8A431B196A5900842D1A /* InvestRecordHeaderCellt375.xib */; };
+		099E8A501B196A5900842D1A /* InvestRecordHeaderCellt414.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8A441B196A5900842D1A /* InvestRecordHeaderCellt414.xib */; };
+		099E8A511B196A5900842D1A /* InvestRecordHeaderCell320.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8A451B196A5900842D1A /* InvestRecordHeaderCell320.xib */; };
+		099E8A521B196A5900842D1A /* InvestRecordHeaderCell375.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8A461B196A5900842D1A /* InvestRecordHeaderCell375.xib */; };
+		099E8A531B196A5900842D1A /* InvestRecordHeaderCell414.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8A471B196A5900842D1A /* InvestRecordHeaderCell414.xib */; };
+		099E8A631B196A6700842D1A /* AccountManageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A561B196A6700842D1A /* AccountManageController.m */; };
+		099E8A641B196A6700842D1A /* AccountManageBindingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A581B196A6700842D1A /* AccountManageBindingController.m */; };
+		099E8A651B196A6700842D1A /* AccountManageBindingEmailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A5A1B196A6700842D1A /* AccountManageBindingEmailController.m */; };
+		099E8A661B196A6700842D1A /* AccountManageKnowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A5C1B196A6700842D1A /* AccountManageKnowController.m */; };
+		099E8A671B196A6700842D1A /* AccountManageEmergencyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A5E1B196A6700842D1A /* AccountManageEmergencyController.m */; };
+		099E8A681B196A6700842D1A /* AccountManagePassController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A601B196A6700842D1A /* AccountManagePassController.m */; };
+		099E8A691B196A6700842D1A /* PersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A621B196A6700842D1A /* PersonController.m */; };
 		184DCE711B10564300DFEF20 /* HomePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184DCE701B10564300DFEF20 /* HomePageController.m */; };
 		184DCE741B1059FA00DFEF20 /* RootNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184DCE731B1059FA00DFEF20 /* RootNavgationController.m */; };
 		184DCE7A1B106B4400DFEF20 /* rollview_test_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 184DCE751B106B4400DFEF20 /* rollview_test_1.png */; };
@@ -93,6 +147,86 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		099E89D61B19693F00842D1A /* MBProgressHUD+NJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+NJ.h"; sourceTree = "<group>"; };
+		099E89D71B19693F00842D1A /* MBProgressHUD+NJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+NJ.m"; sourceTree = "<group>"; };
+		099E89D81B19693F00842D1A /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		099E89D91B19693F00842D1A /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		099E89DA1B19693F00842D1A /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		099E89DE1B19696500842D1A /* ProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductModel.h; path = ../Controller/ProductModel.h; sourceTree = "<group>"; };
+		099E89DF1B19696500842D1A /* ProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductModel.m; path = ../Controller/ProductModel.m; sourceTree = "<group>"; };
+		099E89E11B19699600842D1A /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		099E89E21B19699600842D1A /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		099E89E31B19699600842D1A /* CustomTableViewCell320.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell320.xib; sourceTree = "<group>"; };
+		099E89E41B19699600842D1A /* CustomTableViewCell375.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell375.xib; sourceTree = "<group>"; };
+		099E89E51B19699600842D1A /* CustomTableViewCell414.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell414.xib; sourceTree = "<group>"; };
+		099E89EA1B19699E00842D1A /* ProductController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductController.h; sourceTree = "<group>"; };
+		099E89EB1B19699E00842D1A /* ProductController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductController.m; sourceTree = "<group>"; };
+		099E89F31B1969E600842D1A /* AccountManageOtherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManageOtherCell.h; sourceTree = SOURCE_ROOT; };
+		099E89F41B1969E600842D1A /* AccountManageOtherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManageOtherCell.m; sourceTree = SOURCE_ROOT; };
+		099E89F71B1969F300842D1A /* AccountManageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManageViewCell.h; sourceTree = SOURCE_ROOT; };
+		099E89F81B1969F300842D1A /* AccountManageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManageViewCell.m; sourceTree = SOURCE_ROOT; };
+		099E89F91B1969F300842D1A /* AccountManageViewCell320.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountManageViewCell320.xib; sourceTree = SOURCE_ROOT; };
+		099E89FA1B1969F300842D1A /* AccountManageViewCell375.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountManageViewCell375.xib; sourceTree = SOURCE_ROOT; };
+		099E89FB1B1969F300842D1A /* AccountManageViewCell414.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountManageViewCell414.xib; sourceTree = SOURCE_ROOT; };
+		099E8A011B196A0100842D1A /* AccountCenterHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountCenterHeaderTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		099E8A021B196A0100842D1A /* AccountCenterHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountCenterHeaderTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		099E8A031B196A0100842D1A /* AccountCenterHeaderTableViewCell320.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountCenterHeaderTableViewCell320.xib; sourceTree = SOURCE_ROOT; };
+		099E8A041B196A0100842D1A /* AccountCenterHeaderTableViewCell375.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountCenterHeaderTableViewCell375.xib; sourceTree = SOURCE_ROOT; };
+		099E8A051B196A0100842D1A /* AccountCenterHeaderTableViewCell414.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountCenterHeaderTableViewCell414.xib; sourceTree = SOURCE_ROOT; };
+		099E8A0A1B196A0D00842D1A /* AccountCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountCenterController.h; sourceTree = SOURCE_ROOT; };
+		099E8A0B1B196A0D00842D1A /* AccountCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountCenterController.m; sourceTree = SOURCE_ROOT; };
+		099E8A0E1B196A1A00842D1A /* MyVipController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVipController.h; sourceTree = SOURCE_ROOT; };
+		099E8A0F1B196A1A00842D1A /* MyVipController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyVipController.m; sourceTree = SOURCE_ROOT; };
+		099E8A121B196A2800842D1A /* CardManageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardManageController.h; sourceTree = SOURCE_ROOT; };
+		099E8A131B196A2800842D1A /* CardManageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardManageController.m; sourceTree = SOURCE_ROOT; };
+		099E8A161B196A3700842D1A /* InvestDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvestDetailController.h; sourceTree = SOURCE_ROOT; };
+		099E8A171B196A3700842D1A /* InvestDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvestDetailController.m; sourceTree = SOURCE_ROOT; };
+		099E8A181B196A3700842D1A /* InvestDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvestDetailCell.h; sourceTree = SOURCE_ROOT; };
+		099E8A191B196A3700842D1A /* InvestDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvestDetailCell.m; sourceTree = SOURCE_ROOT; };
+		099E8A1A1B196A3700842D1A /* InvestDetailCell320.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestDetailCell320.xib; sourceTree = SOURCE_ROOT; };
+		099E8A1B1B196A3700842D1A /* InvestDetailCell375.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestDetailCell375.xib; sourceTree = SOURCE_ROOT; };
+		099E8A1C1B196A3700842D1A /* InvestDetailCell414.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestDetailCell414.xib; sourceTree = SOURCE_ROOT; };
+		099E8A231B196A4800842D1A /* BackProjectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackProjectController.h; sourceTree = SOURCE_ROOT; };
+		099E8A241B196A4800842D1A /* BackProjectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackProjectController.m; sourceTree = SOURCE_ROOT; };
+		099E8A251B196A4800842D1A /* BackProjectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackProjectCell.h; sourceTree = SOURCE_ROOT; };
+		099E8A261B196A4800842D1A /* BackProjectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackProjectCell.m; sourceTree = SOURCE_ROOT; };
+		099E8A271B196A4800842D1A /* BackProjectCell320.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackProjectCell320.xib; sourceTree = SOURCE_ROOT; };
+		099E8A281B196A4800842D1A /* BackProjectCell375.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackProjectCell375.xib; sourceTree = SOURCE_ROOT; };
+		099E8A291B196A4800842D1A /* BackProjectCell414.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackProjectCell414.xib; sourceTree = SOURCE_ROOT; };
+		099E8A2A1B196A4800842D1A /* BackProjectHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackProjectHeaderCell.h; sourceTree = SOURCE_ROOT; };
+		099E8A2B1B196A4800842D1A /* BackProjectHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackProjectHeaderCell.m; sourceTree = SOURCE_ROOT; };
+		099E8A2C1B196A4800842D1A /* BackProjectHeaderCell320.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackProjectHeaderCell320.xib; sourceTree = SOURCE_ROOT; };
+		099E8A2D1B196A4800842D1A /* BackProjectHeaderCell375.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackProjectHeaderCell375.xib; sourceTree = SOURCE_ROOT; };
+		099E8A2E1B196A4800842D1A /* BackProjectHeaderCell414.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackProjectHeaderCell414.xib; sourceTree = SOURCE_ROOT; };
+		099E8A391B196A5900842D1A /* InvestRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvestRecordController.h; sourceTree = SOURCE_ROOT; };
+		099E8A3A1B196A5900842D1A /* InvestRecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvestRecordController.m; sourceTree = SOURCE_ROOT; };
+		099E8A3B1B196A5900842D1A /* InvestRecordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvestRecordCell.h; sourceTree = SOURCE_ROOT; };
+		099E8A3C1B196A5900842D1A /* InvestRecordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvestRecordCell.m; sourceTree = SOURCE_ROOT; };
+		099E8A3D1B196A5900842D1A /* InvestRecordCell320.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestRecordCell320.xib; sourceTree = SOURCE_ROOT; };
+		099E8A3E1B196A5900842D1A /* InvestRecordCell375.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestRecordCell375.xib; sourceTree = SOURCE_ROOT; };
+		099E8A3F1B196A5900842D1A /* InvestRecordCell414.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestRecordCell414.xib; sourceTree = SOURCE_ROOT; };
+		099E8A401B196A5900842D1A /* InvestRecordHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvestRecordHeaderCell.h; sourceTree = SOURCE_ROOT; };
+		099E8A411B196A5900842D1A /* InvestRecordHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvestRecordHeaderCell.m; sourceTree = SOURCE_ROOT; };
+		099E8A421B196A5900842D1A /* InvestRecordHeaderCellt320.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestRecordHeaderCellt320.xib; sourceTree = SOURCE_ROOT; };
+		099E8A431B196A5900842D1A /* InvestRecordHeaderCellt375.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestRecordHeaderCellt375.xib; sourceTree = SOURCE_ROOT; };
+		099E8A441B196A5900842D1A /* InvestRecordHeaderCellt414.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestRecordHeaderCellt414.xib; sourceTree = SOURCE_ROOT; };
+		099E8A451B196A5900842D1A /* InvestRecordHeaderCell320.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestRecordHeaderCell320.xib; sourceTree = SOURCE_ROOT; };
+		099E8A461B196A5900842D1A /* InvestRecordHeaderCell375.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestRecordHeaderCell375.xib; sourceTree = SOURCE_ROOT; };
+		099E8A471B196A5900842D1A /* InvestRecordHeaderCell414.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestRecordHeaderCell414.xib; sourceTree = SOURCE_ROOT; };
+		099E8A551B196A6700842D1A /* AccountManageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManageController.h; sourceTree = SOURCE_ROOT; };
+		099E8A561B196A6700842D1A /* AccountManageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManageController.m; sourceTree = SOURCE_ROOT; };
+		099E8A571B196A6700842D1A /* AccountManageBindingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManageBindingController.h; sourceTree = SOURCE_ROOT; };
+		099E8A581B196A6700842D1A /* AccountManageBindingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManageBindingController.m; sourceTree = SOURCE_ROOT; };
+		099E8A591B196A6700842D1A /* AccountManageBindingEmailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManageBindingEmailController.h; sourceTree = SOURCE_ROOT; };
+		099E8A5A1B196A6700842D1A /* AccountManageBindingEmailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManageBindingEmailController.m; sourceTree = SOURCE_ROOT; };
+		099E8A5B1B196A6700842D1A /* AccountManageKnowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManageKnowController.h; sourceTree = SOURCE_ROOT; };
+		099E8A5C1B196A6700842D1A /* AccountManageKnowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManageKnowController.m; sourceTree = SOURCE_ROOT; };
+		099E8A5D1B196A6700842D1A /* AccountManageEmergencyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManageEmergencyController.h; sourceTree = SOURCE_ROOT; };
+		099E8A5E1B196A6700842D1A /* AccountManageEmergencyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManageEmergencyController.m; sourceTree = SOURCE_ROOT; };
+		099E8A5F1B196A6700842D1A /* AccountManagePassController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManagePassController.h; sourceTree = SOURCE_ROOT; };
+		099E8A601B196A6700842D1A /* AccountManagePassController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManagePassController.m; sourceTree = SOURCE_ROOT; };
+		099E8A611B196A6700842D1A /* PersonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonController.h; sourceTree = SOURCE_ROOT; };
+		099E8A621B196A6700842D1A /* PersonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonController.m; sourceTree = SOURCE_ROOT; };
 		184DCE6F1B10564300DFEF20 /* HomePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageController.h; sourceTree = "<group>"; };
 		184DCE701B10564300DFEF20 /* HomePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageController.m; sourceTree = "<group>"; };
 		184DCE721B1059FA00DFEF20 /* RootNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavgationController.h; sourceTree = "<group>"; };
@@ -257,9 +391,176 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		099E89D51B19693F00842D1A /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				099E89D61B19693F00842D1A /* MBProgressHUD+NJ.h */,
+				099E89D71B19693F00842D1A /* MBProgressHUD+NJ.m */,
+				099E89D81B19693F00842D1A /* MBProgressHUD.bundle */,
+				099E89D91B19693F00842D1A /* MBProgressHUD.h */,
+				099E89DA1B19693F00842D1A /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			path = AFNetworking/MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		099E89ED1B1969B700842D1A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		099E89EE1B1969BC00842D1A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				099E8A541B196A6000842D1A /* AccountManage */,
+				099E8A381B196A5100842D1A /* InvestRecord */,
+				099E8A221B196A4100842D1A /* BackProject */,
+				099E8A151B196A3100842D1A /* InvestDetail */,
+				099E8A111B196A2100842D1A /* CardManage */,
+				099E8A0D1B196A1200842D1A /* MyVip */,
+				099E8A0A1B196A0D00842D1A /* AccountCenterController.h */,
+				099E8A0B1B196A0D00842D1A /* AccountCenterController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		099E89EF1B1969CA00842D1A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				099E8A001B1969FA00842D1A /* AccountCenterHeaderTableViewCell */,
+				099E89F61B1969EC00842D1A /* AccountManageViewCell */,
+				099E89F31B1969E600842D1A /* AccountManageOtherCell.h */,
+				099E89F41B1969E600842D1A /* AccountManageOtherCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		099E89F61B1969EC00842D1A /* AccountManageViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				099E89F71B1969F300842D1A /* AccountManageViewCell.h */,
+				099E89F81B1969F300842D1A /* AccountManageViewCell.m */,
+				099E89F91B1969F300842D1A /* AccountManageViewCell320.xib */,
+				099E89FA1B1969F300842D1A /* AccountManageViewCell375.xib */,
+				099E89FB1B1969F300842D1A /* AccountManageViewCell414.xib */,
+			);
+			name = AccountManageViewCell;
+			sourceTree = "<group>";
+		};
+		099E8A001B1969FA00842D1A /* AccountCenterHeaderTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				099E8A011B196A0100842D1A /* AccountCenterHeaderTableViewCell.h */,
+				099E8A021B196A0100842D1A /* AccountCenterHeaderTableViewCell.m */,
+				099E8A031B196A0100842D1A /* AccountCenterHeaderTableViewCell320.xib */,
+				099E8A041B196A0100842D1A /* AccountCenterHeaderTableViewCell375.xib */,
+				099E8A051B196A0100842D1A /* AccountCenterHeaderTableViewCell414.xib */,
+			);
+			name = AccountCenterHeaderTableViewCell;
+			sourceTree = "<group>";
+		};
+		099E8A0D1B196A1200842D1A /* MyVip */ = {
+			isa = PBXGroup;
+			children = (
+				099E8A0E1B196A1A00842D1A /* MyVipController.h */,
+				099E8A0F1B196A1A00842D1A /* MyVipController.m */,
+			);
+			name = MyVip;
+			sourceTree = "<group>";
+		};
+		099E8A111B196A2100842D1A /* CardManage */ = {
+			isa = PBXGroup;
+			children = (
+				099E8A121B196A2800842D1A /* CardManageController.h */,
+				099E8A131B196A2800842D1A /* CardManageController.m */,
+			);
+			name = CardManage;
+			sourceTree = "<group>";
+		};
+		099E8A151B196A3100842D1A /* InvestDetail */ = {
+			isa = PBXGroup;
+			children = (
+				099E8A161B196A3700842D1A /* InvestDetailController.h */,
+				099E8A171B196A3700842D1A /* InvestDetailController.m */,
+				099E8A181B196A3700842D1A /* InvestDetailCell.h */,
+				099E8A191B196A3700842D1A /* InvestDetailCell.m */,
+				099E8A1A1B196A3700842D1A /* InvestDetailCell320.xib */,
+				099E8A1B1B196A3700842D1A /* InvestDetailCell375.xib */,
+				099E8A1C1B196A3700842D1A /* InvestDetailCell414.xib */,
+			);
+			name = InvestDetail;
+			sourceTree = "<group>";
+		};
+		099E8A221B196A4100842D1A /* BackProject */ = {
+			isa = PBXGroup;
+			children = (
+				099E8A231B196A4800842D1A /* BackProjectController.h */,
+				099E8A241B196A4800842D1A /* BackProjectController.m */,
+				099E8A251B196A4800842D1A /* BackProjectCell.h */,
+				099E8A261B196A4800842D1A /* BackProjectCell.m */,
+				099E8A271B196A4800842D1A /* BackProjectCell320.xib */,
+				099E8A281B196A4800842D1A /* BackProjectCell375.xib */,
+				099E8A291B196A4800842D1A /* BackProjectCell414.xib */,
+				099E8A2A1B196A4800842D1A /* BackProjectHeaderCell.h */,
+				099E8A2B1B196A4800842D1A /* BackProjectHeaderCell.m */,
+				099E8A2C1B196A4800842D1A /* BackProjectHeaderCell320.xib */,
+				099E8A2D1B196A4800842D1A /* BackProjectHeaderCell375.xib */,
+				099E8A2E1B196A4800842D1A /* BackProjectHeaderCell414.xib */,
+			);
+			name = BackProject;
+			sourceTree = "<group>";
+		};
+		099E8A381B196A5100842D1A /* InvestRecord */ = {
+			isa = PBXGroup;
+			children = (
+				099E8A391B196A5900842D1A /* InvestRecordController.h */,
+				099E8A3A1B196A5900842D1A /* InvestRecordController.m */,
+				099E8A3B1B196A5900842D1A /* InvestRecordCell.h */,
+				099E8A3C1B196A5900842D1A /* InvestRecordCell.m */,
+				099E8A3D1B196A5900842D1A /* InvestRecordCell320.xib */,
+				099E8A3E1B196A5900842D1A /* InvestRecordCell375.xib */,
+				099E8A3F1B196A5900842D1A /* InvestRecordCell414.xib */,
+				099E8A401B196A5900842D1A /* InvestRecordHeaderCell.h */,
+				099E8A411B196A5900842D1A /* InvestRecordHeaderCell.m */,
+				099E8A421B196A5900842D1A /* InvestRecordHeaderCellt320.xib */,
+				099E8A431B196A5900842D1A /* InvestRecordHeaderCellt375.xib */,
+				099E8A441B196A5900842D1A /* InvestRecordHeaderCellt414.xib */,
+				099E8A451B196A5900842D1A /* InvestRecordHeaderCell320.xib */,
+				099E8A461B196A5900842D1A /* InvestRecordHeaderCell375.xib */,
+				099E8A471B196A5900842D1A /* InvestRecordHeaderCell414.xib */,
+			);
+			name = InvestRecord;
+			sourceTree = "<group>";
+		};
+		099E8A541B196A6000842D1A /* AccountManage */ = {
+			isa = PBXGroup;
+			children = (
+				099E8A551B196A6700842D1A /* AccountManageController.h */,
+				099E8A561B196A6700842D1A /* AccountManageController.m */,
+				099E8A571B196A6700842D1A /* AccountManageBindingController.h */,
+				099E8A581B196A6700842D1A /* AccountManageBindingController.m */,
+				099E8A591B196A6700842D1A /* AccountManageBindingEmailController.h */,
+				099E8A5A1B196A6700842D1A /* AccountManageBindingEmailController.m */,
+				099E8A5B1B196A6700842D1A /* AccountManageKnowController.h */,
+				099E8A5C1B196A6700842D1A /* AccountManageKnowController.m */,
+				099E8A5D1B196A6700842D1A /* AccountManageEmergencyController.h */,
+				099E8A5E1B196A6700842D1A /* AccountManageEmergencyController.m */,
+				099E8A5F1B196A6700842D1A /* AccountManagePassController.h */,
+				099E8A601B196A6700842D1A /* AccountManagePassController.m */,
+				099E8A611B196A6700842D1A /* PersonController.h */,
+				099E8A621B196A6700842D1A /* PersonController.m */,
+			);
+			name = AccountManage;
+			sourceTree = "<group>";
+		};
 		184DCE691B10555800DFEF20 /* AccountCenter */ = {
 			isa = PBXGroup;
 			children = (
+				099E89EF1B1969CA00842D1A /* View */,
+				099E89EE1B1969BC00842D1A /* Controller */,
+				099E89ED1B1969B700842D1A /* Model */,
 			);
 			path = AccountCenter;
 			sourceTree = "<group>";
@@ -310,6 +611,7 @@
 		18678ED41B108A0400DECEBE /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				099E89D51B19693F00842D1A /* MBProgressHUD */,
 				B051376D1B15E5BD0046A4CA /* Reveal.framework */,
 				B02F2FF11B13362100D3D59E /* SDWebImage */,
 				B02F2FAD1B12240B00D3D59E /* SVPullToRefresh */,
@@ -322,6 +624,8 @@
 		186AAB341B11775800B5C84C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				099E89EA1B19699E00842D1A /* ProductController.h */,
+				099E89EB1B19699E00842D1A /* ProductController.m */,
 				186AAB351B11775800B5C84C /* ProductDetailController.h */,
 				186AAB361B11775800B5C84C /* ProductDetailController.m */,
 			);
@@ -331,6 +635,8 @@
 		186AAB371B11775800B5C84C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				099E89DE1B19696500842D1A /* ProductModel.h */,
+				099E89DF1B19696500842D1A /* ProductModel.m */,
 				186AAB461B11A98400B5C84C /* ProductDetail.h */,
 				186AAB471B11A98400B5C84C /* ProductDetail.m */,
 			);
@@ -340,6 +646,11 @@
 		186AAB381B11775800B5C84C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				099E89E11B19699600842D1A /* CustomTableViewCell.h */,
+				099E89E21B19699600842D1A /* CustomTableViewCell.m */,
+				099E89E31B19699600842D1A /* CustomTableViewCell320.xib */,
+				099E89E41B19699600842D1A /* CustomTableViewCell375.xib */,
+				099E89E51B19699600842D1A /* CustomTableViewCell414.xib */,
 				186AAB3A1B1177A300B5C84C /* DetailHeaderView.h */,
 				186AAB3B1B1177A300B5C84C /* DetailHeaderView.m */,
 				186AAB3F1B11906500B5C84C /* DetailHeaderViewFor320.xib */,
@@ -761,19 +1072,47 @@
 			buildActionMask = 2147483647;
 			files = (
 				184DCE7B1B106B4400DFEF20 /* rollview_test_2.png in Resources */,
+				099E89FE1B1969F300842D1A /* AccountManageViewCell375.xib in Resources */,
+				099E89FD1B1969F300842D1A /* AccountManageViewCell320.xib in Resources */,
+				099E8A4F1B196A5900842D1A /* InvestRecordHeaderCellt375.xib in Resources */,
+				099E8A511B196A5900842D1A /* InvestRecordHeaderCell320.xib in Resources */,
+				099E89E81B19699600842D1A /* CustomTableViewCell375.xib in Resources */,
+				099E8A4E1B196A5900842D1A /* InvestRecordHeaderCellt320.xib in Resources */,
+				099E89E91B19699600842D1A /* CustomTableViewCell414.xib in Resources */,
+				099E8A531B196A5900842D1A /* InvestRecordHeaderCell414.xib in Resources */,
 				B0109D8F1B0DEEE100257AF9 /* Images.xcassets in Resources */,
+				099E89DC1B19693F00842D1A /* MBProgressHUD.bundle in Resources */,
+				099E8A201B196A3700842D1A /* InvestDetailCell375.xib in Resources */,
 				186AAB421B11906A00B5C84C /* DetailHeaderViewFor414.xib in Resources */,
+				099E8A321B196A4800842D1A /* BackProjectCell375.xib in Resources */,
+				099E8A4B1B196A5900842D1A /* InvestRecordCell375.xib in Resources */,
 				186AAB3E1B1177E400B5C84C /* DetailHeaderViewFor375.xib in Resources */,
 				B02F2FC41B130F1300D3D59E /* HelpCenterInfo.plist in Resources */,
 				184DCE7A1B106B4400DFEF20 /* rollview_test_1.png in Resources */,
+				099E8A501B196A5900842D1A /* InvestRecordHeaderCellt414.xib in Resources */,
 				184DCE7C1B106B4400DFEF20 /* rollview_test_3.png in Resources */,
 				B08336B31B0C791C007CCCAC /* LaunchScreen.xib in Resources */,
 				B01B8F7E1B13590E00A85DCD /* IntroduceInfo.plist in Resources */,
 				186AAB401B11906500B5C84C /* DetailHeaderViewFor320.xib in Resources */,
+				099E8A311B196A4800842D1A /* BackProjectCell320.xib in Resources */,
+				099E8A071B196A0100842D1A /* AccountCenterHeaderTableViewCell320.xib in Resources */,
 				184DCE7E1B106B4400DFEF20 /* rollview_test_5.png in Resources */,
+				099E8A331B196A4800842D1A /* BackProjectCell414.xib in Resources */,
+				099E8A4A1B196A5900842D1A /* InvestRecordCell320.xib in Resources */,
 				B02F2FBE1B12EA3100D3D59E /* MoreTabInfo.plist in Resources */,
 				B0109D8D1B0DEB1F00257AF9 /* DLMainNav.plist in Resources */,
+				099E8A091B196A0100842D1A /* AccountCenterHeaderTableViewCell414.xib in Resources */,
+				099E89E71B19699600842D1A /* CustomTableViewCell320.xib in Resources */,
+				099E8A371B196A4800842D1A /* BackProjectHeaderCell414.xib in Resources */,
+				099E8A1F1B196A3700842D1A /* InvestDetailCell320.xib in Resources */,
+				099E8A4C1B196A5900842D1A /* InvestRecordCell414.xib in Resources */,
+				099E8A211B196A3700842D1A /* InvestDetailCell414.xib in Resources */,
+				099E89FF1B1969F300842D1A /* AccountManageViewCell414.xib in Resources */,
+				099E8A521B196A5900842D1A /* InvestRecordHeaderCell375.xib in Resources */,
 				184DCE7D1B106B4400DFEF20 /* rollview_test_4.png in Resources */,
+				099E8A361B196A4800842D1A /* BackProjectHeaderCell375.xib in Resources */,
+				099E8A081B196A0100842D1A /* AccountCenterHeaderTableViewCell375.xib in Resources */,
+				099E8A351B196A4800842D1A /* BackProjectHeaderCell320.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -828,23 +1167,34 @@
 				B02F2F9C1B1223DD00D3D59E /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				B02F2FA11B1223DD00D3D59E /* UIRefreshControl+AFNetworking.m in Sources */,
 				B01FB3B01B1400D500088768 /* NSString+Additions.m in Sources */,
+				099E8A141B196A2800842D1A /* CardManageController.m in Sources */,
 				B02F2F9E1B1223DD00D3D59E /* UIButton+AFNetworking.m in Sources */,
 				B02F2F9D1B1223DD00D3D59E /* UIAlertView+AFNetworking.m in Sources */,
+				099E8A0C1B196A0D00842D1A /* AccountCenterController.m in Sources */,
 				184DCE711B10564300DFEF20 /* HomePageController.m in Sources */,
+				099E89DD1B19693F00842D1A /* MBProgressHUD.m in Sources */,
 				B02F2FCD1B1331F600D3D59E /* NewsTableViewCell.m in Sources */,
 				B02F2F911B1223DD00D3D59E /* AFHTTPRequestOperationManager.m in Sources */,
+				099E8A651B196A6700842D1A /* AccountManageBindingEmailController.m in Sources */,
 				184DCE741B1059FA00DFEF20 /* RootNavgationController.m in Sources */,
+				099E8A1E1B196A3700842D1A /* InvestDetailCell.m in Sources */,
 				B01FB3B91B149D2800088768 /* HelpDetailViewController.m in Sources */,
+				099E8A341B196A4800842D1A /* BackProjectHeaderCell.m in Sources */,
 				B02F2FAC1B1223EC00D3D59E /* UIView+RSAdditions.m in Sources */,
 				B02F2F951B1223DD00D3D59E /* AFURLConnectionOperation.m in Sources */,
 				B0109D951B0E09E200257AF9 /* BaseViewController.m in Sources */,
 				B02F2FC21B12F6CC00D3D59E /* HelpCenterTableViewController.m in Sources */,
 				B02F2FF51B13362100D3D59E /* SDWebImageDecoder.m in Sources */,
+				099E8A1D1B196A3700842D1A /* InvestDetailController.m in Sources */,
+				099E8A691B196A6700842D1A /* PersonController.m in Sources */,
 				B02F2F961B1223DD00D3D59E /* AFURLRequestSerialization.m in Sources */,
 				B02F2FF81B13362100D3D59E /* SDWebImageManager.m in Sources */,
+				099E89FC1B1969F300842D1A /* AccountManageViewCell.m in Sources */,
+				099E89E01B19696500842D1A /* ProductModel.m in Sources */,
 				B02F2FFD1B13362100D3D59E /* UIImageView+HighlightedWebCache.m in Sources */,
 				B02F2FB31B12240B00D3D59E /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				B0B650351B13633C002105E2 /* NoticeViewController.m in Sources */,
+				099E8A101B196A1A00842D1A /* MyVipController.m in Sources */,
 				B02F2FA01B1223DD00D3D59E /* UIProgressView+AFNetworking.m in Sources */,
 				B02F2FFB1B13362100D3D59E /* UIImage+GIF.m in Sources */,
 				B02F2F921B1223DD00D3D59E /* AFHTTPSessionManager.m in Sources */,
@@ -854,28 +1204,43 @@
 				B02F2FF71B13362100D3D59E /* SDWebImageDownloaderOperation.m in Sources */,
 				B02F2F941B1223DD00D3D59E /* AFSecurityPolicy.m in Sources */,
 				B02F2FFE1B13362100D3D59E /* UIImageView+WebCache.m in Sources */,
+				099E8A481B196A5900842D1A /* InvestRecordController.m in Sources */,
+				099E8A681B196A6700842D1A /* AccountManagePassController.m in Sources */,
+				099E89F51B1969E600842D1A /* AccountManageOtherCell.m in Sources */,
+				099E8A671B196A6700842D1A /* AccountManageEmergencyController.m in Sources */,
 				B08336A81B0C791C007CCCAC /* AppDelegate.m in Sources */,
 				B02F2FFA1B13362100D3D59E /* UIButton+WebCache.m in Sources */,
 				B01B8F7C1B1358F600A85DCD /* IntroduceViewController.m in Sources */,
+				099E8A061B196A0100842D1A /* AccountCenterHeaderTableViewCell.m in Sources */,
 				B02F2F931B1223DD00D3D59E /* AFNetworkReachabilityManager.m in Sources */,
+				099E8A661B196A6700842D1A /* AccountManageKnowController.m in Sources */,
 				B02F2FF61B13362100D3D59E /* SDWebImageDownloader.m in Sources */,
 				B0B650381B1364F2002105E2 /* NoticeTableViewCell.m in Sources */,
 				B02F2FF21B13362100D3D59E /* NSData+ImageContentType.m in Sources */,
+				099E89DB1B19693F00842D1A /* MBProgressHUD+NJ.m in Sources */,
 				B02F2FC71B131BE600D3D59E /* FeedBackViewController.m in Sources */,
 				B02F2F9F1B1223DD00D3D59E /* UIImageView+AFNetworking.m in Sources */,
+				099E8A641B196A6700842D1A /* AccountManageBindingController.m in Sources */,
 				B02F2FB41B12240B00D3D59E /* UIScrollView+SVPullToRefresh.m in Sources */,
 				B02F2F981B1223DD00D3D59E /* AFURLSessionManager.m in Sources */,
+				099E8A631B196A6700842D1A /* AccountManageController.m in Sources */,
+				099E8A2F1B196A4800842D1A /* BackProjectController.m in Sources */,
 				186AAB3C1B1177A300B5C84C /* DetailHeaderView.m in Sources */,
+				099E8A491B196A5900842D1A /* InvestRecordCell.m in Sources */,
+				099E8A301B196A4800842D1A /* BackProjectCell.m in Sources */,
 				B02F2FF91B13362100D3D59E /* SDWebImagePrefetcher.m in Sources */,
 				B02F2FFC1B13362100D3D59E /* UIImage+MultiFormat.m in Sources */,
+				099E89EC1B19699E00842D1A /* ProductController.m in Sources */,
 				B02F2FF41B13362100D3D59E /* SDWebImageCompat.m in Sources */,
 				B08336A51B0C791C007CCCAC /* main.m in Sources */,
+				099E89E61B19699600842D1A /* CustomTableViewCell.m in Sources */,
 				186AAB451B11996600B5C84C /* PercentCircleView.m in Sources */,
 				B02F2F9B1B1223DD00D3D59E /* AFNetworkActivityIndicatorManager.m in Sources */,
 				B02F2FCA1B1331D500D3D59E /* NewsViewController.m in Sources */,
 				186AAB481B11A98400B5C84C /* ProductDetail.m in Sources */,
 				B02F2FFF1B13362100D3D59E /* UIView+WebCacheOperation.m in Sources */,
 				B02F2FA21B1223DD00D3D59E /* UIWebView+AFNetworking.m in Sources */,
+				099E8A4D1B196A5900842D1A /* InvestRecordHeaderCell.m in Sources */,
 				B02F2F971B1223DD00D3D59E /* AFURLResponseSerialization.m in Sources */,
 				B02F30021B13362100D3D59E /* Pods-SDWebImage-dummy.m in Sources */,
 				186AAB391B11775800B5C84C /* ProductDetailController.m in Sources */,

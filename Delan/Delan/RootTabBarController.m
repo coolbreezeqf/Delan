@@ -10,6 +10,8 @@
 #import "RootNavgationController.h"
 #import "MoreViewController.h"
 #import "HomePageController.h"
+#import "ProductController.h"
+#import "AccountCenterController.h"
 
 @interface RootTabBarController ()<UITabBarControllerDelegate, UITabBarDelegate>{
 	NSInteger lastSelectIndex;			//上次选中的位置
@@ -36,8 +38,8 @@
 - (void)initTabBarController{
 	/***修改这里NavegationController的RootViewController***/
 	_homePageNav = [[RootNavgationController alloc] initWithRootViewController:[[HomePageController alloc] init]];
-	_productNav = [[RootNavgationController alloc] initWithRootViewController:[[UIViewController alloc] init]];
-	_accoutNav = [[RootNavgationController alloc] initWithRootViewController:[[UIViewController alloc] init]];
+	_productNav = [[RootNavgationController alloc] initWithRootViewController:[[ProductController alloc] init]];
+	_accoutNav = [[RootNavgationController alloc] initWithRootViewController:[[AccountCenterController alloc] init]];
 	_moreNav = [[RootNavgationController alloc] initWithRootViewController:[[MoreViewController alloc] init]];
 	/*****************************************************/
 	
