@@ -131,6 +131,7 @@
 		B08336A81B0C791C007CCCAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B08336A71B0C791C007CCCAC /* AppDelegate.m */; };
 		B08336B31B0C791C007CCCAC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08336B11B0C791C007CCCAC /* LaunchScreen.xib */; };
 		B08336BF1B0C791C007CCCAC /* DelanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B08336BE1B0C791C007CCCAC /* DelanTests.m */; };
+		B0AE00B81B189B3400B9745B /* HelpDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AE00B71B189B3400B9745B /* HelpDetailTableViewCell.m */; };
 		B0B650351B13633C002105E2 /* NoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B650341B13633C002105E2 /* NoticeViewController.m */; };
 		B0B650381B1364F2002105E2 /* NoticeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B650371B1364F2002105E2 /* NoticeTableViewCell.m */; };
 		B7C38AEF9BA4367E7D23F98E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8B704C5C15F212F5D79DE6 /* libPods.a */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -364,6 +365,8 @@
 		B08336BE1B0C791C007CCCAC /* DelanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DelanTests.m; sourceTree = "<group>"; };
 		B08336C81B0C7BAB007CCCAC /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B08336C91B0C7CAD007CCCAC /* Public.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Public.h; sourceTree = "<group>"; };
+		B0AE00B61B189B3400B9745B /* HelpDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelpDetailTableViewCell.h; path = MoreTab/HelpDetailTableViewCell.h; sourceTree = "<group>"; };
+		B0AE00B71B189B3400B9745B /* HelpDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelpDetailTableViewCell.m; path = MoreTab/HelpDetailTableViewCell.m; sourceTree = "<group>"; };
 		B0B650331B13633C002105E2 /* NoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeViewController.h; sourceTree = "<group>"; };
 		B0B650341B13633C002105E2 /* NoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeViewController.m; sourceTree = "<group>"; };
 		B0B650361B1364F2002105E2 /* NoticeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoticeTableViewCell.h; path = MoreTab/NoticeTableViewCell.h; sourceTree = "<group>"; };
@@ -825,6 +828,8 @@
 				B02F2FC31B130F1300D3D59E /* HelpCenterInfo.plist */,
 				B01FB3B71B149D2800088768 /* HelpDetailViewController.h */,
 				B01FB3B81B149D2800088768 /* HelpDetailViewController.m */,
+				B0AE00B61B189B3400B9745B /* HelpDetailTableViewCell.h */,
+				B0AE00B71B189B3400B9745B /* HelpDetailTableViewCell.m */,
 			);
 			name = "帮助中心";
 			sourceTree = "<group>";
@@ -1239,6 +1244,7 @@
 				B02F2FCA1B1331D500D3D59E /* NewsViewController.m in Sources */,
 				186AAB481B11A98400B5C84C /* ProductDetail.m in Sources */,
 				B02F2FFF1B13362100D3D59E /* UIView+WebCacheOperation.m in Sources */,
+				B0AE00B81B189B3400B9745B /* HelpDetailTableViewCell.m in Sources */,
 				B02F2FA21B1223DD00D3D59E /* UIWebView+AFNetworking.m in Sources */,
 				099E8A4D1B196A5900842D1A /* InvestRecordHeaderCell.m in Sources */,
 				B02F2F971B1223DD00D3D59E /* AFURLResponseSerialization.m in Sources */,
