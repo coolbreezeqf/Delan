@@ -102,6 +102,15 @@
 		186AAB421B11906A00B5C84C /* DetailHeaderViewFor414.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186AAB411B11906A00B5C84C /* DetailHeaderViewFor414.xib */; };
 		186AAB451B11996600B5C84C /* PercentCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186AAB441B11996600B5C84C /* PercentCircleView.m */; };
 		186AAB481B11A98400B5C84C /* ProductDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 186AAB471B11A98400B5C84C /* ProductDetail.m */; };
+		B00045251B198ECA00A44C82 /* MTNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B00045241B198ECA00A44C82 /* MTNetManager.m */; };
+		B00045291B19933A00A44C82 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B00045281B19933A00A44C82 /* RegisterViewController.m */; };
+		B000452C1B19935C00A44C82 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B000452B1B19935C00A44C82 /* LoginViewController.m */; };
+		B000452F1B19938800A44C82 /* LARNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B000452E1B19938800A44C82 /* LARNetManager.m */; };
+		B00045421B199CE900A44C82 /* MTPBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B000453B1B199CE900A44C82 /* MTPBaseClass.m */; };
+		B00045431B199CE900A44C82 /* MTPData.m in Sources */ = {isa = PBXBuildFile; fileRef = B000453D1B199CE900A44C82 /* MTPData.m */; };
+		B00045441B199CE900A44C82 /* MTPItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B000453F1B199CE900A44C82 /* MTPItem.m */; };
+		B00045451B199CE900A44C82 /* MTPPublicInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B00045411B199CE900A44C82 /* MTPPublicInformation.m */; };
+		B00045481B19A0D800A44C82 /* LRTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B00045471B19A0D800A44C82 /* LRTextField.m */; };
 		B0109D8D1B0DEB1F00257AF9 /* DLMainNav.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0109D8C1B0DEB1F00257AF9 /* DLMainNav.plist */; };
 		B0109D8F1B0DEEE100257AF9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0109D8E1B0DEEE100257AF9 /* Images.xcassets */; };
 		B0109D921B0E01E600257AF9 /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0109D911B0E01E600257AF9 /* RootTabBarController.m */; };
@@ -316,6 +325,24 @@
 		186AAB471B11A98400B5C84C /* ProductDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetail.m; sourceTree = "<group>"; };
 		5D9499F938BB0D5566EA076B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5E8B704C5C15F212F5D79DE6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00045231B198ECA00A44C82 /* MTNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTNetManager.h; sourceTree = "<group>"; };
+		B00045241B198ECA00A44C82 /* MTNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTNetManager.m; sourceTree = "<group>"; };
+		B00045271B19933A00A44C82 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViewController.h; path = Delan/RegisterViewController.h; sourceTree = SOURCE_ROOT; };
+		B00045281B19933A00A44C82 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViewController.m; path = Delan/RegisterViewController.m; sourceTree = SOURCE_ROOT; };
+		B000452A1B19935C00A44C82 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Delan/LoginViewController.h; sourceTree = SOURCE_ROOT; };
+		B000452B1B19935C00A44C82 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Delan/LoginViewController.m; sourceTree = SOURCE_ROOT; };
+		B000452D1B19938800A44C82 /* LARNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LARNetManager.h; path = Delan/LARNetManager.h; sourceTree = SOURCE_ROOT; };
+		B000452E1B19938800A44C82 /* LARNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LARNetManager.m; path = Delan/LARNetManager.m; sourceTree = SOURCE_ROOT; };
+		B000453A1B199CE900A44C82 /* MTPBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPBaseClass.h; sourceTree = "<group>"; };
+		B000453B1B199CE900A44C82 /* MTPBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPBaseClass.m; sourceTree = "<group>"; };
+		B000453C1B199CE900A44C82 /* MTPData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPData.h; sourceTree = "<group>"; };
+		B000453D1B199CE900A44C82 /* MTPData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPData.m; sourceTree = "<group>"; };
+		B000453E1B199CE900A44C82 /* MTPItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPItem.h; sourceTree = "<group>"; };
+		B000453F1B199CE900A44C82 /* MTPItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPItem.m; sourceTree = "<group>"; };
+		B00045401B199CE900A44C82 /* MTPPublicInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPPublicInformation.h; sourceTree = "<group>"; };
+		B00045411B199CE900A44C82 /* MTPPublicInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPPublicInformation.m; sourceTree = "<group>"; };
+		B00045461B19A0D800A44C82 /* LRTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LRTextField.h; path = Delan/LRTextField.h; sourceTree = SOURCE_ROOT; };
+		B00045471B19A0D800A44C82 /* LRTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LRTextField.m; path = Delan/LRTextField.m; sourceTree = SOURCE_ROOT; };
 		B0109D8C1B0DEB1F00257AF9 /* DLMainNav.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DLMainNav.plist; sourceTree = "<group>"; };
 		B0109D8E1B0DEEE100257AF9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B0109D901B0E01E600257AF9 /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
@@ -648,6 +675,7 @@
 		184DCE691B10555800DFEF20 /* AccountCenter */ = {
 			isa = PBXGroup;
 			children = (
+				B00045261B19915F00A44C82 /* LoginAndRegister */,
 				099E89EF1B1969CA00842D1A /* View */,
 				099E89EE1B1969BC00842D1A /* Controller */,
 				099E89ED1B1969B700842D1A /* Model */,
@@ -779,12 +807,59 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B00045151B198E4800A44C82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B000453A1B199CE900A44C82 /* MTPBaseClass.h */,
+				B000453B1B199CE900A44C82 /* MTPBaseClass.m */,
+				B000453C1B199CE900A44C82 /* MTPData.h */,
+				B000453D1B199CE900A44C82 /* MTPData.m */,
+				B000453E1B199CE900A44C82 /* MTPItem.h */,
+				B000453F1B199CE900A44C82 /* MTPItem.m */,
+				B00045401B199CE900A44C82 /* MTPPublicInformation.h */,
+				B00045411B199CE900A44C82 /* MTPPublicInformation.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B00045221B198EAF00A44C82 /* NetManager */ = {
+			isa = PBXGroup;
+			children = (
+				B00045231B198ECA00A44C82 /* MTNetManager.h */,
+				B00045241B198ECA00A44C82 /* MTNetManager.m */,
+			);
+			name = NetManager;
+			sourceTree = "<group>";
+		};
+		B00045261B19915F00A44C82 /* LoginAndRegister */ = {
+			isa = PBXGroup;
+			children = (
+				B00045301B1996C500A44C82 /* NetManager */,
+				B00045271B19933A00A44C82 /* RegisterViewController.h */,
+				B00045281B19933A00A44C82 /* RegisterViewController.m */,
+				B000452A1B19935C00A44C82 /* LoginViewController.h */,
+				B000452B1B19935C00A44C82 /* LoginViewController.m */,
+				B000452D1B19938800A44C82 /* LARNetManager.h */,
+				B000452E1B19938800A44C82 /* LARNetManager.m */,
+				B00045461B19A0D800A44C82 /* LRTextField.h */,
+				B00045471B19A0D800A44C82 /* LRTextField.m */,
+			);
+			name = LoginAndRegister;
+			sourceTree = "<group>";
+		};
+		B00045301B1996C500A44C82 /* NetManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetManager;
+			sourceTree = SOURCE_ROOT;
+		};
 		B013D7AD1B0C94BC00AFE1FC /* MoreTab */ = {
 			isa = PBXGroup;
 			children = (
+				B00045221B198EAF00A44C82 /* NetManager */,
 				B01FB3AE1B1400D500088768 /* NSString+Additions.h */,
 				B01FB3AF1B1400D500088768 /* NSString+Additions.m */,
-				B02F2FBA1B12E72400D3D59E /* 联系我们 */,
 				B02F2FB91B12E71900D3D59E /* 意见反馈 */,
 				B02F2FB81B12E70D00D3D59E /* 帮助中心 */,
 				B02F2FB71B12E70300D3D59E /* 行业报道 */,
@@ -906,6 +981,7 @@
 		B02F2FB61B12E6F900D3D59E /* 官方公告 */ = {
 			isa = PBXGroup;
 			children = (
+				B00045151B198E4800A44C82 /* Model */,
 				B0B650331B13633C002105E2 /* NoticeViewController.h */,
 				B0B650341B13633C002105E2 /* NoticeViewController.m */,
 				B0B650361B1364F2002105E2 /* NoticeTableViewCell.h */,
@@ -946,13 +1022,6 @@
 				B02F2FC61B131BE600D3D59E /* FeedBackViewController.m */,
 			);
 			name = "意见反馈";
-			sourceTree = "<group>";
-		};
-		B02F2FBA1B12E72400D3D59E /* 联系我们 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "联系我们";
 			sourceTree = "<group>";
 		};
 		B02F2FEB1B13362100D3D59E /* Core */ = {
@@ -1329,10 +1398,12 @@
 				B02F2F901B1223DD00D3D59E /* AFHTTPRequestOperation.m in Sources */,
 				B02F2FF31B13362100D3D59E /* SDImageCache.m in Sources */,
 				B0109D921B0E01E600257AF9 /* RootTabBarController.m in Sources */,
+				B00045421B199CE900A44C82 /* MTPBaseClass.m in Sources */,
 				B02F2FF71B13362100D3D59E /* SDWebImageDownloaderOperation.m in Sources */,
 				B02F2F941B1223DD00D3D59E /* AFSecurityPolicy.m in Sources */,
 				B02F2FFE1B13362100D3D59E /* UIImageView+WebCache.m in Sources */,
 				099E8A481B196A5900842D1A /* InvestRecordController.m in Sources */,
+				B00045451B199CE900A44C82 /* MTPPublicInformation.m in Sources */,
 				099E8A681B196A6700842D1A /* AccountManagePassController.m in Sources */,
 				099E89F51B1969E600842D1A /* AccountManageOtherCell.m in Sources */,
 				099E8A671B196A6700842D1A /* AccountManageEmergencyController.m in Sources */,
@@ -1345,17 +1416,22 @@
 				184D12431B1986AF00772EE4 /* ProgressCircleView.m in Sources */,
 				B02F2F931B1223DD00D3D59E /* AFNetworkReachabilityManager.m in Sources */,
 				099E8A661B196A6700842D1A /* AccountManageKnowController.m in Sources */,
+				B00045441B199CE900A44C82 /* MTPItem.m in Sources */,
 				B02F2FF61B13362100D3D59E /* SDWebImageDownloader.m in Sources */,
 				184D12561B19878100772EE4 /* WebPayController.m in Sources */,
 				B0B650381B1364F2002105E2 /* NoticeTableViewCell.m in Sources */,
+				B00045291B19933A00A44C82 /* RegisterViewController.m in Sources */,
+				B000452F1B19938800A44C82 /* LARNetManager.m in Sources */,
 				184D12521B19878100772EE4 /* InvestRecordsController.m in Sources */,
 				B02F2FF21B13362100D3D59E /* NSData+ImageContentType.m in Sources */,
+				B00045251B198ECA00A44C82 /* MTNetManager.m in Sources */,
 				099E89DB1B19693F00842D1A /* MBProgressHUD+NJ.m in Sources */,
 				B02F2FC71B131BE600D3D59E /* FeedBackViewController.m in Sources */,
 				B02F2F9F1B1223DD00D3D59E /* UIImageView+AFNetworking.m in Sources */,
 				099E8A641B196A6700842D1A /* AccountManageBindingController.m in Sources */,
 				B02F2FB41B12240B00D3D59E /* UIScrollView+SVPullToRefresh.m in Sources */,
 				B02F2F981B1223DD00D3D59E /* AFURLSessionManager.m in Sources */,
+				B000452C1B19935C00A44C82 /* LoginViewController.m in Sources */,
 				099E8A631B196A6700842D1A /* AccountManageController.m in Sources */,
 				099E8A2F1B196A4800842D1A /* BackProjectController.m in Sources */,
 				186AAB3C1B1177A300B5C84C /* DetailHeaderView.m in Sources */,
@@ -1378,10 +1454,12 @@
 				B0AE00B81B189B3400B9745B /* HelpDetailTableViewCell.m in Sources */,
 				B02F2FA21B1223DD00D3D59E /* UIWebView+AFNetworking.m in Sources */,
 				099E8A4D1B196A5900842D1A /* InvestRecordHeaderCell.m in Sources */,
+				B00045481B19A0D800A44C82 /* LRTextField.m in Sources */,
 				184D126C1B1987E000772EE4 /* CalculatorView.m in Sources */,
 				B02F2F971B1223DD00D3D59E /* AFURLResponseSerialization.m in Sources */,
 				B02F30021B13362100D3D59E /* Pods-SDWebImage-dummy.m in Sources */,
 				186AAB391B11775800B5C84C /* ProductDetailController.m in Sources */,
+				B00045431B199CE900A44C82 /* MTPData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
