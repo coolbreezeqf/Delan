@@ -45,7 +45,7 @@
 
 //定制导航条样式
 + (void)initialize {
-    
+	
     /***-----------------------标题文字风格样式的设置--------------------***/
     
     NSMutableDictionary * style = [NSMutableDictionary dictionary];

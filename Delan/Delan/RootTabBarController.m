@@ -13,6 +13,8 @@
 #import "ProductController.h"
 #import "AccountCenterController.h"
 
+#import "RegisterViewController.h"
+
 @interface RootTabBarController ()<UITabBarControllerDelegate, UITabBarDelegate>{
 	NSInteger lastSelectIndex;			//上次选中的位置
 	NSInteger currentSelectIndex;		//当前选中的位置
@@ -68,6 +70,15 @@
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
 	currentSelectIndex = tabBarController.selectedIndex;
+	MLOG(@"select %ld tab", currentSelectIndex);
+	if (currentSelectIndex == 2) {
+		RegisterViewController *vc = [[RegisterViewController alloc] init];
+//		[viewController presentViewController:vc animated:YES completion:^{
+		
+//		}];
+		[(RootNavgationController *)viewController pushViewController:vc animated:YES];
+	}
+		
 }
 
 
