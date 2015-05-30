@@ -70,13 +70,9 @@
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
 	currentSelectIndex = tabBarController.selectedIndex;
-	MLOG(@"select %ld tab", currentSelectIndex);
+	MLOG(@"select %d tab", currentSelectIndex);
 	if (currentSelectIndex == 2) {
-		RegisterViewController *vc = [[RegisterViewController alloc] init];
-//		[viewController presentViewController:vc animated:YES completion:^{
-		
-//		}];
-		[(RootNavgationController *)viewController pushViewController:vc animated:YES];
+//		[(RootNavgationController *)viewController pushViewController:vc animated:YES];
 	}
 		
 }
