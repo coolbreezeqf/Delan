@@ -19,7 +19,7 @@
 #define kScreenWidth [[UIScreen mainScreen] bounds].size.width
 #define kScreenHeight [[UIScreen mainScreen] bounds].size.height
 #define kButtonWidth [[UIScreen mainScreen] bounds].size.width / 3
-#define tableUrl @"http://192.168.1.110:8080/mobile/finance/getProductList.json"
+#define tableUrl @"http://192.168.1.108:8080/mobile/finance/getProductList.json"
 
 @interface ProductController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 
@@ -125,6 +125,7 @@
 #pragma mark 网络请求
 
 -(void)updateModel{
+    
     AFHTTPRequestOperationManager *manaager = [AFHTTPRequestOperationManager manager];
     
     NSString * requestUrl = tableUrl;
@@ -154,16 +155,22 @@
             }
         }
         
+            [self.allTableView reloadData];
+            [self.carTableView reloadData];
+            [self.houseTableView reloadData];
+        
+        
         NSLog(@"%d,%d,%d",self.productListArray.count,self.carArray.count,self.houseArray.count);
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        [MBProgressHUD showError:@"网络错误"];
+        [MBProgressHUD showError:@"网络异常,请稍后再试"];
+        NSLog(@"%@",error);
     }];
 }
 
 #pragma mark 创建底部表格
 - (void)createTableView{
-    self.rootScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 109, kScreenWidth, kScreenHeight - 109 - 49)];
+    self.rootScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 109, kScreenWidth, kScreenHeight - 109 - 40)];
     self.rootScrollView.contentSize = CGSizeMake(kScreenWidth * 3, 0);
     self.rootScrollView.tag = 501;
     self.rootScrollView.delegate = self;
@@ -215,11 +222,27 @@
         [weakVC performSelector:@selector(stopRefreshAnimation) withObject:nil afterDelay:1];
     }];
     
+    [weakVC.allTableView.pullToRefreshView setTitle:@"下拉可以刷新" forState:SVPullToRefreshStateStopped];
+    [weakVC.allTableView.pullToRefreshView setTitle:@"正在帮你刷新" forState:SVPullToRefreshStateLoading];
+    [weakVC.allTableView.pullToRefreshView setTitle:@"松开立即刷新" forState:SVPullToRefreshStateTriggered];
+    
+    [weakVC.carTableView.pullToRefreshView setTitle:@"下拉可以刷新" forState:SVPullToRefreshStateStopped];
+    [weakVC.carTableView.pullToRefreshView setTitle:@"正在帮你刷新" forState:SVPullToRefreshStateLoading];
+    [weakVC.carTableView.pullToRefreshView setTitle:@"松开立即刷新" forState:SVPullToRefreshStateTriggered];
+    
+    [weakVC.houseTableView.pullToRefreshView setTitle:@"下拉可以刷新" forState:SVPullToRefreshStateStopped];
+    [weakVC.houseTableView.pullToRefreshView setTitle:@"正在帮你刷新" forState:SVPullToRefreshStateLoading];
+    [weakVC.houseTableView.pullToRefreshView setTitle:@"松开立即刷新" forState:SVPullToRefreshStateTriggered];
+    
     [self.view addSubview:self.rootScrollView];
 }
 
 #pragma mark 刷新事件
 -(void)refreshAction{
+    [self.productListArray removeAllObjects];
+    [self.carArray removeAllObjects];
+    [self.houseArray removeAllObjects];
+    [self updateModel];
     if (self.rootScrollView.contentOffset.x < kScreenWidth) {
         [self.allTableView reloadData];
     }
@@ -320,8 +343,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (tableView.tag == 201) {
-        static NSString *myId=@"myId";
-        CustomTableViewCell *cell = (CustomTableViewCell *)[tableView dequeueReusableCellWithIdentifier:myId];
+        static NSString *myId1=@"myId";
+        CustomTableViewCell *cell = (CustomTableViewCell *)[tableView dequeueReusableCellWithIdentifier:myId1];
         NSString *cellName = @"";
         if (kScreenWidth == 320) {
             cellName = @"CustomTableViewCell320";
@@ -332,19 +355,50 @@
         else{
             cellName = @"CustomTableViewCell414";
         }
-        if(cell==nil)
-        {
-            ProductModel *pro = [self.productListArray objectAtIndex:indexPath.row];
+        if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:cellName owner:nil options:nil] lastObject];
+        }
+        
+            ProductModel *pro = [self.productListArray objectAtIndex:indexPath.row];
             cell.ProductCellName.text = pro.name;
+            NSString *r = [NSString stringWithFormat:@"%.2f%%",pro.rate];
+            cell.ProductCellRate.text = r;
+            cell.ProductCellTime.text = [NSString stringWithFormat:@"%@天",pro.days];
+            NSString *m = [NSString stringWithFormat:@"%.2f元",pro.startMoney];
+            cell.ProductCellMoney.text = m;
+        
+            if ([pro.status intValue] == 5) {
+                
+                if ([pro.isVip intValue] == 1) {
+                    cell.ProductCellVipStatus.image = [UIImage imageNamed:@"ProductCellVip"];
+                    cell.ProductCellStatusLine.image = [UIImage imageNamed:@"ProductCellLeft2"];
+                    cell.ProductCellRate.textColor = RGBCOLOR(250.0, 169.0, 109.0);
+                }
+                else{
+                    cell.ProductCellStatusLine.image = [UIImage imageNamed:@"ProductCellLeft"];
+                    cell.ProductCellRate.textColor = RGBCOLOR(135.0, 171.0, 225.0);
+                    cell.ProductCellVipStatus.image = nil;
+                }
+            }
+            else if ([pro.status intValue] == 6){
+                cell.ProductCellStatusLine.image = [UIImage imageNamed:@"ProductCellLeft3"];
+                cell.ProductCellRate.textColor = RGBCOLOR(167.0, 190.0, 110.0);
+                cell.ProductCellVipStatus.image = nil;
+                
+            }
+            else if ([pro.status intValue] == 8){
+                cell.ProductCellStatusLine.image = [UIImage imageNamed:@"ProductCellLeft4"];
+                cell.ProductCellRate.textColor = RGBCOLOR(169.0, 170.0, 171.0);
+                cell.ProductCellVipStatus.image = nil;
+            }
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             cell.backgroundColor = [UIColor colorWithRed:244.0/255 green:245.0/255 blue:246.0/255 alpha:1.0];
-        }
+        
         return cell;
     }
     else if (tableView.tag == 202){
-        static NSString *myId=@"myId";
-        CustomTableViewCell *cell = (CustomTableViewCell *)[tableView dequeueReusableCellWithIdentifier:myId];
+        static NSString *myId2=@"myId";
+        CustomTableViewCell *cell = (CustomTableViewCell *)[tableView dequeueReusableCellWithIdentifier:myId2];
         NSString *cellName = @"";
         if (kScreenWidth == 320) {
             cellName = @"CustomTableViewCell320";
@@ -355,18 +409,50 @@
         else{
             cellName = @"CustomTableViewCell414";
         }
-        if(cell==nil)
-        {
+        if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:cellName owner:nil options:nil] lastObject];
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            cell.backgroundColor = [UIColor colorWithRed:244.0/255 green:245.0/255 blue:246.0/255 alpha:1.0];
-            cell.ProductCellName.text = @"车贷宝";
         }
+        
+        ProductModel *pro = [self.carArray objectAtIndex:indexPath.row];
+        cell.ProductCellName.text = pro.name;
+        NSString *r = [NSString stringWithFormat:@"%.2f%%",pro.rate];
+        cell.ProductCellRate.text = r;
+        cell.ProductCellTime.text = [NSString stringWithFormat:@"%@天",pro.days];
+        NSString *m = [NSString stringWithFormat:@"%.2f元",pro.startMoney];
+        cell.ProductCellMoney.text = m;
+        
+        if ([pro.status intValue] == 5) {
+            
+            if ([pro.isVip intValue] == 1) {
+                cell.ProductCellVipStatus.image = [UIImage imageNamed:@"ProductCellVip"];
+                cell.ProductCellStatusLine.image = [UIImage imageNamed:@"ProductCellLeft2"];
+                cell.ProductCellRate.textColor = RGBCOLOR(250.0, 169.0, 109.0);
+            }
+            else{
+                cell.ProductCellStatusLine.image = [UIImage imageNamed:@"ProductCellLeft"];
+                cell.ProductCellRate.textColor = RGBCOLOR(135.0, 171.0, 225.0);
+                cell.ProductCellVipStatus.image = nil;
+            }
+        }
+        else if ([pro.status intValue] == 6){
+            cell.ProductCellStatusLine.image = [UIImage imageNamed:@"ProductCellLeft3"];
+            cell.ProductCellRate.textColor = RGBCOLOR(167.0, 190.0, 110.0);
+            cell.ProductCellVipStatus.image = nil;
+            
+        }
+        else if ([pro.status intValue] == 8){
+            cell.ProductCellStatusLine.image = [UIImage imageNamed:@"ProductCellLeft4"];
+            cell.ProductCellRate.textColor = RGBCOLOR(169.0, 170.0, 171.0);
+            cell.ProductCellVipStatus.image = nil;
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.backgroundColor = [UIColor colorWithRed:244.0/255 green:245.0/255 blue:246.0/255 alpha:1.0];
+        
         return cell;
     }
     else{
-        static NSString *myId=@"myId";
-        CustomTableViewCell *cell = (CustomTableViewCell *)[tableView dequeueReusableCellWithIdentifier:myId];
+        static NSString *myId3=@"myId";
+        CustomTableViewCell *cell = (CustomTableViewCell *)[tableView dequeueReusableCellWithIdentifier:myId3];
         
         NSString *cellName = @"";
         if (kScreenWidth == 320) {
@@ -378,13 +464,45 @@
         else{
             cellName = @"CustomTableViewCell414";
         }
-        if(cell==nil)
-        {
+        if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:cellName owner:nil options:nil] lastObject];
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            cell.backgroundColor = [UIColor colorWithRed:244.0/255 green:245.0/255 blue:246.0/255 alpha:1.0];
-            cell.ProductCellName.text = @"房贷宝";
         }
+        
+        ProductModel *pro = [self.houseArray objectAtIndex:indexPath.row];
+        cell.ProductCellName.text = pro.name;
+        NSString *r = [NSString stringWithFormat:@"%.2f%%",pro.rate];
+        cell.ProductCellRate.text = r;
+        cell.ProductCellTime.text = [NSString stringWithFormat:@"%@天",pro.days];
+        NSString *m = [NSString stringWithFormat:@"%.2f元",pro.startMoney];
+        cell.ProductCellMoney.text = m;
+        
+        if ([pro.status intValue] == 5) {
+            
+            if ([pro.isVip intValue] == 1) {
+                cell.ProductCellVipStatus.image = [UIImage imageNamed:@"ProductCellVip"];
+                cell.ProductCellStatusLine.image = [UIImage imageNamed:@"ProductCellLeft2"];
+                cell.ProductCellRate.textColor = RGBCOLOR(250.0, 169.0, 109.0);
+            }
+            else{
+                cell.ProductCellStatusLine.image = [UIImage imageNamed:@"ProductCellLeft"];
+                cell.ProductCellRate.textColor = RGBCOLOR(135.0, 171.0, 225.0);
+                cell.ProductCellVipStatus.image = nil;
+            }
+        }
+        else if ([pro.status intValue] == 6){
+            cell.ProductCellStatusLine.image = [UIImage imageNamed:@"ProductCellLeft3"];
+            cell.ProductCellRate.textColor = RGBCOLOR(167.0, 190.0, 110.0);
+            cell.ProductCellVipStatus.image = nil;
+            
+        }
+        else if ([pro.status intValue] == 8){
+            cell.ProductCellStatusLine.image = [UIImage imageNamed:@"ProductCellLeft4"];
+            cell.ProductCellRate.textColor = RGBCOLOR(169.0, 170.0, 171.0);
+            cell.ProductCellVipStatus.image = nil;
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.backgroundColor = [UIColor colorWithRed:244.0/255 green:245.0/255 blue:246.0/255 alpha:1.0];
+        
         return cell;
     }
     
@@ -423,7 +541,6 @@
             self.lastButton = btn2;
         }
         
-        NSLog(@"%f",scrollView.contentOffset.x);
     }
     else{
         return;
