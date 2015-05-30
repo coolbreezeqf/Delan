@@ -36,18 +36,21 @@
     
     UILabel * percentLabel = [self.subviews lastObject];
     UIImage * image;
-    if (0 == self.type) {
-        image = [UIImage imageNamed:@"ProductDetailCircle-vip"];
+
+    if (1 == _type) {
+        if (1 == _isVip) {
+            image = [UIImage imageNamed:@"ProductDetailCircle-vip"];
+        }
+        else {
+            image = [UIImage imageNamed:@"ProductDetailCircle-normal"];
+        }
     }
-    else if (1 == self.type) {
-        image = [UIImage imageNamed:@"ProductDetailCircle-normal"];
-    }
-    else if (2 == self.type) {
-        image = [UIImage imageNamed:@"ProductDetailCircle-full"];
+    else if (2 == _type) {
+        image = [UIImage imageNamed:@"ProductDetailCircle-repay"];
         percentLabel.hidden = YES;
     }
     else {
-        image = [UIImage imageNamed:@"ProductDetailCircle-repay"];
+        image = [UIImage imageNamed:@"ProductDetailCircle-full"];
         percentLabel.hidden = YES;
     }
     
@@ -55,7 +58,7 @@
     
     
     //如果是vip或者普通产品
-    if (0 == _type || 1 == _type) {
+    if (1 == _type) {
         
         //获取上下文
         CGContextRef ctf = UIGraphicsGetCurrentContext();
@@ -71,7 +74,7 @@
         CGContextAddLineToPoint(ctf, typePercentViewHeight / 2, finalY);
         
         //设置画笔颜色
-        if (0 == _type) {
+        if (1 == _isVip) {
             [RGBCOLOR(235, 115, 33) set];
         }
         else {

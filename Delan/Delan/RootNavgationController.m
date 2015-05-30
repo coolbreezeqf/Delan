@@ -36,7 +36,8 @@
     } else {
         
         //在跳转时自动隐藏tabBar
-		viewController.hidesBottomBarWhenPushed = YES;
+        [viewController setHidesBottomBarWhenPushed:YES];
+        
         //调用父类的push
         [super pushViewController:viewController animated:animated];
     }
@@ -66,13 +67,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
