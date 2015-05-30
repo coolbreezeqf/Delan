@@ -61,8 +61,6 @@
 		099E8A671B196A6700842D1A /* AccountManageEmergencyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A5E1B196A6700842D1A /* AccountManageEmergencyController.m */; };
 		099E8A681B196A6700842D1A /* AccountManagePassController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A601B196A6700842D1A /* AccountManagePassController.m */; };
 		099E8A691B196A6700842D1A /* PersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A621B196A6700842D1A /* PersonController.m */; };
-		099E8A6C1B19AB8600842D1A /* AccountCenterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A6B1B19AB8600842D1A /* AccountCenterModel.m */; };
-		099E8A6F1B19BE4500842D1A /* AccountManageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A6E1B19BE4500842D1A /* AccountManageModel.m */; };
 		184D123F1B1986AF00772EE4 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D12391B1986AF00772EE4 /* CircleView.m */; };
 		184D12401B1986AF00772EE4 /* CircleViewFor320.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184D123A1B1986AF00772EE4 /* CircleViewFor320.xib */; };
 		184D12411B1986AF00772EE4 /* CircleViewFor375.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184D123B1B1986AF00772EE4 /* CircleViewFor375.xib */; };
@@ -257,10 +255,6 @@
 		099E8A601B196A6700842D1A /* AccountManagePassController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManagePassController.m; sourceTree = SOURCE_ROOT; };
 		099E8A611B196A6700842D1A /* PersonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonController.h; sourceTree = SOURCE_ROOT; };
 		099E8A621B196A6700842D1A /* PersonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonController.m; sourceTree = SOURCE_ROOT; };
-		099E8A6A1B19AB8600842D1A /* AccountCenterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountCenterModel.h; sourceTree = SOURCE_ROOT; };
-		099E8A6B1B19AB8600842D1A /* AccountCenterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountCenterModel.m; sourceTree = SOURCE_ROOT; };
-		099E8A6D1B19BE4500842D1A /* AccountManageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManageModel.h; sourceTree = SOURCE_ROOT; };
-		099E8A6E1B19BE4500842D1A /* AccountManageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManageModel.m; sourceTree = SOURCE_ROOT; };
 		184D12381B1986AF00772EE4 /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
 		184D12391B1986AF00772EE4 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
 		184D123A1B1986AF00772EE4 /* CircleViewFor320.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleViewFor320.xib; sourceTree = "<group>"; };
@@ -482,10 +476,6 @@
 		099E89ED1B1969B700842D1A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				099E8A6A1B19AB8600842D1A /* AccountCenterModel.h */,
-				099E8A6B1B19AB8600842D1A /* AccountCenterModel.m */,
-				099E8A6D1B19BE4500842D1A /* AccountManageModel.h */,
-				099E8A6E1B19BE4500842D1A /* AccountManageModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1320,7 +1310,6 @@
 				B02F2F951B1223DD00D3D59E /* AFURLConnectionOperation.m in Sources */,
 				184D12551B19878100772EE4 /* ProductMoreDetailController.m in Sources */,
 				B0109D951B0E09E200257AF9 /* BaseViewController.m in Sources */,
-				099E8A6F1B19BE4500842D1A /* AccountManageModel.m in Sources */,
 				B02F2FC21B12F6CC00D3D59E /* HelpCenterTableViewController.m in Sources */,
 				B02F2FF51B13362100D3D59E /* SDWebImageDecoder.m in Sources */,
 				099E8A1D1B196A3700842D1A /* InvestDetailController.m in Sources */,
@@ -1336,7 +1325,6 @@
 				099E8A101B196A1A00842D1A /* MyVipController.m in Sources */,
 				B02F2FA01B1223DD00D3D59E /* UIProgressView+AFNetworking.m in Sources */,
 				B02F2FFB1B13362100D3D59E /* UIImage+GIF.m in Sources */,
-				099E8A6C1B19AB8600842D1A /* AccountCenterModel.m in Sources */,
 				B02F2F921B1223DD00D3D59E /* AFHTTPSessionManager.m in Sources */,
 				B02F2F901B1223DD00D3D59E /* AFHTTPRequestOperation.m in Sources */,
 				B02F2FF31B13362100D3D59E /* SDImageCache.m in Sources */,

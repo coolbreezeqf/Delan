@@ -15,19 +15,13 @@
 #import "CardManageController.h"
 #import "MyVipController.h"
 #import "SVPullToRefresh.h"
-#import "AFNetworking.h"
-#import "MBProgressHUD+NJ.h"
-#import "AccountCenterModel.h"
 
 #define kScreenWidth [[UIScreen mainScreen] bounds].size.width
 #define kScreenHeight [[UIScreen mainScreen] bounds].size.height
-#define kUrl @"http://yingzibaiye.oicp.net/mobile/user/myProperty.json"
 
 @interface AccountCenterController ()
 
 @property (nonatomic,strong)AccountCenterHeaderTableViewCell *headerView;
-
-@property (nonatomic,strong)AccountCenterModel *model;
 
 @property (nonatomic,strong)UITableView *table;
 
@@ -41,32 +35,7 @@
     self.title = @"我的账户";
     [self createTableView];
     [self createNavigationButton];
-    [self updateModel];
     
-}
-
-#pragma mark 网络请求
-- (void)updateModel{
-    AFHTTPRequestOperationManager *manaager = [AFHTTPRequestOperationManager manager];
-    
-    NSString * requestUrl = kUrl;
-    NSDictionary * requestDict = @{@"token":@"kshdfkdshf",
-                                   @"mobile":@"13999999999"};
-    [manaager POST:requestUrl parameters:requestDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSDictionary * resultDict = (NSDictionary *)responseObject;
-        
-        NSDictionary *dict = resultDict[@"data"][@"info"];
-            
-        self.model = [[AccountCenterModel alloc] initWithDict:dict];
-
-        NSLog(@"%@",responseObject);
-        
-        [self.table reloadData];
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        [MBProgressHUD showError:@"网络异常,请稍后再试"];
-        NSLog(@"%@",error);
-    }];
 }
 
 #pragma mark 创建tableview
@@ -153,14 +122,10 @@
         }
         
         
-        static NSString *myId1 = @"myId";
-        AccountCenterHeaderTableViewCell *cell = (AccountCenterHeaderTableViewCell *)[tableView dequeueReusableCellWithIdentifier:myId1];
+        static NSString *myId=@"myId";
+        AccountCenterHeaderTableViewCell *cell = (AccountCenterHeaderTableViewCell *)[tableView dequeueReusableCellWithIdentifier:myId];
         
-        if (cell == nil) {
-            cell = [[[NSBundle mainBundle] loadNibNamed:cellName owner:nil options:nil] lastObject];
-        }
-        cell.AccountCenterTotalMoney.text = [NSString stringWithFormat:@"总资产:%@元",self.model.totalMoney];
-        cell.AccountCenterRest.text = [NSString stringWithFormat:@"可用余额:%@元",self.model.restMoney];
+        cell = [[[NSBundle mainBundle] loadNibNamed:cellName owner:nil options:nil] lastObject];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell.AccountCenterBuyNowButton addTarget:self action:@selector(buyNowAction) forControlEvents:UIControlEventTouchUpInside];
         
@@ -168,10 +133,10 @@
         
     }
     else{
-        static NSString *myId2 = @"myId";
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:myId2];
+        static NSString *myId = @"myId";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:myId];
         
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:myId2];
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:myId];
             cell.textLabel.text = [ar objectAtIndex:indexPath.row - 1];
             cell.textLabel.font = [UIFont systemFontOfSize:14.0];
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

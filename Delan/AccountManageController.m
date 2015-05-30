@@ -14,12 +14,9 @@
 #import "AccountManageKnowController.h"
 #import "AccountManageEmergencyController.h"
 #import "AccountManagePassController.h"
-#import "AFNetworking.h"
-#import "MBProgressHUD+NJ.h"
 
 #define kScreenWidth [[UIScreen mainScreen] bounds].size.width
 #define kScreenHeight [[UIScreen mainScreen] bounds].size.height
-#define kUrl @"http://192.168.1.108:8080//mobile/user/accountManage.json"
 
 @interface AccountManageController ()
 
@@ -49,27 +46,6 @@
     [self.view addSubview:self.rootTable];
     self.title = @"账户管理";
     
-    [self updateModel];
-    
-}
-
-#pragma mark 网络请求
-- (void)updateModel{
-    AFHTTPRequestOperationManager *manaager = [AFHTTPRequestOperationManager manager];
-    
-    NSString * requestUrl = kUrl;
-    NSDictionary * requestDict = @{@"token":@"kshdfkdshf",
-                                   @"mobile":@"13999999999"};
-    [manaager POST:requestUrl parameters:requestDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSDictionary * resultDict = (NSDictionary *)responseObject[@"data"][@"info"];
-        
-        NSLog(@"%@",responseObject);
-        
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        [MBProgressHUD showError:@"网络异常,请稍后再试"];
-        NSLog(@"%@",error);
-    }];
 }
 
 #pragma mark - Table view data source
