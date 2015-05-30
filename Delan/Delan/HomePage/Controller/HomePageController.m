@@ -10,6 +10,11 @@
 #import "UIImageView+WebCache.h"
 #import "SVPullToRefresh.h"
 #import "ProductDetailController.h"
+#import "CircleView.h"
+#import "ProductDetail.h"
+#import "ProgressCircleView.h"
+#import "AFNetworking.h"
+#import "MBProgressHUD+NJ.m"
 
 /**
  *  定位宏
@@ -17,11 +22,25 @@
 #define topScrollViewHeight 170
 #define dataCenterHeight 35
 
+/**
+ *  手机相关
+ */
+#define iPhoneScreenWidth_small 320
+#define iPhoneScreenWidth_middle 375
+#define iPhoneScreenWidth_large 414
+#define iPhoneScreenHeight_4 480
+#define iPhoneScreenHeight_5 568
+#define iPhoneScreenHeight_6 667
+#define iPhoneScreenHeight_6Plus 736
+
+
 @interface HomePageController () <UIScrollViewDelegate> {
     
     NSUInteger _advertisementImageCount;
 }
 
+/* productDetail模型 */
+@property (nonatomic, strong) ProductDetail * productDetail;
 
 /* HomePage滚动view */
 @property (nonatomic, strong) UIScrollView * pageScrollView;
@@ -30,6 +49,14 @@
 @property (nonatomic, strong) NSMutableArray * imageUrlArray;
 @property (nonatomic, strong) UIScrollView * topScrollView;
 @property (nonatomic, strong) UIPageControl * pageControl;
+
+/* 平台数据 */
+@property (nonatomic, strong) UILabel * userDataLabel;
+@property (nonatomic, strong) UILabel * moneyDataLabel;
+
+/* 动画球View */
+@property (nonatomic, strong) CircleView * circleView;
+@property (nonatomic, strong) CADisplayLink * CA_Progress;
 
 @end
 
@@ -53,8 +80,6 @@
 - (void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
-
-    //    [self.pageScrollView triggerPullToRefresh];
 }
 
 
@@ -69,7 +94,7 @@
     NSMutableDictionary * style = [NSMutableDictionary dictionary];
     style[NSForegroundColorAttributeName] = [UIColor blackColor];
     //标题大小
-    style[NSFontAttributeName] = kFont20;
+    style[NSFontAttributeName] = kFont16;
     self.navigationController.navigationBar.titleTextAttributes = style;
 }
 
@@ -83,7 +108,16 @@
     _advertisementImageCount = 5;
     
     UIScrollView * pageScrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
-    pageScrollView.contentSize = CGSizeMake(0, pageScrollView.frame.size.height + 1);
+    if (iPhoneScreenHeight_6 == kMainScreenHeight || iPhoneScreenHeight_6Plus == kMainScreenHeight) {
+        pageScrollView.contentSize = CGSizeMake(0, pageScrollView.frame.size.height + 1);
+    }
+    else if (iPhoneScreenHeight_5 == kMainScreenHeight) {
+        pageScrollView.contentSize = CGSizeMake(0, pageScrollView.frame.size.height + 50);
+    }
+    else {
+        pageScrollView.contentSize = CGSizeMake(0, pageScrollView.frame.size.height + 138);
+    }
+    
     pageScrollView.backgroundColor = RGBCOLOR(240, 240, 240);
     self.pageScrollView = pageScrollView;
     
@@ -93,23 +127,86 @@
     
     [self addPullToRefreshView];
     
+    [self setCircleView];
+    
     [self.view addSubview:self.pageScrollView];
     
-    UIButton * button = [UIButton buttonWithType:UIButtonTypeSystem];
-    button.frame = CGRectMake(200, 300, 100, 100);
-    button.tintColor = [UIColor redColor];
-    [button setTitle:@"ssss" forState:UIControlStateNormal];
-    button.titleLabel.textColor = [UIColor redColor];
-    button.backgroundColor = [UIColor whiteColor];
-    [button addTarget:self action:@selector(tiao) forControlEvents:UIControlEventTouchUpInside];
-    [self.pageScrollView addSubview:button];
-    
+    [self updateModel];
 }
 
-- (void)tiao {
+
+//请求-精品推荐
+- (void)updateModel {
     
-    [self.navigationController pushViewController:[[ProductDetailController alloc] init] animated:YES];
+    AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
+    
+    NSString * requestUrl = @"localhost/192.168.1.110:8080/mobile/offer/prooffer.json";
+    NSDictionary * requestDict = @{@"token":@"delan168"};
+    
+    [manager POST:requestUrl parameters:requestDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary * resultDict = responseObject[@"data"][@"proInfo"];
+        ProductDetail * model = [ProductDetail ProductDetailWithDict:resultDict];
+        self.productDetail = model;
+        
+        //初始化动画线程
+        [self.CA_Progress invalidate];
+        self.CA_Progress = nil;
+        //求动画进度清零
+        self.circleView.progressCircleView.percent = 0.0;
+        //刷新动画球上的数据
+        [self updateCircleView];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [MBProgressHUD showError:@"网络异常,请稍后再试"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUD];
+        });
+    }];
 }
+
+
+//请求-平台数据
+- (void)updateModel2 {
+    
+    AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
+    
+    NSString * requestUrl = @"localhost/192.168.1.110:8080/mobile/offer/getTotal.json";
+    NSDictionary * requestDict = @{@"token":@"delan168"};
+    
+    [manager POST:requestUrl parameters:requestDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary * resultDict = responseObject[@"data"][@"info"];
+        NSMutableDictionary * dataDict = [NSMutableDictionary dictionary];
+        [dataDict setValue:resultDict[@"sumMoney"] forKey:@"moneyData"];
+        [dataDict setValue:resultDict[@"sumUser"] forKey:@"userData"];
+        //刷新平台数据
+        [self updateCenterDataWithDict:dataDict];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [MBProgressHUD showError:@"网络异常,请稍后再试"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUD];
+        });
+    }];
+}
+
+
+//请求-广告图片
+- (void)updateModel3 {
+    
+    AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
+    
+    NSString * requestUrl = @"localhost/192.168.1.110:8080/mobile/offer/image.json";
+    NSDictionary * requestDict = @{@"token":@"delan168"};
+    
+    [manager POST:requestUrl parameters:requestDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary * resultDict = responseObject[@"data"][@"img"];
+        for (NSString * imageUrlString in resultDict) {
+            [self.imageUrlArray addObject:imageUrlString];
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [MBProgressHUD showError:@"网络异常,请稍后再试"];
+    }];
+}
+
 
 //设置广告view
 - (void)setTopScrollView {
@@ -198,10 +295,12 @@
     UIImageView * userIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"HomePageUser"]];
     userIconView.frame = CGRectMake(bigMargin,smallMargin , iconViewWidth + smallMargin, iconViewHeight);
     
-    UILabel * userDataLabel = [[UILabel alloc] initWithFrame:CGRectMake(userIconView.right, 0, dataLabelWidth - smallMargin, dataCenterHeight)];
-    userDataLabel.font = [UIFont fontWithName:@"Bradley Hand" size:16.0];
-    userDataLabel.textAlignment = NSTextAlignmentCenter;
+    UILabel * userDataLabel = [[UILabel alloc] initWithFrame:CGRectMake(userIconView.right + 10, 0, dataLabelWidth - smallMargin, dataCenterHeight)];
+    userDataLabel.font = [UIFont fontWithName:@"Zapf Dingbats" size:16.0];
+    userDataLabel.textColor = [UIColor grayColor];
+    userDataLabel.textAlignment = NSTextAlignmentLeft;
     userDataLabel.text = @"1318305";
+    self.userDataLabel = userDataLabel;
     
     //分割线
     UIView * spView = [[UIView alloc] init];
@@ -214,17 +313,80 @@
     UIImageView * moneyIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"HomePageMoney"]];
     moneyIconView.frame = CGRectMake(spView.right + bigMargin, smallMargin, iconViewWidth, iconViewHeight);
     
-    UILabel * moneyDataLabel = [[UILabel alloc] initWithFrame:CGRectMake(moneyIconView.right, 0, dataLabelWidth, dataCenterHeight)];
-    moneyDataLabel.font = [UIFont fontWithName:@"Bradley Hand" size:16.0];
-    moneyDataLabel.textAlignment = NSTextAlignmentCenter;
+    UILabel * moneyDataLabel = [[UILabel alloc] initWithFrame:CGRectMake(moneyIconView.right + 10, 0, dataLabelWidth, dataCenterHeight)];
+    moneyDataLabel.font = [UIFont fontWithName:@"Zapf Dingbats" size:16.0];
+    moneyDataLabel.textColor = [UIColor grayColor];
+    moneyDataLabel.textAlignment = NSTextAlignmentLeft;
     moneyDataLabel.text = @"2165759063";
+    self.moneyDataLabel = moneyDataLabel;
     
     [dataView addSubview:userIconView];
-    [dataView addSubview:userDataLabel];
+    [dataView addSubview:self.userDataLabel];
     [dataView addSubview:moneyIconView];
-    [dataView addSubview:moneyDataLabel];
+    [dataView addSubview:self.moneyDataLabel];
     [dataView addSubview:spView];
     [self.pageScrollView addSubview:dataView];
+}
+
+
+- (void)updateCenterDataWithDict:(NSDictionary *)dict {
+    
+    self.userDataLabel.text = [NSString stringWithFormat:@"%@",dict[@"userData"]];
+    self.moneyDataLabel.text = [NSString stringWithFormat:@"%@",dict[@"moneyData"]];
+}
+
+- (void)setCircleView {
+    
+    CircleView * circleView = [[CircleView alloc] init];
+    if (320 == kMainScreenWidth) {
+        circleView.frame = CGRectMake(0, 205, kMainScreenWidth, 300);
+    }
+    else if (375 == kMainScreenWidth) {
+        circleView.frame = CGRectMake(0, 205, kMainScreenWidth, 350);
+    }
+    else {
+        circleView.frame = CGRectMake(0, 205, kMainScreenWidth, 418);
+    }
+    circleView.progressCircleView.centerColor = RGBACOLOR(128, 163, 248, 1.0);
+    circleView.progressCircleView.arcBackColor = RGBACOLOR(237, 237, 237, 1.0);
+    circleView.progressCircleView.arcUnfinishColor = RGBACOLOR(152, 179, 87, 0.8);
+    circleView.progressCircleView.arcFinishColor = RGBACOLOR(128, 163, 248, 1.0);
+    circleView.progressCircleView.width = 13.0;
+    [circleView.purchaseBtn addTarget:self action:@selector(purchase) forControlEvents:UIControlEventTouchUpInside];
+    self.circleView = circleView;
+    [self.pageScrollView addSubview:self.circleView];
+}
+
+
+
+- (void)updateCircleView {
+    
+    self.circleView.progressCircleView.yearRate = self.productDetail.yearRate;
+    self.circleView.deadlineLabel.text = [NSString stringWithFormat:@"限期%d天",self.productDetail.deadline];
+    
+    CADisplayLink * CA_Progress = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateProgress)];
+    [CA_Progress addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    self.CA_Progress = CA_Progress;
+}
+
+
+#pragma mark - 监听投资按钮
+- (void)purchase {
+    
+    ProductDetailController * productDetailDest = [[ProductDetailController alloc] init];
+    [self.navigationController pushViewController:productDetailDest animated:YES];
+}
+
+
+#pragma mark - 球动画
+- (void)updateProgress {
+    
+    self.circleView.progressCircleView.percent += self.productDetail.saledPercent / 60.0;
+    if (self.circleView.progressCircleView.percent >= self.productDetail.saledPercent) {
+        self.circleView.progressCircleView.percent = self.productDetail.saledPercent;
+        [self.CA_Progress invalidate];
+        self.CA_Progress = nil;
+    }
 }
 
 
@@ -234,10 +396,13 @@
     
     __weak typeof(self) block_SELF = self;
     [self.pageScrollView addPullToRefreshWithActionHandler:^{
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [block_SELF.pageScrollView.pullToRefreshView stopAnimating];
-        });
+        [block_SELF updateModel];
+        [block_SELF.pageScrollView.pullToRefreshView stopAnimating];
     }];
+    self.pageScrollView.pullToRefreshView.textColor = [UIColor grayColor];
+    [self.pageScrollView.pullToRefreshView setTitle:@"下拉可以刷新" forState:SVPullToRefreshStateStopped];
+    [self.pageScrollView.pullToRefreshView setTitle:@"正在帮你刷新" forState:SVPullToRefreshStateLoading];
+    [self.pageScrollView.pullToRefreshView setTitle:@"松开立即刷新" forState:SVPullToRefreshStateTriggered];
 }
 
 

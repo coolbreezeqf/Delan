@@ -61,6 +61,33 @@
 		099E8A671B196A6700842D1A /* AccountManageEmergencyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A5E1B196A6700842D1A /* AccountManageEmergencyController.m */; };
 		099E8A681B196A6700842D1A /* AccountManagePassController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A601B196A6700842D1A /* AccountManagePassController.m */; };
 		099E8A691B196A6700842D1A /* PersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E8A621B196A6700842D1A /* PersonController.m */; };
+		184D123F1B1986AF00772EE4 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D12391B1986AF00772EE4 /* CircleView.m */; };
+		184D12401B1986AF00772EE4 /* CircleViewFor320.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184D123A1B1986AF00772EE4 /* CircleViewFor320.xib */; };
+		184D12411B1986AF00772EE4 /* CircleViewFor375.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184D123B1B1986AF00772EE4 /* CircleViewFor375.xib */; };
+		184D12421B1986AF00772EE4 /* CircleViewFor414.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184D123C1B1986AF00772EE4 /* CircleViewFor414.xib */; };
+		184D12431B1986AF00772EE4 /* ProgressCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D123E1B1986AF00772EE4 /* ProgressCircleView.m */; };
+		184D12511B19878100772EE4 /* InvestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D12461B19878100772EE4 /* InvestController.m */; };
+		184D12521B19878100772EE4 /* InvestRecordsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D12481B19878100772EE4 /* InvestRecordsController.m */; };
+		184D12531B19878100772EE4 /* ProductDetailLawBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D124A1B19878100772EE4 /* ProductDetailLawBook.m */; };
+		184D12541B19878100772EE4 /* ProductDetailPictureInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D124C1B19878100772EE4 /* ProductDetailPictureInformation.m */; };
+		184D12551B19878100772EE4 /* ProductMoreDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D124E1B19878100772EE4 /* ProductMoreDetailController.m */; };
+		184D12561B19878100772EE4 /* WebPayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D12501B19878100772EE4 /* WebPayController.m */; };
+		184D12591B19879C00772EE4 /* InvestedUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D12581B19879C00772EE4 /* InvestedUser.m */; };
+		184D126C1B1987E000772EE4 /* CalculatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D125B1B1987E000772EE4 /* CalculatorView.m */; };
+		184D126D1B1987E000772EE4 /* CalculatorViewFor320.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184D125C1B1987E000772EE4 /* CalculatorViewFor320.xib */; };
+		184D126E1B1987E000772EE4 /* CalculatorViewFor375.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184D125D1B1987E000772EE4 /* CalculatorViewFor375.xib */; };
+		184D126F1B1987E000772EE4 /* CalculatorViewFor414.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184D125E1B1987E000772EE4 /* CalculatorViewFor414.xib */; };
+		184D12701B1987E000772EE4 /* InvestedUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D12601B1987E000772EE4 /* InvestedUserCell.m */; };
+		184D12711B1987E000772EE4 /* InvestedUserCellFor320.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184D12611B1987E000772EE4 /* InvestedUserCellFor320.xib */; };
+		184D12721B1987E000772EE4 /* InvestedUserCellFor375.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184D12621B1987E000772EE4 /* InvestedUserCellFor375.xib */; };
+		184D12731B1987E000772EE4 /* InvestedUserCellFor414.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184D12631B1987E000772EE4 /* InvestedUserCellFor414.xib */; };
+		184D12741B1987E000772EE4 /* InvestViewFor320.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184D12641B1987E000772EE4 /* InvestViewFor320.xib */; };
+		184D12751B1987E000772EE4 /* InvestViewFor375.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184D12651B1987E000772EE4 /* InvestViewFor375.xib */; };
+		184D12761B1987E000772EE4 /* InvestViewFor414.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184D12661B1987E000772EE4 /* InvestViewFor414.xib */; };
+		184D12771B1987E000772EE4 /* MoreDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D12681B1987E000772EE4 /* MoreDetailView.m */; };
+		184D12781B1987E000772EE4 /* ProductMoreDetailControllerFor320.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184D12691B1987E000772EE4 /* ProductMoreDetailControllerFor320.xib */; };
+		184D12791B1987E000772EE4 /* ProductMoreDetailControllerFor375.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184D126A1B1987E000772EE4 /* ProductMoreDetailControllerFor375.xib */; };
+		184D127A1B1987E000772EE4 /* ProductMoreDetailControllerFor414.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184D126B1B1987E000772EE4 /* ProductMoreDetailControllerFor414.xib */; };
 		184DCE711B10564300DFEF20 /* HomePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184DCE701B10564300DFEF20 /* HomePageController.m */; };
 		184DCE741B1059FA00DFEF20 /* RootNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184DCE731B1059FA00DFEF20 /* RootNavgationController.m */; };
 		184DCE7A1B106B4400DFEF20 /* rollview_test_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 184DCE751B106B4400DFEF20 /* rollview_test_1.png */; };
@@ -228,6 +255,45 @@
 		099E8A601B196A6700842D1A /* AccountManagePassController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManagePassController.m; sourceTree = SOURCE_ROOT; };
 		099E8A611B196A6700842D1A /* PersonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonController.h; sourceTree = SOURCE_ROOT; };
 		099E8A621B196A6700842D1A /* PersonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonController.m; sourceTree = SOURCE_ROOT; };
+		184D12381B1986AF00772EE4 /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
+		184D12391B1986AF00772EE4 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
+		184D123A1B1986AF00772EE4 /* CircleViewFor320.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleViewFor320.xib; sourceTree = "<group>"; };
+		184D123B1B1986AF00772EE4 /* CircleViewFor375.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleViewFor375.xib; sourceTree = "<group>"; };
+		184D123C1B1986AF00772EE4 /* CircleViewFor414.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleViewFor414.xib; sourceTree = "<group>"; };
+		184D123D1B1986AF00772EE4 /* ProgressCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressCircleView.h; sourceTree = "<group>"; };
+		184D123E1B1986AF00772EE4 /* ProgressCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressCircleView.m; sourceTree = "<group>"; };
+		184D12451B19878100772EE4 /* InvestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvestController.h; sourceTree = "<group>"; };
+		184D12461B19878100772EE4 /* InvestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvestController.m; sourceTree = "<group>"; };
+		184D12471B19878100772EE4 /* InvestRecordsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvestRecordsController.h; sourceTree = "<group>"; };
+		184D12481B19878100772EE4 /* InvestRecordsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvestRecordsController.m; sourceTree = "<group>"; };
+		184D12491B19878100772EE4 /* ProductDetailLawBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailLawBook.h; sourceTree = "<group>"; };
+		184D124A1B19878100772EE4 /* ProductDetailLawBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailLawBook.m; sourceTree = "<group>"; };
+		184D124B1B19878100772EE4 /* ProductDetailPictureInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailPictureInformation.h; sourceTree = "<group>"; };
+		184D124C1B19878100772EE4 /* ProductDetailPictureInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailPictureInformation.m; sourceTree = "<group>"; };
+		184D124D1B19878100772EE4 /* ProductMoreDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductMoreDetailController.h; sourceTree = "<group>"; };
+		184D124E1B19878100772EE4 /* ProductMoreDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductMoreDetailController.m; sourceTree = "<group>"; };
+		184D124F1B19878100772EE4 /* WebPayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPayController.h; sourceTree = "<group>"; };
+		184D12501B19878100772EE4 /* WebPayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebPayController.m; sourceTree = "<group>"; };
+		184D12571B19879C00772EE4 /* InvestedUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvestedUser.h; sourceTree = "<group>"; };
+		184D12581B19879C00772EE4 /* InvestedUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvestedUser.m; sourceTree = "<group>"; };
+		184D125A1B1987E000772EE4 /* CalculatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorView.h; sourceTree = "<group>"; };
+		184D125B1B1987E000772EE4 /* CalculatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorView.m; sourceTree = "<group>"; };
+		184D125C1B1987E000772EE4 /* CalculatorViewFor320.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorViewFor320.xib; sourceTree = "<group>"; };
+		184D125D1B1987E000772EE4 /* CalculatorViewFor375.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorViewFor375.xib; sourceTree = "<group>"; };
+		184D125E1B1987E000772EE4 /* CalculatorViewFor414.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorViewFor414.xib; sourceTree = "<group>"; };
+		184D125F1B1987E000772EE4 /* InvestedUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvestedUserCell.h; sourceTree = "<group>"; };
+		184D12601B1987E000772EE4 /* InvestedUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvestedUserCell.m; sourceTree = "<group>"; };
+		184D12611B1987E000772EE4 /* InvestedUserCellFor320.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestedUserCellFor320.xib; sourceTree = "<group>"; };
+		184D12621B1987E000772EE4 /* InvestedUserCellFor375.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestedUserCellFor375.xib; sourceTree = "<group>"; };
+		184D12631B1987E000772EE4 /* InvestedUserCellFor414.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestedUserCellFor414.xib; sourceTree = "<group>"; };
+		184D12641B1987E000772EE4 /* InvestViewFor320.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestViewFor320.xib; sourceTree = "<group>"; };
+		184D12651B1987E000772EE4 /* InvestViewFor375.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestViewFor375.xib; sourceTree = "<group>"; };
+		184D12661B1987E000772EE4 /* InvestViewFor414.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestViewFor414.xib; sourceTree = "<group>"; };
+		184D12671B1987E000772EE4 /* MoreDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreDetailView.h; sourceTree = "<group>"; };
+		184D12681B1987E000772EE4 /* MoreDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreDetailView.m; sourceTree = "<group>"; };
+		184D12691B1987E000772EE4 /* ProductMoreDetailControllerFor320.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductMoreDetailControllerFor320.xib; sourceTree = "<group>"; };
+		184D126A1B1987E000772EE4 /* ProductMoreDetailControllerFor375.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductMoreDetailControllerFor375.xib; sourceTree = "<group>"; };
+		184D126B1B1987E000772EE4 /* ProductMoreDetailControllerFor414.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductMoreDetailControllerFor414.xib; sourceTree = "<group>"; };
 		184DCE6F1B10564300DFEF20 /* HomePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageController.h; sourceTree = "<group>"; };
 		184DCE701B10564300DFEF20 /* HomePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageController.m; sourceTree = "<group>"; };
 		184DCE721B1059FA00DFEF20 /* RootNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavgationController.h; sourceTree = "<group>"; };
@@ -558,6 +624,27 @@
 			name = AccountManage;
 			sourceTree = "<group>";
 		};
+		184D12371B1986AF00772EE4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				184D12381B1986AF00772EE4 /* CircleView.h */,
+				184D12391B1986AF00772EE4 /* CircleView.m */,
+				184D123A1B1986AF00772EE4 /* CircleViewFor320.xib */,
+				184D123B1B1986AF00772EE4 /* CircleViewFor375.xib */,
+				184D123C1B1986AF00772EE4 /* CircleViewFor414.xib */,
+				184D123D1B1986AF00772EE4 /* ProgressCircleView.h */,
+				184D123E1B1986AF00772EE4 /* ProgressCircleView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		184D12441B1986BE00772EE4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		184DCE691B10555800DFEF20 /* AccountCenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -571,9 +658,9 @@
 		184DCE6A1B10555800DFEF20 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				184D12441B1986BE00772EE4 /* Model */,
+				184D12371B1986AF00772EE4 /* View */,
 				184DCE6C1B1055BD00DFEF20 /* Controller */,
-				184DCE6D1B1055BD00DFEF20 /* Model */,
-				184DCE6E1B1055BD00DFEF20 /* View */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -597,20 +684,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		184DCE6D1B1055BD00DFEF20 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		184DCE6E1B1055BD00DFEF20 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		18678ED41B108A0400DECEBE /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -627,6 +700,18 @@
 		186AAB341B11775800B5C84C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				184D12451B19878100772EE4 /* InvestController.h */,
+				184D12461B19878100772EE4 /* InvestController.m */,
+				184D12471B19878100772EE4 /* InvestRecordsController.h */,
+				184D12481B19878100772EE4 /* InvestRecordsController.m */,
+				184D12491B19878100772EE4 /* ProductDetailLawBook.h */,
+				184D124A1B19878100772EE4 /* ProductDetailLawBook.m */,
+				184D124B1B19878100772EE4 /* ProductDetailPictureInformation.h */,
+				184D124C1B19878100772EE4 /* ProductDetailPictureInformation.m */,
+				184D124D1B19878100772EE4 /* ProductMoreDetailController.h */,
+				184D124E1B19878100772EE4 /* ProductMoreDetailController.m */,
+				184D124F1B19878100772EE4 /* WebPayController.h */,
+				184D12501B19878100772EE4 /* WebPayController.m */,
 				099E89EA1B19699E00842D1A /* ProductController.h */,
 				099E89EB1B19699E00842D1A /* ProductController.m */,
 				186AAB351B11775800B5C84C /* ProductDetailController.h */,
@@ -638,6 +723,8 @@
 		186AAB371B11775800B5C84C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				184D12571B19879C00772EE4 /* InvestedUser.h */,
+				184D12581B19879C00772EE4 /* InvestedUser.m */,
 				099E89DE1B19696500842D1A /* ProductModel.h */,
 				099E89DF1B19696500842D1A /* ProductModel.m */,
 				186AAB461B11A98400B5C84C /* ProductDetail.h */,
@@ -651,6 +738,24 @@
 			children = (
 				099E89E11B19699600842D1A /* CustomTableViewCell.h */,
 				099E89E21B19699600842D1A /* CustomTableViewCell.m */,
+				184D125A1B1987E000772EE4 /* CalculatorView.h */,
+				184D125B1B1987E000772EE4 /* CalculatorView.m */,
+				184D125C1B1987E000772EE4 /* CalculatorViewFor320.xib */,
+				184D125D1B1987E000772EE4 /* CalculatorViewFor375.xib */,
+				184D125E1B1987E000772EE4 /* CalculatorViewFor414.xib */,
+				184D125F1B1987E000772EE4 /* InvestedUserCell.h */,
+				184D12601B1987E000772EE4 /* InvestedUserCell.m */,
+				184D12611B1987E000772EE4 /* InvestedUserCellFor320.xib */,
+				184D12621B1987E000772EE4 /* InvestedUserCellFor375.xib */,
+				184D12631B1987E000772EE4 /* InvestedUserCellFor414.xib */,
+				184D12641B1987E000772EE4 /* InvestViewFor320.xib */,
+				184D12651B1987E000772EE4 /* InvestViewFor375.xib */,
+				184D12661B1987E000772EE4 /* InvestViewFor414.xib */,
+				184D12671B1987E000772EE4 /* MoreDetailView.h */,
+				184D12681B1987E000772EE4 /* MoreDetailView.m */,
+				184D12691B1987E000772EE4 /* ProductMoreDetailControllerFor320.xib */,
+				184D126A1B1987E000772EE4 /* ProductMoreDetailControllerFor375.xib */,
+				184D126B1B1987E000772EE4 /* ProductMoreDetailControllerFor414.xib */,
 				099E89E31B19699600842D1A /* CustomTableViewCell320.xib */,
 				099E89E41B19699600842D1A /* CustomTableViewCell375.xib */,
 				099E89E51B19699600842D1A /* CustomTableViewCell414.xib */,
@@ -1076,10 +1181,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184D126D1B1987E000772EE4 /* CalculatorViewFor320.xib in Resources */,
 				184DCE7B1B106B4400DFEF20 /* rollview_test_2.png in Resources */,
 				099E89FE1B1969F300842D1A /* AccountManageViewCell375.xib in Resources */,
+				184D127A1B1987E000772EE4 /* ProductMoreDetailControllerFor414.xib in Resources */,
+				184D12731B1987E000772EE4 /* InvestedUserCellFor414.xib in Resources */,
 				099E89FD1B1969F300842D1A /* AccountManageViewCell320.xib in Resources */,
 				099E8A4F1B196A5900842D1A /* InvestRecordHeaderCellt375.xib in Resources */,
+				184D12411B1986AF00772EE4 /* CircleViewFor375.xib in Resources */,
 				099E8A511B196A5900842D1A /* InvestRecordHeaderCell320.xib in Resources */,
 				099E89E81B19699600842D1A /* CustomTableViewCell375.xib in Resources */,
 				099E8A4E1B196A5900842D1A /* InvestRecordHeaderCellt320.xib in Resources */,
@@ -1096,10 +1205,14 @@
 				184DCE7A1B106B4400DFEF20 /* rollview_test_1.png in Resources */,
 				099E8A501B196A5900842D1A /* InvestRecordHeaderCellt414.xib in Resources */,
 				184DCE7C1B106B4400DFEF20 /* rollview_test_3.png in Resources */,
+				184D12721B1987E000772EE4 /* InvestedUserCellFor375.xib in Resources */,
 				B08336B31B0C791C007CCCAC /* LaunchScreen.xib in Resources */,
 				B01B8F7E1B13590E00A85DCD /* IntroduceInfo.plist in Resources */,
+				184D12711B1987E000772EE4 /* InvestedUserCellFor320.xib in Resources */,
 				186AAB401B11906500B5C84C /* DetailHeaderViewFor320.xib in Resources */,
 				099E8A311B196A4800842D1A /* BackProjectCell320.xib in Resources */,
+				184D12741B1987E000772EE4 /* InvestViewFor320.xib in Resources */,
+				184D12781B1987E000772EE4 /* ProductMoreDetailControllerFor320.xib in Resources */,
 				099E8A071B196A0100842D1A /* AccountCenterHeaderTableViewCell320.xib in Resources */,
 				184DCE7E1B106B4400DFEF20 /* rollview_test_5.png in Resources */,
 				099E8A331B196A4800842D1A /* BackProjectCell414.xib in Resources */,
@@ -1108,15 +1221,22 @@
 				B0109D8D1B0DEB1F00257AF9 /* DLMainNav.plist in Resources */,
 				099E8A091B196A0100842D1A /* AccountCenterHeaderTableViewCell414.xib in Resources */,
 				099E89E71B19699600842D1A /* CustomTableViewCell320.xib in Resources */,
+				184D12791B1987E000772EE4 /* ProductMoreDetailControllerFor375.xib in Resources */,
+				184D12401B1986AF00772EE4 /* CircleViewFor320.xib in Resources */,
+				184D12751B1987E000772EE4 /* InvestViewFor375.xib in Resources */,
 				099E8A371B196A4800842D1A /* BackProjectHeaderCell414.xib in Resources */,
+				184D12761B1987E000772EE4 /* InvestViewFor414.xib in Resources */,
 				099E8A1F1B196A3700842D1A /* InvestDetailCell320.xib in Resources */,
 				099E8A4C1B196A5900842D1A /* InvestRecordCell414.xib in Resources */,
 				099E8A211B196A3700842D1A /* InvestDetailCell414.xib in Resources */,
 				099E89FF1B1969F300842D1A /* AccountManageViewCell414.xib in Resources */,
 				099E8A521B196A5900842D1A /* InvestRecordHeaderCell375.xib in Resources */,
+				184D126E1B1987E000772EE4 /* CalculatorViewFor375.xib in Resources */,
 				184DCE7D1B106B4400DFEF20 /* rollview_test_4.png in Resources */,
+				184D12421B1986AF00772EE4 /* CircleViewFor414.xib in Resources */,
 				099E8A361B196A4800842D1A /* BackProjectHeaderCell375.xib in Resources */,
 				099E8A081B196A0100842D1A /* AccountCenterHeaderTableViewCell375.xib in Resources */,
+				184D126F1B1987E000772EE4 /* CalculatorViewFor414.xib in Resources */,
 				099E8A351B196A4800842D1A /* BackProjectHeaderCell320.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1178,6 +1298,7 @@
 				099E8A0C1B196A0D00842D1A /* AccountCenterController.m in Sources */,
 				184DCE711B10564300DFEF20 /* HomePageController.m in Sources */,
 				099E89DD1B19693F00842D1A /* MBProgressHUD.m in Sources */,
+				184D12771B1987E000772EE4 /* MoreDetailView.m in Sources */,
 				B02F2FCD1B1331F600D3D59E /* NewsTableViewCell.m in Sources */,
 				B02F2F911B1223DD00D3D59E /* AFHTTPRequestOperationManager.m in Sources */,
 				099E8A651B196A6700842D1A /* AccountManageBindingEmailController.m in Sources */,
@@ -1187,6 +1308,7 @@
 				099E8A341B196A4800842D1A /* BackProjectHeaderCell.m in Sources */,
 				B02F2FAC1B1223EC00D3D59E /* UIView+RSAdditions.m in Sources */,
 				B02F2F951B1223DD00D3D59E /* AFURLConnectionOperation.m in Sources */,
+				184D12551B19878100772EE4 /* ProductMoreDetailController.m in Sources */,
 				B0109D951B0E09E200257AF9 /* BaseViewController.m in Sources */,
 				B02F2FC21B12F6CC00D3D59E /* HelpCenterTableViewController.m in Sources */,
 				B02F2FF51B13362100D3D59E /* SDWebImageDecoder.m in Sources */,
@@ -1199,6 +1321,7 @@
 				B02F2FFD1B13362100D3D59E /* UIImageView+HighlightedWebCache.m in Sources */,
 				B02F2FB31B12240B00D3D59E /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				B0B650351B13633C002105E2 /* NoticeViewController.m in Sources */,
+				184D12511B19878100772EE4 /* InvestController.m in Sources */,
 				099E8A101B196A1A00842D1A /* MyVipController.m in Sources */,
 				B02F2FA01B1223DD00D3D59E /* UIProgressView+AFNetworking.m in Sources */,
 				B02F2FFB1B13362100D3D59E /* UIImage+GIF.m in Sources */,
@@ -1213,14 +1336,19 @@
 				099E8A681B196A6700842D1A /* AccountManagePassController.m in Sources */,
 				099E89F51B1969E600842D1A /* AccountManageOtherCell.m in Sources */,
 				099E8A671B196A6700842D1A /* AccountManageEmergencyController.m in Sources */,
+				184D12541B19878100772EE4 /* ProductDetailPictureInformation.m in Sources */,
 				B08336A81B0C791C007CCCAC /* AppDelegate.m in Sources */,
 				B02F2FFA1B13362100D3D59E /* UIButton+WebCache.m in Sources */,
 				B01B8F7C1B1358F600A85DCD /* IntroduceViewController.m in Sources */,
 				099E8A061B196A0100842D1A /* AccountCenterHeaderTableViewCell.m in Sources */,
+				184D12531B19878100772EE4 /* ProductDetailLawBook.m in Sources */,
+				184D12431B1986AF00772EE4 /* ProgressCircleView.m in Sources */,
 				B02F2F931B1223DD00D3D59E /* AFNetworkReachabilityManager.m in Sources */,
 				099E8A661B196A6700842D1A /* AccountManageKnowController.m in Sources */,
 				B02F2FF61B13362100D3D59E /* SDWebImageDownloader.m in Sources */,
+				184D12561B19878100772EE4 /* WebPayController.m in Sources */,
 				B0B650381B1364F2002105E2 /* NoticeTableViewCell.m in Sources */,
+				184D12521B19878100772EE4 /* InvestRecordsController.m in Sources */,
 				B02F2FF21B13362100D3D59E /* NSData+ImageContentType.m in Sources */,
 				099E89DB1B19693F00842D1A /* MBProgressHUD+NJ.m in Sources */,
 				B02F2FC71B131BE600D3D59E /* FeedBackViewController.m in Sources */,
@@ -1232,7 +1360,10 @@
 				099E8A2F1B196A4800842D1A /* BackProjectController.m in Sources */,
 				186AAB3C1B1177A300B5C84C /* DetailHeaderView.m in Sources */,
 				099E8A491B196A5900842D1A /* InvestRecordCell.m in Sources */,
+				184D12701B1987E000772EE4 /* InvestedUserCell.m in Sources */,
 				099E8A301B196A4800842D1A /* BackProjectCell.m in Sources */,
+				184D123F1B1986AF00772EE4 /* CircleView.m in Sources */,
+				184D12591B19879C00772EE4 /* InvestedUser.m in Sources */,
 				B02F2FF91B13362100D3D59E /* SDWebImagePrefetcher.m in Sources */,
 				B02F2FFC1B13362100D3D59E /* UIImage+MultiFormat.m in Sources */,
 				099E89EC1B19699E00842D1A /* ProductController.m in Sources */,
@@ -1247,6 +1378,7 @@
 				B0AE00B81B189B3400B9745B /* HelpDetailTableViewCell.m in Sources */,
 				B02F2FA21B1223DD00D3D59E /* UIWebView+AFNetworking.m in Sources */,
 				099E8A4D1B196A5900842D1A /* InvestRecordHeaderCell.m in Sources */,
+				184D126C1B1987E000772EE4 /* CalculatorView.m in Sources */,
 				B02F2F971B1223DD00D3D59E /* AFURLResponseSerialization.m in Sources */,
 				B02F30021B13362100D3D59E /* Pods-SDWebImage-dummy.m in Sources */,
 				186AAB391B11775800B5C84C /* ProductDetailController.m in Sources */,
