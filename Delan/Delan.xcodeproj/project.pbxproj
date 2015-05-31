@@ -113,6 +113,9 @@
 		B00045481B19A0D800A44C82 /* LRTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B00045471B19A0D800A44C82 /* LRTextField.m */; };
 		B000454B1B1AC9C200A44C82 /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B000454A1B1AC9C200A44C82 /* ForgetViewController.m */; };
 		B000454E1B1AD9E800A44C82 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = B000454D1B1AD9E800A44C82 /* UserService.m */; };
+		B00045681B1B06D300A44C82 /* UserBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B00045631B1B06D300A44C82 /* UserBaseClass.m */; };
+		B00045691B1B06D300A44C82 /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = B00045651B1B06D300A44C82 /* UserData.m */; };
+		B000456A1B1B06D300A44C82 /* UserUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B00045671B1B06D300A44C82 /* UserUserInfo.m */; };
 		B0109D8D1B0DEB1F00257AF9 /* DLMainNav.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0109D8C1B0DEB1F00257AF9 /* DLMainNav.plist */; };
 		B0109D8F1B0DEEE100257AF9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0109D8E1B0DEEE100257AF9 /* Images.xcassets */; };
 		B0109D921B0E01E600257AF9 /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0109D911B0E01E600257AF9 /* RootTabBarController.m */; };
@@ -349,6 +352,13 @@
 		B000454A1B1AC9C200A44C82 /* ForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForgetViewController.m; path = Delan/ForgetViewController.m; sourceTree = SOURCE_ROOT; };
 		B000454C1B1AD9E800A44C82 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserService.h; path = Delan/UserService.h; sourceTree = SOURCE_ROOT; };
 		B000454D1B1AD9E800A44C82 /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserService.m; path = Delan/UserService.m; sourceTree = SOURCE_ROOT; };
+		B00045621B1B06D300A44C82 /* UserBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserBaseClass.h; sourceTree = SOURCE_ROOT; };
+		B00045631B1B06D300A44C82 /* UserBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserBaseClass.m; sourceTree = SOURCE_ROOT; };
+		B00045641B1B06D300A44C82 /* UserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserData.h; sourceTree = SOURCE_ROOT; };
+		B00045651B1B06D300A44C82 /* UserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserData.m; sourceTree = SOURCE_ROOT; };
+		B00045661B1B06D300A44C82 /* UserUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserUserInfo.h; sourceTree = SOURCE_ROOT; };
+		B00045671B1B06D300A44C82 /* UserUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserUserInfo.m; sourceTree = SOURCE_ROOT; };
+		B000456B1B1B07E200A44C82 /* UserDataModels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDataModels.h; sourceTree = SOURCE_ROOT; };
 		B0109D8C1B0DEB1F00257AF9 /* DLMainNav.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DLMainNav.plist; sourceTree = "<group>"; };
 		B0109D8E1B0DEEE100257AF9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B0109D901B0E01E600257AF9 /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
@@ -840,6 +850,7 @@
 		B00045261B19915F00A44C82 /* LoginAndRegister */ = {
 			isa = PBXGroup;
 			children = (
+				B00045611B1B06C800A44C82 /* Model */,
 				B000454C1B1AD9E800A44C82 /* UserService.h */,
 				B000454D1B1AD9E800A44C82 /* UserService.m */,
 				B00045301B1996C500A44C82 /* NetManager */,
@@ -849,8 +860,6 @@
 				B000452B1B19935C00A44C82 /* LoginViewController.m */,
 				B00045491B1AC9C200A44C82 /* ForgetViewController.h */,
 				B000454A1B1AC9C200A44C82 /* ForgetViewController.m */,
-				B000452D1B19938800A44C82 /* LARNetManager.h */,
-				B000452E1B19938800A44C82 /* LARNetManager.m */,
 				B00045461B19A0D800A44C82 /* LRTextField.h */,
 				B00045471B19A0D800A44C82 /* LRTextField.m */,
 			);
@@ -860,9 +869,25 @@
 		B00045301B1996C500A44C82 /* NetManager */ = {
 			isa = PBXGroup;
 			children = (
+				B000452D1B19938800A44C82 /* LARNetManager.h */,
+				B000452E1B19938800A44C82 /* LARNetManager.m */,
 			);
 			path = NetManager;
 			sourceTree = SOURCE_ROOT;
+		};
+		B00045611B1B06C800A44C82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B000456B1B1B07E200A44C82 /* UserDataModels.h */,
+				B00045621B1B06D300A44C82 /* UserBaseClass.h */,
+				B00045631B1B06D300A44C82 /* UserBaseClass.m */,
+				B00045641B1B06D300A44C82 /* UserData.h */,
+				B00045651B1B06D300A44C82 /* UserData.m */,
+				B00045661B1B06D300A44C82 /* UserUserInfo.h */,
+				B00045671B1B06D300A44C82 /* UserUserInfo.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
 		};
 		B013D7AD1B0C94BC00AFE1FC /* MoreTab */ = {
 			isa = PBXGroup;
@@ -1385,6 +1410,7 @@
 				099E8A1E1B196A3700842D1A /* InvestDetailCell.m in Sources */,
 				B01FB3B91B149D2800088768 /* HelpDetailViewController.m in Sources */,
 				099E8A341B196A4800842D1A /* BackProjectHeaderCell.m in Sources */,
+				B00045691B1B06D300A44C82 /* UserData.m in Sources */,
 				B02F2FAC1B1223EC00D3D59E /* UIView+RSAdditions.m in Sources */,
 				B02F2F951B1223DD00D3D59E /* AFURLConnectionOperation.m in Sources */,
 				184D12551B19878100772EE4 /* ProductMoreDetailController.m in Sources */,
@@ -1401,6 +1427,7 @@
 				B02F2FB31B12240B00D3D59E /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				B0B650351B13633C002105E2 /* NoticeViewController.m in Sources */,
 				184D12511B19878100772EE4 /* InvestController.m in Sources */,
+				B000456A1B1B06D300A44C82 /* UserUserInfo.m in Sources */,
 				099E8A101B196A1A00842D1A /* MyVipController.m in Sources */,
 				B02F2FA01B1223DD00D3D59E /* UIProgressView+AFNetworking.m in Sources */,
 				B02F2FFB1B13362100D3D59E /* UIImage+GIF.m in Sources */,
@@ -1445,6 +1472,7 @@
 				B02F2F981B1223DD00D3D59E /* AFURLSessionManager.m in Sources */,
 				B000452C1B19935C00A44C82 /* LoginViewController.m in Sources */,
 				099E8A631B196A6700842D1A /* AccountManageController.m in Sources */,
+				B00045681B1B06D300A44C82 /* UserBaseClass.m in Sources */,
 				099E8A2F1B196A4800842D1A /* BackProjectController.m in Sources */,
 				186AAB3C1B1177A300B5C84C /* DetailHeaderView.m in Sources */,
 				099E8A491B196A5900842D1A /* InvestRecordCell.m in Sources */,

@@ -9,14 +9,16 @@
 #import "LoginViewController.h"
 #import "ForgetViewController.h"
 #import "RegisterViewController.h"
+#import "LARNetManager.h"
 #import "LRTextField.h"
+#import "MBProgressHUD+NJ.h"
 
 @interface LoginViewController ()<UITextFieldDelegate>
 @property (nonatomic,strong) LRTextField *userNameTF;
 @property (nonatomic,strong) LRTextField *userPasswordTF;
-@property (nonatomic,strong) LRTextField *checkCodeTF;
+//@property (nonatomic,strong) LRTextField *checkCodeTF;
 @property (nonatomic,strong) UIButton *loginButton;
-@property (nonatomic,strong) UIButton *getCheckCodeButton;
+//@property (nonatomic,strong) UIButton *getCheckCodeButton;
 @property (nonatomic,strong) UIButton *forgetButton;
 @property (nonatomic,strong) UIButton *registerButton;
 @end
@@ -34,13 +36,18 @@
 	self.navigationItem.title = @"登 录";
 	self.navigationController.navigationBar.barTintColor = kMainColor;
 	
-	[self setLeftButton:nil title:@"取消" target:self action:@selector(cleanLogin)];
+	[self setLeftButton:nil title:@"取消" target:self action:@selector(cancelLogin)];
 
 	//手机号tf
 	_userNameTF = [[LRTextField alloc] initWithFrame:CGRectMake(10, 64+10, kMainScreenWidth-20, 44)];
 	_userNameTF.leftImage = [UIImage imageNamed:@"LRUser"];
 	_userNameTF.placeholder = @"请输入您绑定的手机号";
 	_userNameTF.delegate = self;
+	_userNameTF.keyboardType = UIKeyboardTypeNumberPad;
+	if ([UserService sharedUserService].mobile) {
+		_userNameTF.text = [UserService sharedUserService].mobile;
+	}
+
 	[self.view addSubview:_userNameTF];
 	
 	//密码tf
@@ -52,24 +59,24 @@
 	[self.view addSubview:_userPasswordTF];
 	
 	//获取验证码button
-	_getCheckCodeButton = [[UIButton alloc] initWithFrame:CGRectMake(0, _userPasswordTF.bottom + 15, 115, 44)];
-	_getCheckCodeButton.left = kMainScreenWidth - _getCheckCodeButton.width - 10;
-	_getCheckCodeButton.backgroundColor = RGBCOLOR(253, 171, 105);
-	[_getCheckCodeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
-	[_getCheckCodeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-	[_getCheckCodeButton addTarget:self action:@selector(getCheckCode) forControlEvents:UIControlEventTouchDown];
-	_getCheckCodeButton.titleLabel.font = kFont14;
-	[self.view addSubview:_getCheckCodeButton];
+//	_getCheckCodeButton = [[UIButton alloc] initWithFrame:CGRectMake(0, _userPasswordTF.bottom + 15, 115, 44)];
+//	_getCheckCodeButton.left = kMainScreenWidth - _getCheckCodeButton.width - 10;
+//	_getCheckCodeButton.backgroundColor = RGBCOLOR(253, 171, 105);
+//	[_getCheckCodeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
+//	[_getCheckCodeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//	[_getCheckCodeButton addTarget:self action:@selector(getCheckCode) forControlEvents:UIControlEventTouchDown];
+//	_getCheckCodeButton.titleLabel.font = kFont14;
+//	[self.view addSubview:_getCheckCodeButton];
 	
 	//验证码tf
-	_checkCodeTF = [[LRTextField alloc] initWithFrame:CGRectMake(10, _userPasswordTF.bottom + 15, kMainScreenWidth-_getCheckCodeButton.width - 30, 44)];
-	_checkCodeTF.leftImage = [UIImage imageNamed:@"LRCheck"];
-	_checkCodeTF.placeholder = @"请输入验证码";
-	_checkCodeTF.delegate = self;
-	[self.view addSubview:_checkCodeTF];
+//	_checkCodeTF = [[LRTextField alloc] initWithFrame:CGRectMake(10, _userPasswordTF.bottom + 15, kMainScreenWidth-_getCheckCodeButton.width - 30, 44)];
+//	_checkCodeTF.leftImage = [UIImage imageNamed:@"LRCheck"];
+//	_checkCodeTF.placeholder = @"请输入验证码";
+//	_checkCodeTF.delegate = self;
+//	[self.view addSubview:_checkCodeTF];
 	
 	//登陆button
-	_loginButton = [[UIButton alloc] initWithFrame:CGRectMake(10, _checkCodeTF.bottom + 15, kMainScreenWidth - 20, 44)];
+	_loginButton = [[UIButton alloc] initWithFrame:CGRectMake(10, _userPasswordTF.bottom + 15, kMainScreenWidth - 20, 44)];
 	[_loginButton setBackgroundColor:kMainColor];
 	[_loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 	[_loginButton setTitle:@"登 录" forState:UIControlStateNormal];
@@ -91,9 +98,9 @@
 	_registerButton.left = kMainScreenWidth - _registerButton.width - 10;
 	[self.view addSubview:_registerButton];
 }
-- (void)cleanLogin{
+- (void)cancelLogin{
 	[self.navigationController dismissViewControllerAnimated:YES completion:^{
-		
+		kAppDelegate.tabBar.selectedIndex = 0;
 	}];
 }
 
@@ -104,13 +111,35 @@
 
 //登录
 - (void)login{
-	
+	[MBProgressHUD showMessage:@"登录中..."];
+	LARNetManager *netmanager = [[LARNetManager alloc] init];
+	NSDictionary *dic = @{@"mobile": _userNameTF.text,
+						  @"password": _userPasswordTF.text};
+	[netmanager userLogin:dic succ:^(NSDictionary *successDict) {
+		NSDictionary *dic = @{@"mobile": _userNameTF.text,
+							  @"userInfo": successDict};
+		[[UserService sharedUserService] userLoginWithInfo:dic];
+		[MBProgressHUD showSuccess:@"登录成功"];
+		[self.navigationController dismissViewControllerAnimated:YES
+													  completion:^{
+														  
+													  }];
+	} failure:^(NSDictionary *failDict, NSError *error) {
+		
+	}];
 }
 
 // 获取验证码
-- (void)getCheckCode{
-	
-}
+//- (void)getCheckCode{
+//	[MBProgressHUD showMessage:@"正在发送验证码"];
+//	LARNetManager *netmanager = [[LARNetManager alloc] init];
+//	[netmanager getMobileCodeWith:_userNameTF.text succ:^(NSDictionary *dic){
+//		MLOG(@"success");
+//	} failure:^{
+//		MLOG(@"failure");
+//	}];
+//
+//}
 
 //push 注册用户界面
 - (void)showRegisterView{

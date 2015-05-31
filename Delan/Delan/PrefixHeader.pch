@@ -15,7 +15,8 @@
 #import "Public.h"
 #import "UIView+RSAdditions.h"
 #import "BaseViewController.h"
-
-#define HostUrl @"192.168.1.108:8080/"
+#import "UserService.h"
+//#define HostUrl @"http://192.168.1.108:8080/"
+#define HostUrl @"http://yingzibaiye.oicp.net/"
 #define kMainColor RGBCOLOR(87, 114, 185)
 #endif

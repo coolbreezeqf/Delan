@@ -7,7 +7,7 @@
 //
 
 #import "MoreViewController.h"
-#import "MBProgressHUD.h"
+#import "MBProgressHUD+NJ.h"
 #import "AFNetworking.h"
 #import "HelpCenterTableViewController.h"
 #import "FeedBackViewController.h"
@@ -63,7 +63,8 @@
 
 #pragma mark - action
 - (void)logoutUser{
-	
+	[[UserService sharedUserService] userLogout];
+	[MBProgressHUD showSuccess:@"已退出"];
 }
 
 #pragma mark - tableView delegate and datasource
@@ -133,6 +134,8 @@
 			default:{
 			}break;
 		}
+	}else{
+		[self logoutUser];
 	}
 }
 
