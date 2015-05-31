@@ -111,6 +111,8 @@
 		B00045441B199CE900A44C82 /* MTPItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B000453F1B199CE900A44C82 /* MTPItem.m */; };
 		B00045451B199CE900A44C82 /* MTPPublicInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B00045411B199CE900A44C82 /* MTPPublicInformation.m */; };
 		B00045481B19A0D800A44C82 /* LRTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B00045471B19A0D800A44C82 /* LRTextField.m */; };
+		B000454B1B1AC9C200A44C82 /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B000454A1B1AC9C200A44C82 /* ForgetViewController.m */; };
+		B000454E1B1AD9E800A44C82 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = B000454D1B1AD9E800A44C82 /* UserService.m */; };
 		B0109D8D1B0DEB1F00257AF9 /* DLMainNav.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0109D8C1B0DEB1F00257AF9 /* DLMainNav.plist */; };
 		B0109D8F1B0DEEE100257AF9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0109D8E1B0DEEE100257AF9 /* Images.xcassets */; };
 		B0109D921B0E01E600257AF9 /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0109D911B0E01E600257AF9 /* RootTabBarController.m */; };
@@ -343,6 +345,10 @@
 		B00045411B199CE900A44C82 /* MTPPublicInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPPublicInformation.m; sourceTree = "<group>"; };
 		B00045461B19A0D800A44C82 /* LRTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LRTextField.h; path = Delan/LRTextField.h; sourceTree = SOURCE_ROOT; };
 		B00045471B19A0D800A44C82 /* LRTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LRTextField.m; path = Delan/LRTextField.m; sourceTree = SOURCE_ROOT; };
+		B00045491B1AC9C200A44C82 /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForgetViewController.h; path = Delan/ForgetViewController.h; sourceTree = SOURCE_ROOT; };
+		B000454A1B1AC9C200A44C82 /* ForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForgetViewController.m; path = Delan/ForgetViewController.m; sourceTree = SOURCE_ROOT; };
+		B000454C1B1AD9E800A44C82 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserService.h; path = Delan/UserService.h; sourceTree = SOURCE_ROOT; };
+		B000454D1B1AD9E800A44C82 /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserService.m; path = Delan/UserService.m; sourceTree = SOURCE_ROOT; };
 		B0109D8C1B0DEB1F00257AF9 /* DLMainNav.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DLMainNav.plist; sourceTree = "<group>"; };
 		B0109D8E1B0DEEE100257AF9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B0109D901B0E01E600257AF9 /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
@@ -834,11 +840,15 @@
 		B00045261B19915F00A44C82 /* LoginAndRegister */ = {
 			isa = PBXGroup;
 			children = (
+				B000454C1B1AD9E800A44C82 /* UserService.h */,
+				B000454D1B1AD9E800A44C82 /* UserService.m */,
 				B00045301B1996C500A44C82 /* NetManager */,
 				B00045271B19933A00A44C82 /* RegisterViewController.h */,
 				B00045281B19933A00A44C82 /* RegisterViewController.m */,
 				B000452A1B19935C00A44C82 /* LoginViewController.h */,
 				B000452B1B19935C00A44C82 /* LoginViewController.m */,
+				B00045491B1AC9C200A44C82 /* ForgetViewController.h */,
+				B000454A1B1AC9C200A44C82 /* ForgetViewController.m */,
 				B000452D1B19938800A44C82 /* LARNetManager.h */,
 				B000452E1B19938800A44C82 /* LARNetManager.m */,
 				B00045461B19A0D800A44C82 /* LRTextField.h */,
@@ -1404,6 +1414,7 @@
 				B02F2FFE1B13362100D3D59E /* UIImageView+WebCache.m in Sources */,
 				099E8A481B196A5900842D1A /* InvestRecordController.m in Sources */,
 				B00045451B199CE900A44C82 /* MTPPublicInformation.m in Sources */,
+				B000454B1B1AC9C200A44C82 /* ForgetViewController.m in Sources */,
 				099E8A681B196A6700842D1A /* AccountManagePassController.m in Sources */,
 				099E89F51B1969E600842D1A /* AccountManageOtherCell.m in Sources */,
 				099E8A671B196A6700842D1A /* AccountManageEmergencyController.m in Sources */,
@@ -1414,6 +1425,7 @@
 				099E8A061B196A0100842D1A /* AccountCenterHeaderTableViewCell.m in Sources */,
 				184D12531B19878100772EE4 /* ProductDetailLawBook.m in Sources */,
 				184D12431B1986AF00772EE4 /* ProgressCircleView.m in Sources */,
+				B000454E1B1AD9E800A44C82 /* UserService.m in Sources */,
 				B02F2F931B1223DD00D3D59E /* AFNetworkReachabilityManager.m in Sources */,
 				099E8A661B196A6700842D1A /* AccountManageKnowController.m in Sources */,
 				B00045441B199CE900A44C82 /* MTPItem.m in Sources */,

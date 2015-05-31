@@ -22,6 +22,12 @@
 		[self setLeftButton:[UIImage imageNamed:@"DLBackButtonImage"] title:nil target:self action:@selector(back) rect:CGRectMake(0, 0, 22, 22)];
 	}
 	
+//	if (kSystemVersion >= 7.0) {
+//		self.navigationController.navigationBar.barTintColor = kMainColor;
+//	}else{
+//		self.navigationController.navigationBar.tintColor = kMainColor;
+//	}
+	
 //	if (self.navigationController) {
 //		if (self.navigationController.navigationBarHidden == YES) {
 //			g_OffsetY = 0;

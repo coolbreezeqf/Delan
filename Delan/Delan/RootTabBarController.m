@@ -73,6 +73,13 @@
 	currentSelectIndex = tabBarController.selectedIndex;
 	MLOG(@"select %d tab", currentSelectIndex);
 	if (currentSelectIndex == 2) {
+		if (1) {//没有登陆
+			RootNavgationController *nav = [[RootNavgationController alloc] initWithRootViewController:[[LoginViewController alloc] init]];
+			
+			[self presentViewController:nav animated:YES completion:^{
+				//登陆失败或成功
+			}];
+		}
 //		[(RootNavgationController *)viewController pushViewController:vc animated:YES];
 //		[(RootNavgationController *)viewController pushViewController:[[LoginViewController alloc] init] animated:YES];
 	}

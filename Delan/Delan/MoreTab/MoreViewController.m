@@ -143,6 +143,10 @@
 	return 10;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+	return 1;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
 	return 3;
 }

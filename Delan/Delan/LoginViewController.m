@@ -7,6 +7,8 @@
 //
 
 #import "LoginViewController.h"
+#import "ForgetViewController.h"
+#import "RegisterViewController.h"
 #import "LRTextField.h"
 
 @interface LoginViewController ()<UITextFieldDelegate>
@@ -30,7 +32,10 @@
 - (void) initUI{
 	self.view.backgroundColor = RGBCOLOR(245, 245, 245);
 	self.navigationItem.title = @"登 录";
+	self.navigationController.navigationBar.barTintColor = kMainColor;
 	
+	[self setLeftButton:nil title:@"取消" target:self action:@selector(cleanLogin)];
+
 	//手机号tf
 	_userNameTF = [[LRTextField alloc] initWithFrame:CGRectMake(10, 64+10, kMainScreenWidth-20, 44)];
 	_userNameTF.leftImage = [UIImage imageNamed:@"LRUser"];
@@ -74,17 +79,22 @@
 	_forgetButton = [UIButton buttonWithType:UIButtonTypeSystem];
 	[_forgetButton setTitle:@"忘记密码?" forState:UIControlStateNormal];
 	[_forgetButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-	[_forgetButton addTarget:self action:@selector(forgetButton) forControlEvents:UIControlEventTouchDown];
+	[_forgetButton addTarget:self action:@selector(showForgetView) forControlEvents:UIControlEventTouchDown];
 	_forgetButton.frame = CGRectMake(10, _loginButton.bottom + 5, 80, 25);
 	[self.view addSubview:_forgetButton];
 	
 	_registerButton = [UIButton buttonWithType:UIButtonTypeSystem];
 	[_registerButton setTitle:@"注册" forState:UIControlStateNormal];
 	[_registerButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-	[_registerButton addTarget:self action:@selector(forgetButton) forControlEvents:UIControlEventTouchDown];
+	[_registerButton addTarget:self action:@selector(showRegisterView) forControlEvents:UIControlEventTouchDown];
 	_registerButton.frame = CGRectMake(0, _loginButton.bottom + 5, 50, 25);
 	_registerButton.left = kMainScreenWidth - _registerButton.width - 10;
 	[self.view addSubview:_registerButton];
+}
+- (void)cleanLogin{
+	[self.navigationController dismissViewControllerAnimated:YES completion:^{
+		
+	}];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
@@ -104,12 +114,12 @@
 
 //push 注册用户界面
 - (void)showRegisterView{
-	
+	[self.navigationController pushViewController:[[RegisterViewController alloc] init] animated:YES];
 }
 
 //push 忘记密码界面
 - (void)showForgetView{
-	
+	[self.navigationController pushViewController:[[ForgetViewController alloc] init] animated:YES];
 }
 
 

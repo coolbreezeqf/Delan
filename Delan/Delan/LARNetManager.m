@@ -24,8 +24,19 @@
 
 - (void)getMobileCodeWith:(NSString *)mobile succ:(void (^)(NSDictionary *))succ failure:(void (^)())failure{
 	NSString *url = [NSString stringWithFormat:@"%@/user/getMobileCode.json",HostUrl];
-//	[NetManager requestWith:@{@"mobile": mobile} url:url method:@"POST" operationKey:nil parameEncoding:AFNetworking succ:<#^(NSDictionary *successDict)success#> failure:<#^(NSDictionary *failDict, NSError *error)failure#>]
+	[[AFHTTPRequestOperationManager manager] POST:[NSString stringWithFormat:@"mobile=%@",mobile] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+		
+	} failure:nil];
+//	
+//	[[AFHTTPRequestOperationManager manager] GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//		NSLog(@"JSON:%@",responseObject);
+////		self.tabBarController.selectedIndex = 0;
+//	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//		NSLog(@"Error:%@",error);
+//	}];
 }
+
+
 
 
 @end

@@ -28,7 +28,7 @@
 - (void)initUI{
 	self.view.backgroundColor = RGBCOLOR(245, 245, 245);
 	self.navigationItem.title = @"注 册";
-	
+	self.navigationController.navigationBar.tintColor = kMainColor;
 	//手机号
 	_userNameTF = [[LRTextField alloc] initWithFrame:CGRectMake(10, 64+10, kMainScreenWidth-20, 44)];
 	_userNameTF.leftImage = [UIImage imageNamed:@"LRUser"];
