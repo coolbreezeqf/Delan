@@ -27,8 +27,8 @@
 
 //重载用户信息
 //sessionId过期时可以调用它重新获取
-- (void)reLoadUserInfoWithSucc:(SUCCESSBLOCK) succ
-				   failure:(FAILUREBLOCK) failure;
+- (void)reLoadUserInfo;
+
 //登出
 - (void)userLogout;
 @end
