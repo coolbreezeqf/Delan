@@ -850,10 +850,10 @@
 		B00045261B19915F00A44C82 /* LoginAndRegister */ = {
 			isa = PBXGroup;
 			children = (
+				B00045301B1996C500A44C82 /* NetManager */,
 				B00045611B1B06C800A44C82 /* Model */,
 				B000454C1B1AD9E800A44C82 /* UserService.h */,
 				B000454D1B1AD9E800A44C82 /* UserService.m */,
-				B00045301B1996C500A44C82 /* NetManager */,
 				B00045271B19933A00A44C82 /* RegisterViewController.h */,
 				B00045281B19933A00A44C82 /* RegisterViewController.m */,
 				B000452A1B19935C00A44C82 /* LoginViewController.h */,

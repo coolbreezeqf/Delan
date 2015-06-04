@@ -17,6 +17,6 @@
 #import "BaseViewController.h"
 #import "UserService.h"
 //#define HostUrl @"http://192.168.1.108:8080/"
-#define HostUrl @"http://yingzibaiye.oicp.net/"
+#define HostUrl @"http://www.delanlicai.wdb168.com/"
 #define kMainColor RGBCOLOR(87, 114, 185)
 #endif

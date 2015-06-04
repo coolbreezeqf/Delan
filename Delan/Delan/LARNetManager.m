@@ -42,6 +42,10 @@
 	}];
 }
 
+//忘记密码
+
+
+//注册
 - (void)registerWith:(NSDictionary *)info
 				succ:(SUCCESSBLOCK) succ
 			 failure:(FAILUREBLOCK) failure{
@@ -60,25 +64,26 @@
 	}];
 }
 
+//登录
 - (void)userLogin:(NSDictionary *)info
 			 succ:(SUCCESSBLOCK) succ
 			 failure:(FAILUREBLOCK) failure{
 	NSString *url = [NSString stringWithFormat:@"%@mobile/user/login.json", HostUrl];
 	MLOG(@"request: %@", url);
 	[_manager POST:url parameters:info success:^(AFHTTPRequestOperation *operation, id responseObject) {
-		[MBProgressHUD hideHUD];
 		MLOG(@"response: %@",responseObject);
 		UserBaseClass *userbase = [UserBaseClass modelObjectWithDictionary:responseObject];
 		if ([userbase.code integerValue]) {
 			succ([userbase.data.userInfo dictionaryRepresentation]);
 		}else{
-			[MBProgressHUD showError:userbase.msg];
+			failure(responseObject,nil);
 		}
 	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-		[MBProgressHUD hideHUD];
+		failure(nil,error);
 		MLOG(@"%@",error);
 	}];
 }
+
 
 
 @end

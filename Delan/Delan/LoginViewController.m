@@ -98,6 +98,8 @@
 	_registerButton.left = kMainScreenWidth - _registerButton.width - 10;
 	[self.view addSubview:_registerButton];
 }
+
+//取消登陆
 - (void)cancelLogin{
 	[self.navigationController dismissViewControllerAnimated:YES completion:^{
 		kAppDelegate.tabBar.selectedIndex = 0;
@@ -112,20 +114,17 @@
 //登录
 - (void)login{
 	[MBProgressHUD showMessage:@"登录中..."];
-	LARNetManager *netmanager = [[LARNetManager alloc] init];
-	NSDictionary *dic = @{@"mobile": _userNameTF.text,
-						  @"password": _userPasswordTF.text};
-	[netmanager userLogin:dic succ:^(NSDictionary *successDict) {
-		NSDictionary *dic = @{@"mobile": _userNameTF.text,
-							  @"userInfo": successDict};
-		[[UserService sharedUserService] userLoginWithInfo:dic];
+	
+	[[UserService sharedUserService]  loginWith:_userNameTF.text andPassword:_userPasswordTF.text succ:^(NSDictionary *successDict) {
+		[MBProgressHUD hideHUD];
 		[MBProgressHUD showSuccess:@"登录成功"];
 		[self.navigationController dismissViewControllerAnimated:YES
 													  completion:^{
-														  
+
 													  }];
 	} failure:^(NSDictionary *failDict, NSError *error) {
-		
+		[MBProgressHUD hideHUD];
+		[MBProgressHUD showError:failDict[@"msg"]];
 	}];
 }
 

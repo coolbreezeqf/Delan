@@ -74,9 +74,7 @@
 	MLOG(@"select %d tab", currentSelectIndex);
 	if (currentSelectIndex == 2) {
 		if (![UserService sharedUserService].isLogin) {//没有登陆
-			RootNavgationController *nav = [[RootNavgationController alloc] initWithRootViewController:[[LoginViewController alloc] init]];
-			[self presentViewController:nav animated:YES completion:^{
-			}];
+			[[UserService sharedUserService] showLoginView];
 		}
 	}
 		

@@ -63,8 +63,12 @@
 
 #pragma mark - action
 - (void)logoutUser{
-	[[UserService sharedUserService] userLogout];
-	[MBProgressHUD showSuccess:@"已退出"];
+	if ([UserService sharedUserService].isLogin) {
+		[[UserService sharedUserService] userLogout];
+		[MBProgressHUD showSuccess:@"已退出"];
+	}else{
+		[MBProgressHUD showError:@"操作有误，尚未登陆"];
+	}
 }
 
 #pragma mark - tableView delegate and datasource
