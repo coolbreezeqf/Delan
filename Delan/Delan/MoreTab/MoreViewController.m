@@ -14,10 +14,11 @@
 #import "NewsViewController.h"
 #import "IntroduceViewController.h"
 #import "NoticeViewController.h"
-@interface MoreViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface MoreViewController ()<UITableViewDataSource, UITableViewDelegate,UIAlertViewDelegate>
 
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) NSArray *rowInfo;
+@property (nonatomic,strong) NSString *helpMobile;
 
 @end
 
@@ -59,6 +60,7 @@
 	NSURL *url = [[NSBundle mainBundle] URLForResource:@"MoreTabInfo" withExtension:@"plist"];
 	NSDictionary *dic = [NSDictionary dictionaryWithContentsOfURL:url];
 	_rowInfo = dic[@"tableViewInfo"];
+	_helpMobile = dic[@"HelpMobile"];
 }
 
 #pragma mark - action
@@ -68,6 +70,13 @@
 		[MBProgressHUD showSuccess:@"已退出"];
 	}else{
 		[MBProgressHUD showError:@"操作有误，尚未登陆"];
+	}
+}
+
+#pragma mark - alert delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+	if (buttonIndex == 1) {
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@",_helpMobile]]];
 	}
 }
 
@@ -95,7 +104,8 @@
 			UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 50, 30)];
 			label.font = kFont15;
 #warning 动态获取
-			label.text = @"V1.2.4";
+			label.text = [NSString stringWithFormat:@"V%@",kSofterViewsion];
+			label.textAlignment = NSTextAlignmentCenter;
 			label.textColor = [UIColor grayColor];
 			cell.accessoryView = label;
 		}else{
@@ -128,12 +138,20 @@
 	}else if(indexPath.section == 1){
 		switch (indexPath.row) {
 			case 0:{
+				//帮助中心
 				HelpCenterTableViewController *hvc = [[HelpCenterTableViewController alloc] init];
 				[self.navigationController pushViewController:hvc animated:YES];
 			}break;
 			case 1:{
+				//反馈
 				FeedBackViewController *fbvc = [[FeedBackViewController alloc] init];
 				[self.navigationController pushViewController:fbvc animated:YES];
+			}break;
+			case 2:{
+				NSString *msg = [NSString stringWithFormat:@"号码:%@",_helpMobile];
+				UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"是否呼叫客服" message:msg delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"呼叫", nil];
+				
+				[alert show];
 			}break;
 			default:{
 			}break;

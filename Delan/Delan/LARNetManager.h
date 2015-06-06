@@ -24,4 +24,16 @@
 			 succ:(SUCCESSBLOCK) succ
 			 failure:(FAILUREBLOCK) failure;
 
+/*
+	忘记密码
+	info: {
+		mobile: 
+		password:
+		smsCode:
+	}
+*/
+- (void)forgetPasswordWith:(NSDictionary *)info
+					  succ:(SUCCESSBLOCK) succ
+				   failure:(FAILUREBLOCK) failure;
+
 @end

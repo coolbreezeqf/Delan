@@ -12,7 +12,6 @@
 #import "HomePageController.h"
 #import "ProductController.h"
 #import "AccountCenterController.h"
-
 #import "RegisterViewController.h"
 #import "LoginViewController.h"
 
@@ -66,18 +65,18 @@
 #pragma mark -delegate
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
 	lastSelectIndex = tabBarController.selectedIndex;
-	return YES;
-}
-
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
-	currentSelectIndex = tabBarController.selectedIndex;
-	MLOG(@"select %d tab", currentSelectIndex);
-	if (currentSelectIndex == 2) {
+	if (viewController == _accoutNav) {
 		if (![UserService sharedUserService].isLogin) {//没有登陆
 			[[UserService sharedUserService] showLoginView];
 		}
 	}
-		
+	return YES;
+}
+
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+	currentSelectIndex = tabBarController.selectedIndex;
+	MLOG(@"select %d tab", currentSelectIndex);
 }
 
 

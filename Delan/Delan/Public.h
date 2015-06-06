@@ -37,6 +37,10 @@
 #define NSLog(...) {}
 #endif
 
+#define kIntToString(str,a) do{\
+[NSString stringWithFormat:@"%d", a];\
+}while(0)
+
 #define kFont10 [UIFont systemFontOfSize:10]
 #define kFont11 [UIFont systemFontOfSize:11]
 #define kFont12 [UIFont systemFontOfSize:12]

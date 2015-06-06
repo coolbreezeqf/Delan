@@ -12,7 +12,7 @@
 @interface NewsViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic,strong) UITableView *tableView;
-@property (nonatomic,strong) NSArray *dataArr;
+@property (nonatomic,strong) NSMutableArray *dataArr;
 
 @end
 
@@ -35,6 +35,8 @@
 }
 
 - (void)initData{
+//	_dataArr = [NSMutableArray arrayWithCapacity:42];
+	
 	NSDictionary *dic = @{@"image": @"ProductDetailBackgroud",
 						  @"title": @"银监会12年来首次大调整",
 						  @"content": @"银监会12年来首次大调整银监会12年来首次大调整银监会12年来首次大调整"};
@@ -44,7 +46,7 @@
 	NSDictionary *dic2 = @{@"image": @"ProductDetailBackgroud",
 						  @"title": @"银监会12年来首次大调整",
 						  @"content": @"银监会12年来首次大调整银监会12年来首次大调整银监会12年来首次大调整银监会12年来首次大调整银监会12年来首次大调整银监会12年来首次大调整银监会12年来首次大调整银监会12年来首次大调整银监会12年来首次大调整银监会12年来首次大调整银监会12年来首次大调整银监会12年来首次大调整银监会12年来首次大调整银监会12年来首次大调整银监会12年来首次大调整银监会12年来首次大调整银监会12年来首次大调整银监会12年来首次大调整银监会12年来首次大调整银监会12年来首次大调整银监会12年来首次大调整"};
-	_dataArr = @[dic, dic1, dic2];
+	_dataArr = @[dic,dic1,dic2];
 }
 
 #pragma mark - talbeview

@@ -146,26 +146,37 @@
 	}
 	if (![self.checkPasswordTF.text isEqualToString:self.userPasswordTF.text]) {
 		[MBProgressHUD showError:@"两次输入的密码不同"];
+		return;
 	}
 	
 	[MBProgressHUD showMessage:@"请稍后..."];
-	if (1) {//请求通过
+	LARNetManager *manager = [[LARNetManager alloc] init];
+	NSDictionary *info = @{@"mobile": _userNameTF.text,
+						   @"smsCode": _checkPasswordTF.text,
+						   @"password": _userPasswordTF.text};
+	[manager forgetPasswordWith:info succ:^(NSDictionary *successDict) {
+		[MBProgressHUD hideHUD];
+		[MBProgressHUD showSuccess:@"修改成功"];
 		[self.navigationController popToRootViewControllerAnimated:YES];
-	}
+	} failure:^(NSDictionary *failDict, NSError *error) {
+		[MBProgressHUD hideHUD];
+		MLOG(@"%@",failDict[@"msg"]);
+		[MBProgressHUD showError:@"修改失败"];
+	}];
 }
 
 //获取验证码
-//- (void)getCheckCode{
-//	if (self.userNameTF.text.length != 11) {
-//		[MBProgressHUD showError:@"请输入正确的手机号"];
-//		return;
-//	}
-//	[MBProgressHUD showMessage:@"正在发送验证码"];
-//	LARNetManager *netmanager = [[LARNetManager alloc] init];
-//	[netmanager getMobileCodeWith:_userNameTF.text succ:^(NSDictionary *successDict) {
-//		MLOG(@"success");
-//	} failure:nil];
-//}
+- (void)getCheckCode{
+	if (self.userNameTF.text.length != 11) {
+		[MBProgressHUD showError:@"请输入正确的手机号"];
+		return;
+	}
+	[MBProgressHUD showMessage:@"正在发送验证码"];
+	LARNetManager *netmanager = [[LARNetManager alloc] init];
+	[netmanager getMobileCodeWith:_userNameTF.text succ:^(NSDictionary *successDict) {
+		MLOG(@"success");
+	} failure:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

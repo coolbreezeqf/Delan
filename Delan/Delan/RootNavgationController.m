@@ -39,6 +39,11 @@
         [viewController setHidesBottomBarWhenPushed:YES];
         
         //调用父类的push
+		if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)])
+			{
+			self.interactivePopGestureRecognizer.enabled = YES;
+			self.interactivePopGestureRecognizer.delegate = nil;
+			}
         [super pushViewController:viewController animated:animated];
     }
 }

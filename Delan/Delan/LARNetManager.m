@@ -43,7 +43,22 @@
 }
 
 //忘记密码
-
+- (void)forgetPasswordWith:(NSDictionary *)info
+					  succ:(SUCCESSBLOCK) succ
+				   failure:(FAILUREBLOCK) failure{
+	NSString *url = [NSString stringWithFormat:@"%@mobile/user/resetPassword.json",HostUrl];
+	MLOG(@"request: %@", url);
+	[_manager POST:url parameters:info success:^(AFHTTPRequestOperation *operation, id responseObject) {
+		if ([[responseObject objectForKey:@"code"] integerValue]) {
+			succ([responseObject objectForKey:@"data"]);
+		}else{
+			[MBProgressHUD showError:[responseObject objectForKey:@"msg"]];
+			failure(responseObject, nil);
+		}
+	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+		failure(nil, error);
+	}];
+}
 
 //注册
 - (void)registerWith:(NSDictionary *)info

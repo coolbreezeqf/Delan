@@ -101,8 +101,9 @@
 
 //取消登陆
 - (void)cancelLogin{
+	kAppDelegate.tabBar.selectedIndex = 0;
 	[self.navigationController dismissViewControllerAnimated:YES completion:^{
-		kAppDelegate.tabBar.selectedIndex = 0;
+		
 	}];
 }
 

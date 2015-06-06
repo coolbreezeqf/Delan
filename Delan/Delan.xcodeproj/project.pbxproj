@@ -168,6 +168,10 @@
 		B02F30021B13362100D3D59E /* Pods-SDWebImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B02F2FEE1B13362100D3D59E /* Pods-SDWebImage-dummy.m */; };
 		B051376C1B15E5490046A4CA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B051376B1B15E5490046A4CA /* libz.dylib */; };
 		B051376E1B15E5BD0046A4CA /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B051376D1B15E5BD0046A4CA /* Reveal.framework */; };
+		B068F9791B21A513005E5FE7 /* MTMediaBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B068F9721B21A513005E5FE7 /* MTMediaBaseClass.m */; };
+		B068F97A1B21A513005E5FE7 /* MTMediaData.m in Sources */ = {isa = PBXBuildFile; fileRef = B068F9741B21A513005E5FE7 /* MTMediaData.m */; };
+		B068F97B1B21A513005E5FE7 /* MTMediaHelpInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B068F9761B21A513005E5FE7 /* MTMediaHelpInfo.m */; };
+		B068F97C1B21A513005E5FE7 /* MTMediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B068F9781B21A513005E5FE7 /* MTMediaItem.m */; };
 		B08336A51B0C791C007CCCAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B08336A41B0C791C007CCCAC /* main.m */; };
 		B08336A81B0C791C007CCCAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B08336A71B0C791C007CCCAC /* AppDelegate.m */; };
 		B08336B31B0C791C007CCCAC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08336B11B0C791C007CCCAC /* LaunchScreen.xib */; };
@@ -463,6 +467,15 @@
 		B02F2FEF1B13362100D3D59E /* Pods-SDWebImage-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pods-SDWebImage-prefix.pch"; sourceTree = "<group>"; };
 		B051376B1B15E5490046A4CA /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		B051376D1B15E5BD0046A4CA /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		B068F9701B21A513005E5FE7 /* MediaDataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaDataModels.h; sourceTree = "<group>"; };
+		B068F9711B21A513005E5FE7 /* MTMediaBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMediaBaseClass.h; sourceTree = "<group>"; };
+		B068F9721B21A513005E5FE7 /* MTMediaBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMediaBaseClass.m; sourceTree = "<group>"; };
+		B068F9731B21A513005E5FE7 /* MTMediaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMediaData.h; sourceTree = "<group>"; };
+		B068F9741B21A513005E5FE7 /* MTMediaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMediaData.m; sourceTree = "<group>"; };
+		B068F9751B21A513005E5FE7 /* MTMediaHelpInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMediaHelpInfo.h; sourceTree = "<group>"; };
+		B068F9761B21A513005E5FE7 /* MTMediaHelpInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMediaHelpInfo.m; sourceTree = "<group>"; };
+		B068F9771B21A513005E5FE7 /* MTMediaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMediaItem.h; sourceTree = "<group>"; };
+		B068F9781B21A513005E5FE7 /* MTMediaItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMediaItem.m; sourceTree = "<group>"; };
 		B083369F1B0C791C007CCCAC /* Delan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08336A31B0C791C007CCCAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B08336A41B0C791C007CCCAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -892,6 +905,7 @@
 		B013D7AD1B0C94BC00AFE1FC /* MoreTab */ = {
 			isa = PBXGroup;
 			children = (
+				B068F96F1B21A502005E5FE7 /* Model */,
 				B00045221B198EAF00A44C82 /* NetManager */,
 				B01FB3AE1B1400D500088768 /* NSString+Additions.h */,
 				B01FB3AF1B1400D500088768 /* NSString+Additions.m */,
@@ -1115,6 +1129,22 @@
 			);
 			name = SDWebImage;
 			path = ../Pods/SDWebImage;
+			sourceTree = "<group>";
+		};
+		B068F96F1B21A502005E5FE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B068F9701B21A513005E5FE7 /* MediaDataModels.h */,
+				B068F9711B21A513005E5FE7 /* MTMediaBaseClass.h */,
+				B068F9721B21A513005E5FE7 /* MTMediaBaseClass.m */,
+				B068F9731B21A513005E5FE7 /* MTMediaData.h */,
+				B068F9741B21A513005E5FE7 /* MTMediaData.m */,
+				B068F9751B21A513005E5FE7 /* MTMediaHelpInfo.h */,
+				B068F9761B21A513005E5FE7 /* MTMediaHelpInfo.m */,
+				B068F9771B21A513005E5FE7 /* MTMediaItem.h */,
+				B068F9781B21A513005E5FE7 /* MTMediaItem.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		B08336961B0C791C007CCCAC = {
@@ -1395,6 +1425,7 @@
 				B013D7B11B0C952500AFE1FC /* MoreViewController.m in Sources */,
 				B02F2F9C1B1223DD00D3D59E /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				B02F2FA11B1223DD00D3D59E /* UIRefreshControl+AFNetworking.m in Sources */,
+				B068F97B1B21A513005E5FE7 /* MTMediaHelpInfo.m in Sources */,
 				B01FB3B01B1400D500088768 /* NSString+Additions.m in Sources */,
 				099E8A141B196A2800842D1A /* CardManageController.m in Sources */,
 				B02F2F9E1B1223DD00D3D59E /* UIButton+AFNetworking.m in Sources */,
@@ -1409,6 +1440,7 @@
 				184DCE741B1059FA00DFEF20 /* RootNavgationController.m in Sources */,
 				099E8A1E1B196A3700842D1A /* InvestDetailCell.m in Sources */,
 				B01FB3B91B149D2800088768 /* HelpDetailViewController.m in Sources */,
+				B068F97A1B21A513005E5FE7 /* MTMediaData.m in Sources */,
 				099E8A341B196A4800842D1A /* BackProjectHeaderCell.m in Sources */,
 				B00045691B1B06D300A44C82 /* UserData.m in Sources */,
 				B02F2FAC1B1223EC00D3D59E /* UIView+RSAdditions.m in Sources */,
@@ -1430,6 +1462,7 @@
 				B000456A1B1B06D300A44C82 /* UserUserInfo.m in Sources */,
 				099E8A101B196A1A00842D1A /* MyVipController.m in Sources */,
 				B02F2FA01B1223DD00D3D59E /* UIProgressView+AFNetworking.m in Sources */,
+				B068F97C1B21A513005E5FE7 /* MTMediaItem.m in Sources */,
 				B02F2FFB1B13362100D3D59E /* UIImage+GIF.m in Sources */,
 				B02F2F921B1223DD00D3D59E /* AFHTTPSessionManager.m in Sources */,
 				B02F2F901B1223DD00D3D59E /* AFHTTPRequestOperation.m in Sources */,
@@ -1440,6 +1473,7 @@
 				B02F2F941B1223DD00D3D59E /* AFSecurityPolicy.m in Sources */,
 				B02F2FFE1B13362100D3D59E /* UIImageView+WebCache.m in Sources */,
 				099E8A481B196A5900842D1A /* InvestRecordController.m in Sources */,
+				B068F9791B21A513005E5FE7 /* MTMediaBaseClass.m in Sources */,
 				B00045451B199CE900A44C82 /* MTPPublicInformation.m in Sources */,
 				B000454B1B1AC9C200A44C82 /* ForgetViewController.m in Sources */,
 				099E8A681B196A6700842D1A /* AccountManagePassController.m in Sources */,
