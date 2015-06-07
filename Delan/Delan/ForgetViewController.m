@@ -36,7 +36,7 @@
 - (void)initUI{
 	self.view.backgroundColor = RGBCOLOR(245, 245, 245);
 	self.navigationItem.title = @"忘记密码";
-	self.navigationController.navigationBar.tintColor = kMainColor;
+//	self.navigationController.navigationBar.tintColor = kMainColor;
 	
 	[self setLeftButton:[UIImage imageNamed:@"DLBackButton2"] title:nil target:self action:@selector(back) rect:CGRectMake(0, 0, 22, 22)];
 	
@@ -173,7 +173,7 @@
 	}
 	[MBProgressHUD showMessage:@"正在发送验证码"];
 	LARNetManager *netmanager = [[LARNetManager alloc] init];
-	[netmanager getMobileCodeWith:_userNameTF.text succ:^(NSDictionary *successDict) {
+	[netmanager getModifyMobileCodeWith:_userNameTF.text succ:^(NSDictionary *successDict) {
 		MLOG(@"success");
 	} failure:nil];
 }

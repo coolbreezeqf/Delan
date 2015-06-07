@@ -1,19 +1,17 @@
 //
-//  MTPBaseClass.h
+//  MTPublicData.h
 //
-//  Created by qf  on 15/5/30
+//  Created by qf  on 15/6/7
 //  Copyright (c) 2015 __MyCompanyName__. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@class MTPData;
+@class MTPublicPublicInformation;
 
-@interface MTPBaseClass : NSObject <NSCoding, NSCopying>
+@interface MTPublicData : NSObject <NSCoding, NSCopying>
 
-@property (nonatomic, strong) NSString *msg;
-@property (nonatomic, strong) MTPData *data;
-@property (nonatomic, assign) double code;
+@property (nonatomic, strong) MTPublicPublicInformation *publicInformation;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;

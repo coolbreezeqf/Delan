@@ -1,26 +1,26 @@
 //
-//  MTPBaseClass.m
+//  MTPublicBaseClass.m
 //
-//  Created by qf  on 15/5/30
+//  Created by qf  on 15/6/7
 //  Copyright (c) 2015 __MyCompanyName__. All rights reserved.
 //
 
-#import "MTPBaseClass.h"
-#import "MTPData.h"
+#import "MTPublicBaseClass.h"
+#import "MTPublicData.h"
 
 
-NSString *const kMTPBaseClassMsg = @"msg";
-NSString *const kMTPBaseClassData = @"data";
-NSString *const kMTPBaseClassCode = @"code";
+NSString *const kMTPublicBaseClassMsg = @"msg";
+NSString *const kMTPublicBaseClassData = @"data";
+NSString *const kMTPublicBaseClassCode = @"code";
 
 
-@interface MTPBaseClass ()
+@interface MTPublicBaseClass ()
 
 - (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict;
 
 @end
 
-@implementation MTPBaseClass
+@implementation MTPublicBaseClass
 
 @synthesize msg = _msg;
 @synthesize data = _data;
@@ -39,9 +39,9 @@ NSString *const kMTPBaseClassCode = @"code";
     // This check serves to make sure that a non-NSDictionary object
     // passed into the model class doesn't break the parsing.
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
-            self.msg = [self objectOrNilForKey:kMTPBaseClassMsg fromDictionary:dict];
-            self.data = [MTPData modelObjectWithDictionary:[dict objectForKey:kMTPBaseClassData]];
-            self.code = [[self objectOrNilForKey:kMTPBaseClassCode fromDictionary:dict] doubleValue];
+            self.msg = [self objectOrNilForKey:kMTPublicBaseClassMsg fromDictionary:dict];
+            self.data = [MTPublicData modelObjectWithDictionary:[dict objectForKey:kMTPublicBaseClassData]];
+            self.code = [self objectOrNilForKey:kMTPublicBaseClassCode fromDictionary:dict];
 
     }
     
@@ -52,9 +52,9 @@ NSString *const kMTPBaseClassCode = @"code";
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
-    [mutableDict setValue:self.msg forKey:kMTPBaseClassMsg];
-    [mutableDict setValue:[self.data dictionaryRepresentation] forKey:kMTPBaseClassData];
-    [mutableDict setValue:[NSNumber numberWithDouble:self.code] forKey:kMTPBaseClassCode];
+    [mutableDict setValue:self.msg forKey:kMTPublicBaseClassMsg];
+    [mutableDict setValue:[self.data dictionaryRepresentation] forKey:kMTPublicBaseClassData];
+    [mutableDict setValue:self.code forKey:kMTPublicBaseClassCode];
 
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
@@ -78,29 +78,29 @@ NSString *const kMTPBaseClassCode = @"code";
 {
     self = [super init];
 
-    self.msg = [aDecoder decodeObjectForKey:kMTPBaseClassMsg];
-    self.data = [aDecoder decodeObjectForKey:kMTPBaseClassData];
-    self.code = [aDecoder decodeDoubleForKey:kMTPBaseClassCode];
+    self.msg = [aDecoder decodeObjectForKey:kMTPublicBaseClassMsg];
+    self.data = [aDecoder decodeObjectForKey:kMTPublicBaseClassData];
+    self.code = [aDecoder decodeObjectForKey:kMTPublicBaseClassCode];
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
 
-    [aCoder encodeObject:_msg forKey:kMTPBaseClassMsg];
-    [aCoder encodeObject:_data forKey:kMTPBaseClassData];
-    [aCoder encodeDouble:_code forKey:kMTPBaseClassCode];
+    [aCoder encodeObject:_msg forKey:kMTPublicBaseClassMsg];
+    [aCoder encodeObject:_data forKey:kMTPublicBaseClassData];
+    [aCoder encodeObject:_code forKey:kMTPublicBaseClassCode];
 }
 
 - (id)copyWithZone:(NSZone *)zone
 {
-    MTPBaseClass *copy = [[MTPBaseClass alloc] init];
+    MTPublicBaseClass *copy = [[MTPublicBaseClass alloc] init];
     
     if (copy) {
 
         copy.msg = [self.msg copyWithZone:zone];
         copy.data = [self.data copyWithZone:zone];
-        copy.code = self.code;
+        copy.code = [self.code copyWithZone:zone];
     }
     
     return copy;

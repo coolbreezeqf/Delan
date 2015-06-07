@@ -9,6 +9,7 @@
 #import "MTNetManager.h"
 #import "AFNetworking.h"
 #import "MediaDataModels.h"
+#import "PublicDataModels.h"
 #import "MBProgressHUD+NJ.h"
 @interface MTNetManager()
 @property (nonatomic, strong) AFHTTPRequestOperationManager *manager;
@@ -24,14 +25,19 @@
 }
 
 - (void)getPublicInformationWith:(NSInteger)pageNum andPageSize:(NSInteger)pageSize
-							succ:(SUCCESS_DIC_BLOCK) succ
+							succ:(void(^)(MTPublicPublicInformation* info)) succ
 						 failure:(FAILUREBLOCK) failure{
-	NSDictionary *parameters = @{@"token": [UserService sharedUserService].token,
+	NSDictionary *parameters = @{@"token": [UserService sharedUserService].token?[UserService sharedUserService].token: @"xxx",
 								 @"pageNum": [NSString stringWithFormat:@"%i",pageNum],
 								 @"pageSize": [NSString stringWithFormat:@"%i",pageSize]};
+	MLOG(@"post: %@",URL_PublicInformation);
 	[_manager POST:URL_PublicInformation parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-#warning TO DO
-		succ(responseObject);
+		MTPublicBaseClass *base = [MTPublicBaseClass modelObjectWithDictionary:responseObject];
+		if ([base.code integerValue]) {
+			succ(base.data.publicInformation);
+		}else{
+			failure(responseObject,nil);
+		}
 	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		failure(nil,error);
 	}];
@@ -41,9 +47,11 @@
 - (void)getMediaInfoWith:(NSInteger)pageNum andPageSize:(NSInteger)pageSize
 					succ:(void(^)(MTMediaHelpInfo* info)) succ
 				 failure:(FAILUREBLOCK) failure{
-	NSDictionary *parameters = @{@"token": [UserService sharedUserService].token,
+#warning 这里的token有必要吗？
+	NSDictionary *parameters = @{@"token": @"xxx",//[UserService sharedUserService].token,
 								 @"pageNum": [NSString stringWithFormat:@"%i",pageNum],
 								 @"pageSize": [NSString stringWithFormat:@"%i",pageSize]};
+	MLOG(@"post: %@",URL_GetMediaList);
 	[_manager POST:URL_GetMediaList parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
 		MTMediaBaseClass *base = [MTMediaBaseClass modelObjectWithDictionary:responseObject];
 		if ([base.msg isEqualToString:@""]) {

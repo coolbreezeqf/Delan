@@ -106,10 +106,6 @@
 		B00045291B19933A00A44C82 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B00045281B19933A00A44C82 /* RegisterViewController.m */; };
 		B000452C1B19935C00A44C82 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B000452B1B19935C00A44C82 /* LoginViewController.m */; };
 		B000452F1B19938800A44C82 /* LARNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B000452E1B19938800A44C82 /* LARNetManager.m */; };
-		B00045421B199CE900A44C82 /* MTPBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B000453B1B199CE900A44C82 /* MTPBaseClass.m */; };
-		B00045431B199CE900A44C82 /* MTPData.m in Sources */ = {isa = PBXBuildFile; fileRef = B000453D1B199CE900A44C82 /* MTPData.m */; };
-		B00045441B199CE900A44C82 /* MTPItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B000453F1B199CE900A44C82 /* MTPItem.m */; };
-		B00045451B199CE900A44C82 /* MTPPublicInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B00045411B199CE900A44C82 /* MTPPublicInformation.m */; };
 		B00045481B19A0D800A44C82 /* LRTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B00045471B19A0D800A44C82 /* LRTextField.m */; };
 		B000454B1B1AC9C200A44C82 /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B000454A1B1AC9C200A44C82 /* ForgetViewController.m */; };
 		B000454E1B1AD9E800A44C82 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = B000454D1B1AD9E800A44C82 /* UserService.m */; };
@@ -179,6 +175,11 @@
 		B0AE00B81B189B3400B9745B /* HelpDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AE00B71B189B3400B9745B /* HelpDetailTableViewCell.m */; };
 		B0B650351B13633C002105E2 /* NoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B650341B13633C002105E2 /* NoticeViewController.m */; };
 		B0B650381B1364F2002105E2 /* NoticeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B650371B1364F2002105E2 /* NoticeTableViewCell.m */; };
+		B0B976701B234D3E0068C58D /* DLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B9766F1B234D3E0068C58D /* DLWebViewController.m */; };
+		B0B976791B2448370068C58D /* MTPublicBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B976721B2448370068C58D /* MTPublicBaseClass.m */; };
+		B0B9767A1B2448370068C58D /* MTPublicData.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B976741B2448370068C58D /* MTPublicData.m */; };
+		B0B9767B1B2448370068C58D /* MTPublicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B976761B2448370068C58D /* MTPublicItem.m */; };
+		B0B9767C1B2448370068C58D /* MTPublicPublicInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B976781B2448370068C58D /* MTPublicPublicInformation.m */; };
 		B7C38AEF9BA4367E7D23F98E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8B704C5C15F212F5D79DE6 /* libPods.a */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -342,14 +343,6 @@
 		B000452B1B19935C00A44C82 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Delan/LoginViewController.m; sourceTree = SOURCE_ROOT; };
 		B000452D1B19938800A44C82 /* LARNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LARNetManager.h; path = Delan/LARNetManager.h; sourceTree = SOURCE_ROOT; };
 		B000452E1B19938800A44C82 /* LARNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LARNetManager.m; path = Delan/LARNetManager.m; sourceTree = SOURCE_ROOT; };
-		B000453A1B199CE900A44C82 /* MTPBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPBaseClass.h; sourceTree = "<group>"; };
-		B000453B1B199CE900A44C82 /* MTPBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPBaseClass.m; sourceTree = "<group>"; };
-		B000453C1B199CE900A44C82 /* MTPData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPData.h; sourceTree = "<group>"; };
-		B000453D1B199CE900A44C82 /* MTPData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPData.m; sourceTree = "<group>"; };
-		B000453E1B199CE900A44C82 /* MTPItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPItem.h; sourceTree = "<group>"; };
-		B000453F1B199CE900A44C82 /* MTPItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPItem.m; sourceTree = "<group>"; };
-		B00045401B199CE900A44C82 /* MTPPublicInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPPublicInformation.h; sourceTree = "<group>"; };
-		B00045411B199CE900A44C82 /* MTPPublicInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPPublicInformation.m; sourceTree = "<group>"; };
 		B00045461B19A0D800A44C82 /* LRTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LRTextField.h; path = Delan/LRTextField.h; sourceTree = SOURCE_ROOT; };
 		B00045471B19A0D800A44C82 /* LRTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LRTextField.m; path = Delan/LRTextField.m; sourceTree = SOURCE_ROOT; };
 		B00045491B1AC9C200A44C82 /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForgetViewController.h; path = Delan/ForgetViewController.h; sourceTree = SOURCE_ROOT; };
@@ -493,6 +486,17 @@
 		B0B650341B13633C002105E2 /* NoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeViewController.m; sourceTree = "<group>"; };
 		B0B650361B1364F2002105E2 /* NoticeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoticeTableViewCell.h; path = MoreTab/NoticeTableViewCell.h; sourceTree = "<group>"; };
 		B0B650371B1364F2002105E2 /* NoticeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoticeTableViewCell.m; path = MoreTab/NoticeTableViewCell.m; sourceTree = "<group>"; };
+		B0B9766E1B234D3E0068C58D /* DLWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLWebViewController.h; path = MoreTab/DLWebViewController.h; sourceTree = "<group>"; };
+		B0B9766F1B234D3E0068C58D /* DLWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLWebViewController.m; path = MoreTab/DLWebViewController.m; sourceTree = "<group>"; };
+		B0B976711B2448370068C58D /* MTPublicBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPublicBaseClass.h; sourceTree = "<group>"; };
+		B0B976721B2448370068C58D /* MTPublicBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPublicBaseClass.m; sourceTree = "<group>"; };
+		B0B976731B2448370068C58D /* MTPublicData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPublicData.h; sourceTree = "<group>"; };
+		B0B976741B2448370068C58D /* MTPublicData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPublicData.m; sourceTree = "<group>"; };
+		B0B976751B2448370068C58D /* MTPublicItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPublicItem.h; sourceTree = "<group>"; };
+		B0B976761B2448370068C58D /* MTPublicItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPublicItem.m; sourceTree = "<group>"; };
+		B0B976771B2448370068C58D /* MTPublicPublicInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPublicPublicInformation.h; sourceTree = "<group>"; };
+		B0B976781B2448370068C58D /* MTPublicPublicInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPublicPublicInformation.m; sourceTree = "<group>"; };
+		B0B9767D1B24483E0068C58D /* PublicDataModels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicDataModels.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -839,14 +843,15 @@
 		B00045151B198E4800A44C82 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B000453A1B199CE900A44C82 /* MTPBaseClass.h */,
-				B000453B1B199CE900A44C82 /* MTPBaseClass.m */,
-				B000453C1B199CE900A44C82 /* MTPData.h */,
-				B000453D1B199CE900A44C82 /* MTPData.m */,
-				B000453E1B199CE900A44C82 /* MTPItem.h */,
-				B000453F1B199CE900A44C82 /* MTPItem.m */,
-				B00045401B199CE900A44C82 /* MTPPublicInformation.h */,
-				B00045411B199CE900A44C82 /* MTPPublicInformation.m */,
+				B0B9767D1B24483E0068C58D /* PublicDataModels.h */,
+				B0B976711B2448370068C58D /* MTPublicBaseClass.h */,
+				B0B976721B2448370068C58D /* MTPublicBaseClass.m */,
+				B0B976731B2448370068C58D /* MTPublicData.h */,
+				B0B976741B2448370068C58D /* MTPublicData.m */,
+				B0B976751B2448370068C58D /* MTPublicItem.h */,
+				B0B976761B2448370068C58D /* MTPublicItem.m */,
+				B0B976771B2448370068C58D /* MTPublicPublicInformation.h */,
+				B0B976781B2448370068C58D /* MTPublicPublicInformation.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -905,18 +910,19 @@
 		B013D7AD1B0C94BC00AFE1FC /* MoreTab */ = {
 			isa = PBXGroup;
 			children = (
-				B068F96F1B21A502005E5FE7 /* Model */,
-				B00045221B198EAF00A44C82 /* NetManager */,
+				B013D7AF1B0C952500AFE1FC /* MoreViewController.h */,
+				B013D7B01B0C952500AFE1FC /* MoreViewController.m */,
+				B02F2FBD1B12EA3100D3D59E /* MoreTabInfo.plist */,
+				B0B9766E1B234D3E0068C58D /* DLWebViewController.h */,
+				B0B9766F1B234D3E0068C58D /* DLWebViewController.m */,
 				B01FB3AE1B1400D500088768 /* NSString+Additions.h */,
 				B01FB3AF1B1400D500088768 /* NSString+Additions.m */,
+				B00045221B198EAF00A44C82 /* NetManager */,
 				B02F2FB91B12E71900D3D59E /* 意见反馈 */,
 				B02F2FB81B12E70D00D3D59E /* 帮助中心 */,
 				B02F2FB71B12E70300D3D59E /* 行业报道 */,
 				B02F2FB61B12E6F900D3D59E /* 官方公告 */,
 				B02F2FB51B12E6ED00D3D59E /* 公司简介 */,
-				B013D7AF1B0C952500AFE1FC /* MoreViewController.h */,
-				B013D7B01B0C952500AFE1FC /* MoreViewController.m */,
-				B02F2FBD1B12EA3100D3D59E /* MoreTabInfo.plist */,
 			);
 			name = MoreTab;
 			sourceTree = "<group>";
@@ -1042,6 +1048,7 @@
 		B02F2FB71B12E70300D3D59E /* 行业报道 */ = {
 			isa = PBXGroup;
 			children = (
+				B068F96F1B21A502005E5FE7 /* Model */,
 				B02F2FC81B1331D500D3D59E /* NewsViewController.h */,
 				B02F2FC91B1331D500D3D59E /* NewsViewController.m */,
 				B02F2FCB1B1331F600D3D59E /* NewsTableViewCell.h */,
@@ -1468,13 +1475,12 @@
 				B02F2F901B1223DD00D3D59E /* AFHTTPRequestOperation.m in Sources */,
 				B02F2FF31B13362100D3D59E /* SDImageCache.m in Sources */,
 				B0109D921B0E01E600257AF9 /* RootTabBarController.m in Sources */,
-				B00045421B199CE900A44C82 /* MTPBaseClass.m in Sources */,
 				B02F2FF71B13362100D3D59E /* SDWebImageDownloaderOperation.m in Sources */,
 				B02F2F941B1223DD00D3D59E /* AFSecurityPolicy.m in Sources */,
 				B02F2FFE1B13362100D3D59E /* UIImageView+WebCache.m in Sources */,
 				099E8A481B196A5900842D1A /* InvestRecordController.m in Sources */,
 				B068F9791B21A513005E5FE7 /* MTMediaBaseClass.m in Sources */,
-				B00045451B199CE900A44C82 /* MTPPublicInformation.m in Sources */,
+				B0B9767C1B2448370068C58D /* MTPublicPublicInformation.m in Sources */,
 				B000454B1B1AC9C200A44C82 /* ForgetViewController.m in Sources */,
 				099E8A681B196A6700842D1A /* AccountManagePassController.m in Sources */,
 				099E89F51B1969E600842D1A /* AccountManageOtherCell.m in Sources */,
@@ -1486,10 +1492,10 @@
 				099E8A061B196A0100842D1A /* AccountCenterHeaderTableViewCell.m in Sources */,
 				184D12531B19878100772EE4 /* ProductDetailLawBook.m in Sources */,
 				184D12431B1986AF00772EE4 /* ProgressCircleView.m in Sources */,
+				B0B9767A1B2448370068C58D /* MTPublicData.m in Sources */,
 				B000454E1B1AD9E800A44C82 /* UserService.m in Sources */,
 				B02F2F931B1223DD00D3D59E /* AFNetworkReachabilityManager.m in Sources */,
 				099E8A661B196A6700842D1A /* AccountManageKnowController.m in Sources */,
-				B00045441B199CE900A44C82 /* MTPItem.m in Sources */,
 				B02F2FF61B13362100D3D59E /* SDWebImageDownloader.m in Sources */,
 				184D12561B19878100772EE4 /* WebPayController.m in Sources */,
 				B0B650381B1364F2002105E2 /* NoticeTableViewCell.m in Sources */,
@@ -1504,6 +1510,7 @@
 				099E8A641B196A6700842D1A /* AccountManageBindingController.m in Sources */,
 				B02F2FB41B12240B00D3D59E /* UIScrollView+SVPullToRefresh.m in Sources */,
 				B02F2F981B1223DD00D3D59E /* AFURLSessionManager.m in Sources */,
+				B0B976791B2448370068C58D /* MTPublicBaseClass.m in Sources */,
 				B000452C1B19935C00A44C82 /* LoginViewController.m in Sources */,
 				099E8A631B196A6700842D1A /* AccountManageController.m in Sources */,
 				B00045681B1B06D300A44C82 /* UserBaseClass.m in Sources */,
@@ -1511,6 +1518,7 @@
 				186AAB3C1B1177A300B5C84C /* DetailHeaderView.m in Sources */,
 				099E8A491B196A5900842D1A /* InvestRecordCell.m in Sources */,
 				184D12701B1987E000772EE4 /* InvestedUserCell.m in Sources */,
+				B0B9767B1B2448370068C58D /* MTPublicItem.m in Sources */,
 				099E8A301B196A4800842D1A /* BackProjectCell.m in Sources */,
 				184D123F1B1986AF00772EE4 /* CircleView.m in Sources */,
 				184D12591B19879C00772EE4 /* InvestedUser.m in Sources */,
@@ -1524,6 +1532,7 @@
 				B02F2F9B1B1223DD00D3D59E /* AFNetworkActivityIndicatorManager.m in Sources */,
 				B02F2FCA1B1331D500D3D59E /* NewsViewController.m in Sources */,
 				186AAB481B11A98400B5C84C /* ProductDetail.m in Sources */,
+				B0B976701B234D3E0068C58D /* DLWebViewController.m in Sources */,
 				B02F2FFF1B13362100D3D59E /* UIView+WebCacheOperation.m in Sources */,
 				B0AE00B81B189B3400B9745B /* HelpDetailTableViewCell.m in Sources */,
 				B02F2FA21B1223DD00D3D59E /* UIWebView+AFNetworking.m in Sources */,
@@ -1533,7 +1542,6 @@
 				B02F2F971B1223DD00D3D59E /* AFURLResponseSerialization.m in Sources */,
 				B02F30021B13362100D3D59E /* Pods-SDWebImage-dummy.m in Sources */,
 				186AAB391B11775800B5C84C /* ProductDetailController.m in Sources */,
-				B00045431B199CE900A44C82 /* MTPData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

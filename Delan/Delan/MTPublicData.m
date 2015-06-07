@@ -1,24 +1,24 @@
 //
-//  MTPData.m
+//  MTPublicData.m
 //
-//  Created by qf  on 15/5/30
+//  Created by qf  on 15/6/7
 //  Copyright (c) 2015 __MyCompanyName__. All rights reserved.
 //
 
-#import "MTPData.h"
-#import "MTPPublicInformation.h"
+#import "MTPublicData.h"
+#import "MTPublicPublicInformation.h"
 
 
-NSString *const kMTPDataPublicInformation = @"publicInformation";
+NSString *const kMTPublicDataPublicInformation = @"publicInformation";
 
 
-@interface MTPData ()
+@interface MTPublicData ()
 
 - (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict;
 
 @end
 
-@implementation MTPData
+@implementation MTPublicData
 
 @synthesize publicInformation = _publicInformation;
 
@@ -35,7 +35,7 @@ NSString *const kMTPDataPublicInformation = @"publicInformation";
     // This check serves to make sure that a non-NSDictionary object
     // passed into the model class doesn't break the parsing.
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
-            self.publicInformation = [MTPPublicInformation modelObjectWithDictionary:[dict objectForKey:kMTPDataPublicInformation]];
+            self.publicInformation = [MTPublicPublicInformation modelObjectWithDictionary:[dict objectForKey:kMTPublicDataPublicInformation]];
 
     }
     
@@ -46,7 +46,7 @@ NSString *const kMTPDataPublicInformation = @"publicInformation";
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
-    [mutableDict setValue:[self.publicInformation dictionaryRepresentation] forKey:kMTPDataPublicInformation];
+    [mutableDict setValue:[self.publicInformation dictionaryRepresentation] forKey:kMTPublicDataPublicInformation];
 
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
@@ -70,19 +70,19 @@ NSString *const kMTPDataPublicInformation = @"publicInformation";
 {
     self = [super init];
 
-    self.publicInformation = [aDecoder decodeObjectForKey:kMTPDataPublicInformation];
+    self.publicInformation = [aDecoder decodeObjectForKey:kMTPublicDataPublicInformation];
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
 
-    [aCoder encodeObject:_publicInformation forKey:kMTPDataPublicInformation];
+    [aCoder encodeObject:_publicInformation forKey:kMTPublicDataPublicInformation];
 }
 
 - (id)copyWithZone:(NSZone *)zone
 {
-    MTPData *copy = [[MTPData alloc] init];
+    MTPublicData *copy = [[MTPublicData alloc] init];
     
     if (copy) {
 

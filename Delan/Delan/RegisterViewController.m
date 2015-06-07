@@ -10,6 +10,7 @@
 #import "LRTextField.h"
 #import "MBProgressHUD+NJ.h"
 #import "LARNetManager.h"
+#import "DLWebViewController.h"
 @interface RegisterViewController ()<UITextFieldDelegate>
 @property (nonatomic,strong) LRTextField *userNameTF;
 @property (nonatomic,strong) LRTextField *userPasswordTF;
@@ -34,7 +35,7 @@
 - (void)initUI{
 	self.view.backgroundColor = RGBCOLOR(245, 245, 245);
 	self.navigationItem.title = @"注 册";
-	self.navigationController.navigationBar.tintColor = kMainColor;
+	self.navigationController.navigationBar.barTintColor = kMainColor;
 	
 	[self setLeftButton:[UIImage imageNamed:@"DLBackButton2"] title:nil target:self action:@selector(back) rect:CGRectMake(0, 0, 22, 22)];
 	
@@ -156,7 +157,9 @@
 
 //展开协议
 - (void)showProtocol{
-	MLOG(@"show Protocol");
+	MLOG(@"show Delan Protocol");
+	DLWebViewController *wvc = [[DLWebViewController alloc] initWithUrl:@"http://www.baidu.com"];
+	[self.navigationController pushViewController:wvc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

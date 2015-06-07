@@ -72,7 +72,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 	UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"InCell"];
-	
+	cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	cell.textLabel.text = _dataArr[indexPath.section][@"content"];
 	cell.textLabel.numberOfLines = 0;
 	cell.textLabel.font = kFont13;

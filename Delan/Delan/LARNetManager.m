@@ -23,6 +23,25 @@
 	return self;
 }
 
+- (void)getModifyMobileCodeWith:(NSString *)mobile
+					 succ:(SUCCESSBLOCK) succ
+				  failure:(FAILUREBLOCK) failure{
+	NSString *url = [NSString stringWithFormat:@"%@user/getModifyMobileCode.json",HostUrl];
+	MLOG(@"request: %@",url);
+	[_manager POST:url parameters:@{@"mobile": mobile} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+		[MBProgressHUD hideHUD];
+		MLOG(@"msg: %@",responseObject);
+		if ([[responseObject objectForKey:@"code"] integerValue]) {
+			[MBProgressHUD showSuccess:@"验证码已发送，请注意查收"];
+		}else{
+			[MBProgressHUD showError:[responseObject objectForKey:@"msg"]];
+		}
+	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+		[MBProgressHUD hideHUD];
+		NSLog(@"Error:%@",error);
+	}];
+}
+
 - (void)getMobileCodeWith:(NSString *)mobile
 					 succ:(SUCCESSBLOCK) succ
 				  failure:(FAILUREBLOCK) failure{

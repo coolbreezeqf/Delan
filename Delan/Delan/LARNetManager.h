@@ -24,6 +24,10 @@
 			 succ:(SUCCESSBLOCK) succ
 			 failure:(FAILUREBLOCK) failure;
 
+- (void)getModifyMobileCodeWith:(NSString *)mobile
+						   succ:(SUCCESSBLOCK) succ
+				  failure:(FAILUREBLOCK) failure;
+
 /*
 	忘记密码
 	info: {

@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @class MTMediaHelpInfo;
-
-#define URL_PublicInformation [NSString stringWithFormat:@"%@	",HostUrl]
+@class MTPublicPublicInformation;
+#define URL_PublicInformation [NSString stringWithFormat:@"%@mobile/infomation/publicInformation.json",HostUrl]
 #define URL_GetMediaList [NSString stringWithFormat:@"%@mobile/infomation/getMediaList.json",HostUrl]
 
 #define SUCCESS_DIC_BLOCK      void(^)(NSDictionary* successDict)
@@ -21,7 +21,7 @@
 
 //获取公告
 - (void)getPublicInformationWith:(NSInteger)pageNum andPageSize:(NSInteger)pageSize
-							succ:(SUCCESS_DIC_BLOCK) succ
+							succ:(void(^)(MTPublicPublicInformation* info)) succ
 						 failure:(FAILUREBLOCK) failure;
 //获取媒体报道
 - (void)getMediaInfoWith:(NSInteger)pageNum andPageSize:(NSInteger)pageSize

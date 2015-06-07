@@ -83,6 +83,8 @@
 #pragma mark - tableView delegate and datasource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 	UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MoreTabCell"];
+	cell.selectionStyle = UITableViewCellSelectionStyleGray;
+
 	if (indexPath.section == 2) {
 		//退出登录按钮
 		UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 44)];
@@ -117,6 +119,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+	UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+	cell.selected = NO;
 	if (indexPath.section == 0) {
 		switch (indexPath.row) {
 			case 0:{
