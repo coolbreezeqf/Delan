@@ -19,4 +19,5 @@
 //#define HostUrl @"http://192.168.1.108:8080/"
 #define HostUrl @"http://www.delanlicai.wdb168.com/"
 #define kMainColor RGBCOLOR(87, 114, 185)
+#define DLProtocolUrl @"http://www.delanlicai.wdb168.com/"
 #endif

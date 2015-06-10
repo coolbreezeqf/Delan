@@ -112,8 +112,27 @@
 	return YES;
 }
 
+//判断密码格式是否符合规范
+- (BOOL)checkUpPassword:(NSString *)str
+{
+	NSString *      regex = @"(^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$)";
+	NSPredicate *   pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+	
+	return [pred evaluateWithObject:str];
+}
+
 //登录
 - (void)login{
+	if (_userNameTF.text.length != 11) {
+		[MBProgressHUD showError:@"请输入正确的手机号"];
+		return;
+	}
+	
+	if (![self checkUpPassword:self.userPasswordTF.text]) {
+		[MBProgressHUD showError:@"密码格式不符合规范"];
+		return;
+	}
+	
 	[MBProgressHUD showMessage:@"登录中..."];
 	
 	[[UserService sharedUserService]  loginWith:_userNameTF.text andPassword:_userPasswordTF.text succ:^(NSDictionary *successDict) {

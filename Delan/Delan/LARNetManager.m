@@ -32,12 +32,14 @@
 		[MBProgressHUD hideHUD];
 		MLOG(@"msg: %@",responseObject);
 		if ([[responseObject objectForKey:@"code"] integerValue]) {
-			[MBProgressHUD showSuccess:@"验证码已发送，请注意查收"];
+			succ(responseObject);
+//			[MBProgressHUD showSuccess:@"验证码已发送，请注意查收"];
 		}else{
-			[MBProgressHUD showError:[responseObject objectForKey:@"msg"]];
+			failure(responseObject,nil);
+//			[MBProgressHUD showError:[responseObject objectForKey:@"msg"]];
 		}
 	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-		[MBProgressHUD hideHUD];
+		failure(nil,error);
 		NSLog(@"Error:%@",error);
 	}];
 }
@@ -48,15 +50,15 @@
 	NSString *url = [NSString stringWithFormat:@"%@user/getMobileCode.json",HostUrl];
 	MLOG(@"request: %@",url);
 	[_manager POST:url parameters:@{@"mobile": mobile} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-		[MBProgressHUD hideHUD];
 		MLOG(@"msg: %@",responseObject);
 		if ([[responseObject objectForKey:@"code"] integerValue]) {
-			[MBProgressHUD showSuccess:@"验证码已发送，请注意查收"];
+			succ(responseObject);
+//			[MBProgressHUD showSuccess:@"验证码已发送，请注意查收"];
 		}else{
-			[MBProgressHUD showError:[responseObject objectForKey:@"msg"]];
+			failure(responseObject,nil);
 		}
 	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-		[MBProgressHUD hideHUD];
+		failure(nil,error);
 		NSLog(@"Error:%@",error);
 	}];
 }

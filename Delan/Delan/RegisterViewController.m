@@ -61,6 +61,7 @@
 	_checkCodeTF = [[LRTextField alloc] initWithFrame:CGRectMake(10, _userNameTF.bottom + 10, kMainScreenWidth-_getCheckCodeButton.width - 30, 44)];
 	_checkCodeTF.leftImage = [UIImage imageNamed:@"LRCheck"];
 	_checkCodeTF.placeholder = @"请输入验证码";
+	_checkCodeTF.keyboardType = UIKeyboardTypeNumberPad;
 	_checkCodeTF.delegate = self;
 	[self.view addSubview:_checkCodeTF];
 
@@ -84,7 +85,7 @@
 	//提示信息
 	UILabel *tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, _checkPasswordTF.bottom + 5, kMainScreenWidth, 20)];
 	tipLabel.font = kFont12;
-	tipLabel.text = @"密码需6-16位，建议使用字母和数字或符号的组合";
+	tipLabel.text = @"密码需6-16位，使用字母和数字的组合";
 	tipLabel.textAlignment = NSTextAlignmentCenter;
 	tipLabel.textColor = [UIColor grayColor];
 	[self.view addSubview:tipLabel];
@@ -111,17 +112,65 @@
 	return YES;
 }
 
+- (void)time:(id)sender{
+	static int timeCnt = 60;
+	timeCnt--;
+	[_getCheckCodeButton setTitle:[NSString stringWithFormat:@"%d秒后重发",timeCnt] forState:UIControlStateNormal];
+	
+	if (timeCnt == 0) {
+		[self abledCheckCodeBt];
+		[(NSTimer *)sender invalidate];
+		timeCnt = 60;
+	}
+}
+
+- (void)unabledCheckCodeBt{
+	[_getCheckCodeButton setBackgroundColor:[UIColor lightGrayColor]];
+	_getCheckCodeButton.enabled = NO;
+	[_getCheckCodeButton setTitle:@"60秒后重发" forState:UIControlStateNormal];
+	NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(time:) userInfo:nil repeats:YES];
+	[timer fire];
+}
+
+- (void)abledCheckCodeBt{
+	[_getCheckCodeButton setTitle:@"重新获取验证码" forState:UIControlStateNormal];
+	[_getCheckCodeButton setBackgroundColor:RGBCOLOR(253, 171, 105)];
+	_getCheckCodeButton.enabled = YES;
+}
+
 //获取验证码
 - (void)getCheckCode{
 	if (self.userNameTF.text.length != 11) {
 		[MBProgressHUD showError:@"请输入正确的手机号"];
 		return;
 	}
+	
 	[MBProgressHUD showMessage:@"正在发送验证码"];
 	LARNetManager *netmanager = [[LARNetManager alloc] init];
 	[netmanager getMobileCodeWith:_userNameTF.text succ:^(NSDictionary *successDict) {
+		[MBProgressHUD hideHUD];
+		[MBProgressHUD showSuccess:@"已发送，请注意查收"];
+		[self unabledCheckCodeBt];
 		MLOG(@"success");
-	} failure:nil];
+	} failure:^(NSDictionary *failDict, NSError *error) {
+		[MBProgressHUD hideHUD];
+		if (failDict) {
+			[MBProgressHUD showError:[failDict objectForKey:@"msg"]];
+		}
+		if (error) {
+			[MBProgressHUD showError:@"网络错误或请求失败"];
+		}
+		[self abledCheckCodeBt];
+	}];
+}
+
+//判断密码格式是否符合规范
+- (BOOL)checkUpPassword:(NSString *)str
+{
+	NSString *      regex = @"(^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$)";
+	NSPredicate *   pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+	
+	return [pred evaluateWithObject:str];
 }
 
 //注册用户
@@ -134,8 +183,13 @@
 		[MBProgressHUD showError:@"请输入验证码"];
 		return;
 	}
+	if (![self checkUpPassword:self.userPasswordTF.text]) {
+		[MBProgressHUD showError:@"密码格式不符合规范"];
+		return;
+	}
 	if (![self.checkPasswordTF.text isEqualToString:self.userPasswordTF.text]) {
 		[MBProgressHUD showError:@"两次输入的密码不同"];
+		return;
 	}
 	
 	[MBProgressHUD showMessage:@"请稍后..."];
@@ -151,14 +205,15 @@
 //		MLOG(@"successDic: %@", successDict);
 		[self.navigationController popViewControllerAnimated:YES];
 	} failure:^(NSDictionary *failDict, NSError *error) {
+		[MBProgressHUD showError:@"网络错误或服务器异常"];
 		MLOG(@"%@", error);
 	}];
 }
 
 //展开协议
 - (void)showProtocol{
-	MLOG(@"show Delan Protocol");
-	DLWebViewController *wvc = [[DLWebViewController alloc] initWithUrl:@"http://www.baidu.com"];
+	
+	DLWebViewController *wvc = [[DLWebViewController alloc] initWithUrl:DLProtocolUrl];
 	[self.navigationController pushViewController:wvc animated:YES];
 }
 

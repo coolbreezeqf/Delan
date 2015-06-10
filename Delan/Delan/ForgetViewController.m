@@ -64,6 +64,7 @@
 	_checkCodeTF.leftImage = [UIImage imageNamed:@"LRCheck"];
 	_checkCodeTF.placeholder = @"请输入验证码";
 	_checkCodeTF.delegate = self;
+	_checkCodeTF.keyboardType = UIKeyboardTypeNumberPad;
 	[self.view addSubview:_checkCodeTF];
 	
 //	_nextStep = [[UIButton alloc] initWithFrame:CGRectMake(10, _checkCodeTF.bottom + 20, kMainScreenWidth-20, 44)];
@@ -92,7 +93,7 @@
 	
 	UILabel *tipLb = [[UILabel alloc] initWithFrame:CGRectMake(0, _checkPasswordTF.bottom+5, kMainScreenWidth, 20)];
 	tipLb.font = kFont11;
-	tipLb.text = @"密码需6-16位，建议使用字母和数字或符号的组合";
+	tipLb.text = @"密码需6-16位，建议使用字母和数字的组合";
 	tipLb.textColor = [UIColor grayColor];
 	tipLb.textAlignment = NSTextAlignmentCenter;
 	[self.view addSubview:tipLb];
@@ -134,6 +135,41 @@
 	return YES;
 }
 
+//判断密码格式是否符合规范
+- (BOOL)checkUpPassword:(NSString *)str
+{
+	NSString *      regex = @"(^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$)";
+	NSPredicate *   pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+	
+	return [pred evaluateWithObject:str];
+}
+
+- (void)time:(id)sender{
+	static int timeCnt = 60;
+	timeCnt--;
+	[_getCheckCodeBt setTitle:[NSString stringWithFormat:@"%d秒后重发",timeCnt] forState:UIControlStateNormal];
+	
+	if (timeCnt == 0) {
+		[self abledCheckCodeBt];
+		[(NSTimer *)sender invalidate];
+		timeCnt = 60;
+	}
+}
+
+- (void)unabledCheckCodeBt{
+	[_getCheckCodeBt setBackgroundColor:[UIColor lightGrayColor]];
+	_getCheckCodeBt.enabled = NO;
+	[_getCheckCodeBt setTitle:@"60秒后重发" forState:UIControlStateNormal];
+	NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(time:) userInfo:nil repeats:YES];
+	[timer fire];
+}
+
+- (void)abledCheckCodeBt{
+	[_getCheckCodeBt setTitle:@"重新获取验证码" forState:UIControlStateNormal];
+	[_getCheckCodeBt setBackgroundColor:RGBCOLOR(253, 171, 105)];
+	_getCheckCodeBt.enabled = YES;
+}
+
 //验证密码，发送请求
 - (void)done{
 	if (self.userNameTF.text.length != 11) {
@@ -142,6 +178,10 @@
 	}
 	if ([self.checkCodeTF.text isEqualToString:@""]) {
 		[MBProgressHUD showError:@"请输入验证码"];
+		return;
+	}
+	if (![self checkUpPassword:self.userPasswordTF.text]) {
+		[MBProgressHUD showError:@"密码格式不符合规范"];
 		return;
 	}
 	if (![self.checkPasswordTF.text isEqualToString:self.userPasswordTF.text]) {
@@ -174,8 +214,20 @@
 	[MBProgressHUD showMessage:@"正在发送验证码"];
 	LARNetManager *netmanager = [[LARNetManager alloc] init];
 	[netmanager getModifyMobileCodeWith:_userNameTF.text succ:^(NSDictionary *successDict) {
+		[MBProgressHUD hideHUD];
+		[MBProgressHUD showSuccess:@"已发送，请注意查收"];
+		[self unabledCheckCodeBt];
 		MLOG(@"success");
-	} failure:nil];
+	} failure:^(NSDictionary *failDict, NSError *error) {
+		[MBProgressHUD hideHUD];
+		if (failDict) {
+			[MBProgressHUD showError:[failDict objectForKey:@"msg"]];
+		}
+		if (error) {
+			[MBProgressHUD showError:@"网络错误或请求失败"];
+		}
+		[self abledCheckCodeBt];
+	}];
 }
 
 - (void)didReceiveMemoryWarning {
