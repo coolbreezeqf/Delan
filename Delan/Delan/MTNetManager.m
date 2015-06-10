@@ -47,7 +47,7 @@
 - (void)getMediaInfoWith:(NSInteger)pageNum andPageSize:(NSInteger)pageSize
 					succ:(void(^)(MTMediaHelpInfo* info)) succ
 				 failure:(FAILUREBLOCK) failure{
-#warning 这里的token有必要吗？
+	//warning 这里的token有必要吗？
 	NSDictionary *parameters = @{@"token": @"xxx",//[UserService sharedUserService].token,
 								 @"pageNum": [NSString stringWithFormat:@"%i",pageNum],
 								 @"pageSize": [NSString stringWithFormat:@"%i",pageSize]};
@@ -62,6 +62,22 @@
 		}
 	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		failure(nil, error);
+	}];
+}
+
+- (void)postFeedBackWith:(NSString *) feedback
+					succ:(SUCCESSBLOCK) succ
+				 failure:(FAILUREBLOCK) failure{
+	NSString *url = [NSString stringWithFormat:@"%@mobile/infomation/postFeedBack.json",HostUrl];
+	UserService *user = [UserService sharedUserService];
+	NSDictionary *parameters = @{@"token": user.isLogin? user.token: @"xxxxx",
+								 @"username": user.isLogin? user.mobile: @"13777777777",
+								 @"feedback": feedback
+								 };
+	[_manager POST:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+		succ(responseObject);
+	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+		failure(nil,error);
 	}];
 }
 

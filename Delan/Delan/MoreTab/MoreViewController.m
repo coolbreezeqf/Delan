@@ -14,6 +14,7 @@
 #import "NewsViewController.h"
 #import "IntroduceViewController.h"
 #import "NoticeViewController.h"
+#import "DLWebViewController.h"
 @interface MoreViewController ()<UITableViewDataSource, UITableViewDelegate,UIAlertViewDelegate>
 
 @property (nonatomic,strong) UITableView *tableView;
@@ -105,7 +106,6 @@
 			//版本信息
 			UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 50, 30)];
 			label.font = kFont15;
-#warning 动态获取
 			label.text = [NSString stringWithFormat:@"V%@",kSofterViewsion];
 			label.textAlignment = NSTextAlignmentCenter;
 			label.textColor = [UIColor grayColor];
@@ -124,6 +124,7 @@
 	if (indexPath.section == 0) {
 		switch (indexPath.row) {
 			case 0:{
+				//公司简介
 				IntroduceViewController *ivc = [[IntroduceViewController alloc] init];
 				[self.navigationController pushViewController:ivc animated:YES];
 			}break;
@@ -133,6 +134,7 @@
 				[self.navigationController pushViewController:nvc animated:YES];
 			}break;
 			case 2:{
+				//行业报道
 				NewsViewController *nvc = [[NewsViewController alloc] init];
 				[self.navigationController pushViewController:nvc animated:YES];
 			}break;
@@ -143,8 +145,11 @@
 		switch (indexPath.row) {
 			case 0:{
 				//帮助中心
-				HelpCenterTableViewController *hvc = [[HelpCenterTableViewController alloc] init];
-				[self.navigationController pushViewController:hvc animated:YES];
+//				HelpCenterTableViewController *hvc = [[HelpCenterTableViewController alloc] init];
+//				[self.navigationController pushViewController:hvc animated:YES];
+				DLWebViewController *wvc = [[DLWebViewController alloc] initWithUrl:@"http://web.wdb168.com/mobile/about/helpCenter.htm"];
+				wvc.navigationItem.title = @"帮助中心";
+				[self.navigationController pushViewController:wvc animated:YES];
 			}break;
 			case 1:{
 				//反馈
@@ -152,6 +157,7 @@
 				[self.navigationController pushViewController:fbvc animated:YES];
 			}break;
 			case 2:{
+				//联系我们
 				NSString *msg = [NSString stringWithFormat:@"号码:%@",_helpMobile];
 				UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"是否呼叫客服" message:msg delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"呼叫", nil];
 				

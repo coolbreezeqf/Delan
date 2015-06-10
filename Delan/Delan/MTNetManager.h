@@ -28,4 +28,8 @@
 					succ:(void(^)(MTMediaHelpInfo* info)) succ
 				 failure:(FAILUREBLOCK) failure;
 
+//意见反馈
+- (void)postFeedBackWith:(NSString *) feedback
+					succ:(SUCCESSBLOCK) succ
+				 failure:(FAILUREBLOCK) failure;
 @end

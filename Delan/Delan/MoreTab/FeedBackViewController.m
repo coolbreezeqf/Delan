@@ -7,6 +7,8 @@
 //
 
 #import "FeedBackViewController.h"
+#import "MTNetManager.h"
+#import "MBProgressHUD+NJ.h"
 #define ButtonColor RGBCOLOR(87, 112, 187)
 #define BackGroundColor RGBCOLOR(245, 245, 245)
 @interface FeedBackViewController ()<UITextViewDelegate>
@@ -70,8 +72,13 @@
 
 - (void)feedBack{
 	//Feed Back
-#warning 补充
+	MTNetManager *manager = [[MTNetManager alloc] init];
 	MLOG(@"feedBack");
+	[manager postFeedBackWith:_textView.text succ:^(NSDictionary *successDict) {
+		[MBProgressHUD showSuccess:@"发送成功"];
+	} failure:^(NSDictionary *failDict, NSError *error) {
+		
+	}];
 }
 
 #pragma mark - keyboard notification
