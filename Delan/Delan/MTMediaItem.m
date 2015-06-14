@@ -12,7 +12,7 @@ NSString *const kMTMediaItemNoticeContent = @"noticeContent";
 NSString *const kMTMediaItemImageUrl = @"imageUrl";
 NSString *const kMTMediaItemNoticeUrl = @"noticeUrl";
 NSString *const kMTMediaItemNoticeTitle = @"noticeTitle";
-
+NSString *const kMTMediaItemNoticeDate = @"noticeDate";
 
 @interface MTMediaItem ()
 
@@ -26,7 +26,7 @@ NSString *const kMTMediaItemNoticeTitle = @"noticeTitle";
 @synthesize imageUrl = _imageUrl;
 @synthesize noticeUrl = _noticeUrl;
 @synthesize noticeTitle = _noticeTitle;
-
+@synthesize noticeDate = _noticeDate;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict
 {
@@ -44,7 +44,7 @@ NSString *const kMTMediaItemNoticeTitle = @"noticeTitle";
             self.imageUrl = [self objectOrNilForKey:kMTMediaItemImageUrl fromDictionary:dict];
             self.noticeUrl = [self objectOrNilForKey:kMTMediaItemNoticeUrl fromDictionary:dict];
             self.noticeTitle = [self objectOrNilForKey:kMTMediaItemNoticeTitle fromDictionary:dict];
-
+		self.noticeDate = [self objectOrNilForKey:kMTMediaItemNoticeDate fromDictionary:dict];
     }
     
     return self;
@@ -58,7 +58,7 @@ NSString *const kMTMediaItemNoticeTitle = @"noticeTitle";
     [mutableDict setValue:self.imageUrl forKey:kMTMediaItemImageUrl];
     [mutableDict setValue:self.noticeUrl forKey:kMTMediaItemNoticeUrl];
     [mutableDict setValue:self.noticeTitle forKey:kMTMediaItemNoticeTitle];
-
+	[mutableDict setValue:self.noticeDate forKey:kMTMediaItemNoticeDate];
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
 
@@ -85,6 +85,7 @@ NSString *const kMTMediaItemNoticeTitle = @"noticeTitle";
     self.imageUrl = [aDecoder decodeObjectForKey:kMTMediaItemImageUrl];
     self.noticeUrl = [aDecoder decodeObjectForKey:kMTMediaItemNoticeUrl];
     self.noticeTitle = [aDecoder decodeObjectForKey:kMTMediaItemNoticeTitle];
+	self.noticeDate = [aDecoder decodeObjectForKey:kMTMediaItemNoticeDate];
     return self;
 }
 
@@ -95,6 +96,7 @@ NSString *const kMTMediaItemNoticeTitle = @"noticeTitle";
     [aCoder encodeObject:_imageUrl forKey:kMTMediaItemImageUrl];
     [aCoder encodeObject:_noticeUrl forKey:kMTMediaItemNoticeUrl];
     [aCoder encodeObject:_noticeTitle forKey:kMTMediaItemNoticeTitle];
+	[aCoder encodeObject:_noticeDate forKey:kMTMediaItemNoticeDate];
 }
 
 - (id)copyWithZone:(NSZone *)zone
@@ -107,6 +109,7 @@ NSString *const kMTMediaItemNoticeTitle = @"noticeTitle";
         copy.imageUrl = [self.imageUrl copyWithZone:zone];
         copy.noticeUrl = [self.noticeUrl copyWithZone:zone];
         copy.noticeTitle = [self.noticeTitle copyWithZone:zone];
+		copy.noticeDate = [self.noticeDate copyWithZone:zone];
     }
     
     return copy;

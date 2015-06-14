@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSString *imageUrl;
 @property (nonatomic, strong) NSString *noticeUrl;
 @property (nonatomic, strong) NSString *noticeTitle;
+@property (nonatomic, strong) NSString *noticeDate;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;

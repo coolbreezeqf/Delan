@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSString *noticeUrl;
 @property (nonatomic, strong) NSString *noticeId;
 @property (nonatomic, strong) NSString *urlpath;
+@property (nonatomic, strong) NSString *noticeDate;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;

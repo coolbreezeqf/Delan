@@ -14,7 +14,7 @@ NSString *const kMTPublicItemImageUrl = @"imageUrl";
 NSString *const kMTPublicItemNoticeUrl = @"noticeUrl";
 NSString *const kMTPublicItemNoticeId = @"noticeId";
 NSString *const kMTPublicItemUrlpath = @"urlpath";
-
+NSString *const kMTPublicItemNoticeDate = @"noticeDate";
 
 @interface MTPublicItem ()
 
@@ -30,7 +30,7 @@ NSString *const kMTPublicItemUrlpath = @"urlpath";
 @synthesize noticeUrl = _noticeUrl;
 @synthesize noticeId = _noticeId;
 @synthesize urlpath = _urlpath;
-
+@synthesize noticeDate = _noticeDate;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict
 {
@@ -50,7 +50,7 @@ NSString *const kMTPublicItemUrlpath = @"urlpath";
             self.noticeUrl = [self objectOrNilForKey:kMTPublicItemNoticeUrl fromDictionary:dict];
             self.noticeId = [self objectOrNilForKey:kMTPublicItemNoticeId fromDictionary:dict];
             self.urlpath = [self objectOrNilForKey:kMTPublicItemUrlpath fromDictionary:dict];
-
+		self.noticeDate = [self objectOrNilForKey:kMTPublicItemNoticeDate fromDictionary:dict];
     }
     
     return self;
@@ -66,7 +66,7 @@ NSString *const kMTPublicItemUrlpath = @"urlpath";
     [mutableDict setValue:self.noticeUrl forKey:kMTPublicItemNoticeUrl];
     [mutableDict setValue:self.noticeId forKey:kMTPublicItemNoticeId];
     [mutableDict setValue:self.urlpath forKey:kMTPublicItemUrlpath];
-
+	[mutableDict setValue:self.noticeDate forKey:kMTPublicItemNoticeDate];
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
 
@@ -95,6 +95,7 @@ NSString *const kMTPublicItemUrlpath = @"urlpath";
     self.noticeUrl = [aDecoder decodeObjectForKey:kMTPublicItemNoticeUrl];
     self.noticeId = [aDecoder decodeObjectForKey:kMTPublicItemNoticeId];
     self.urlpath = [aDecoder decodeObjectForKey:kMTPublicItemUrlpath];
+	self.noticeDate = [aDecoder decodeObjectForKey:kMTPublicItemNoticeDate];
     return self;
 }
 
@@ -107,6 +108,7 @@ NSString *const kMTPublicItemUrlpath = @"urlpath";
     [aCoder encodeObject:_noticeUrl forKey:kMTPublicItemNoticeUrl];
     [aCoder encodeObject:_noticeId forKey:kMTPublicItemNoticeId];
     [aCoder encodeObject:_urlpath forKey:kMTPublicItemUrlpath];
+	[aCoder encodeObject:_noticeDate forKey:kMTPublicItemNoticeDate];
 }
 
 - (id)copyWithZone:(NSZone *)zone
@@ -121,6 +123,7 @@ NSString *const kMTPublicItemUrlpath = @"urlpath";
         copy.noticeUrl = [self.noticeUrl copyWithZone:zone];
         copy.noticeId = [self.noticeId copyWithZone:zone];
         copy.urlpath = [self.urlpath copyWithZone:zone];
+		copy.noticeDate = [self.noticeDate copyWithZone:zone];
     }
     
     return copy;
